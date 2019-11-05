@@ -1,0 +1,2287 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>torch.utils.data · Pytorch 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ApacheCN">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="dlpack.html" />
+    
+    
+    <link rel="prev" href="cpp_extension.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"apachecn","repo":"pytorch-doc-zh","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    中文教程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    入门
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="beginner/deep_learning_60min_blitz.html">
+            
+                <a href="beginner/deep_learning_60min_blitz.html">
+            
+                    
+                    PyTorch 深度学习: 60 分钟极速入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1.1" data-path="beginner/blitz/tensor_tutorial.html">
+            
+                <a href="beginner/blitz/tensor_tutorial.html">
+            
+                    
+                    什么是PyTorch？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.2" data-path="beginner/blitz/autograd_tutorial.html">
+            
+                <a href="beginner/blitz/autograd_tutorial.html">
+            
+                    
+                    Autograd：自动求导
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.3" data-path="beginner/blitz/neural_networks_tutorial.html">
+            
+                <a href="beginner/blitz/neural_networks_tutorial.html">
+            
+                    
+                    神经网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.4" data-path="beginner/blitz/cifar10_tutorial.html">
+            
+                <a href="beginner/blitz/cifar10_tutorial.html">
+            
+                    
+                    训练分类器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.1.5" data-path="beginner/blitz/data_parallel_tutorial.html">
+            
+                <a href="beginner/blitz/data_parallel_tutorial.html">
+            
+                    
+                    可选: 数据并行处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="beginner/data_loading_tutorial.html">
+            
+                <a href="beginner/data_loading_tutorial.html">
+            
+                    
+                    数据加载和处理教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="beginner/pytorch_with_examples.html">
+            
+                <a href="beginner/pytorch_with_examples.html">
+            
+                    
+                    用例子学习 PyTorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="beginner/transfer_learning_tutorial.html">
+            
+                <a href="beginner/transfer_learning_tutorial.html">
+            
+                    
+                    迁移学习教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="beginner/deploy_seq2seq_hybrid_frontend_tutorial.html">
+            
+                <a href="beginner/deploy_seq2seq_hybrid_frontend_tutorial.html">
+            
+                    
+                    利用 TorchScript 部署 Seq2Seq 模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="intermediate/tensorboard_tutorial.html">
+            
+                <a href="intermediate/tensorboard_tutorial.html">
+            
+                    
+                    使用 TensorBoard 可视化模型，数据和训练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="beginner/saving_loading_models.html">
+            
+                <a href="beginner/saving_loading_models.html">
+            
+                    
+                    保存和加载模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="beginner/nn_tutorial.html">
+            
+                <a href="beginner/nn_tutorial.html">
+            
+                    
+                    torch.nn 到底是什么？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    图片
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="intermediate/torchvision_tutorial.html">
+            
+                <a href="intermediate/torchvision_tutorial.html">
+            
+                    
+                    TorchVision 对象检测微调教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="beginner/finetuning_torchvision_models_tutorial.html">
+            
+                <a href="beginner/finetuning_torchvision_models_tutorial.html">
+            
+                    
+                    微调Torchvision模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="intermediate/spatial_transformer_tutorial.html">
+            
+                <a href="intermediate/spatial_transformer_tutorial.html">
+            
+                    
+                    空间变压器网络教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="advanced/neural_style_tutorial.html">
+            
+                <a href="advanced/neural_style_tutorial.html">
+            
+                    
+                    使用PyTorch进行神经网络传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="beginner/fgsm_tutorial.html">
+            
+                <a href="beginner/fgsm_tutorial.html">
+            
+                    
+                    对抗性示例生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="beginner/dcgan_faces_tutorial.html">
+            
+                <a href="beginner/dcgan_faces_tutorial.html">
+            
+                    
+                    DCGAN教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    音频
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="beginner/audio_preprocessing_tutorial.html">
+            
+                <a href="beginner/audio_preprocessing_tutorial.html">
+            
+                    
+                    torchaudio教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
+            
+                <span>
+            
+                    
+                    文本
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="intermediate/char_rnn_classification_tutorial.html">
+            
+                <a href="intermediate/char_rnn_classification_tutorial.html">
+            
+                    
+                    NLP From Scratch: 使用char-RNN对姓氏进行分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="intermediate/char_rnn_generation_tutorial.html">
+            
+                <a href="intermediate/char_rnn_generation_tutorial.html">
+            
+                    
+                    NLP From Scratch: 生成名称与字符级RNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="intermediate/seq2seq_translation_tutorial.html">
+            
+                <a href="intermediate/seq2seq_translation_tutorial.html">
+            
+                    
+                    NLP From Scratch: 基于注意力机制的 seq2seq 神经网络翻译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="beginner/text_sentiment_ngrams_tutorial.html">
+            
+                <a href="beginner/text_sentiment_ngrams_tutorial.html">
+            
+                    
+                    文本分类与TorchText
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="beginner/torchtext_translation_tutorial.html">
+            
+                <a href="beginner/torchtext_translation_tutorial.html">
+            
+                    
+                    语言翻译与TorchText
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="beginner/transformer_tutorial.html">
+            
+                <a href="beginner/transformer_tutorial.html">
+            
+                    
+                    序列到序列与nn.Transformer和TorchText建模
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" >
+            
+                <span>
+            
+                    
+                    强化学习
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="intermediate/reinforcement_q_learning.html">
+            
+                <a href="intermediate/reinforcement_q_learning.html">
+            
+                    
+                    强化学习（DQN）教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" >
+            
+                <span>
+            
+                    
+                    在生产部署PyTorch模型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="intermediate/flask_rest_api_tutorial.html">
+            
+                <a href="intermediate/flask_rest_api_tutorial.html">
+            
+                    
+                    部署PyTorch在Python经由REST API从Flask
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="beginner/Intro_to_TorchScript_tutorial.html">
+            
+                <a href="beginner/Intro_to_TorchScript_tutorial.html">
+            
+                    
+                    介绍TorchScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="advanced/cpp_export.html">
+            
+                <a href="advanced/cpp_export.html">
+            
+                    
+                    在C ++中加载TorchScript模型 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="advanced/super_resolution_with_onnxruntime.html">
+            
+                <a href="advanced/super_resolution_with_onnxruntime.html">
+            
+                    
+                    （可选）将模型从PyTorch导出到ONNX并使用ONNX Runtime运行    
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" >
+            
+                <span>
+            
+                    
+                    并行和分布式训练
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="intermediate/model_parallel_tutorial.html">
+            
+                <a href="intermediate/model_parallel_tutorial.html">
+            
+                    
+                    模型并行化最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="intermediate/ddp_tutorial.html">
+            
+                <a href="intermediate/ddp_tutorial.html">
+            
+                    
+                    入门分布式数据并行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.3" data-path="intermediate/dist_tuto.html">
+            
+                <a href="intermediate/dist_tuto.html">
+            
+                    
+                    PyTorch编写分布式应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.4" data-path="beginner/aws_distributed_training_tutorial.html">
+            
+                <a href="beginner/aws_distributed_training_tutorial.html">
+            
+                    
+                    （高级）PyTorch 1.0分布式训练与Amazon AWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" >
+            
+                <span>
+            
+                    
+                    扩展PyTorch
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="advanced/torch_script_custom_ops.html">
+            
+                <a href="advanced/torch_script_custom_ops.html">
+            
+                    
+                    使用自定义 C++ 扩展算TorchScript 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.2" data-path="advanced/numpy_extensions_tutorial.html">
+            
+                <a href="advanced/numpy_extensions_tutorial.html">
+            
+                    
+                    用 numpy 和 scipy 创建扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.3" data-path="advanced/cpp_extension.html">
+            
+                <a href="advanced/cpp_extension.html">
+            
+                    
+                    自定义 C++ 和CUDA扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" >
+            
+                <span>
+            
+                    
+                    PyTorch在其他语言
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.9.1" data-path="advanced/cpp_frontend.html">
+            
+                <a href="advanced/cpp_frontend.html">
+            
+                    
+                    使用PyTorch C++ 前端
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    中文文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    注解
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="notes/autograd.html">
+            
+                <a href="notes/autograd.html">
+            
+                    
+                    自动求导机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="notes/broadcasting.html">
+            
+                <a href="notes/broadcasting.html">
+            
+                    
+                    广播语义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="notes/cpu_threading_torchscript_inference.html">
+            
+                <a href="notes/cpu_threading_torchscript_inference.html">
+            
+                    
+                    CPU线程和TorchScript推理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="notes/cuda.html">
+            
+                <a href="notes/cuda.html">
+            
+                    
+                    CUDA语义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="notes/extending.html">
+            
+                <a href="notes/extending.html">
+            
+                    
+                    扩展PyTorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="notes/faq.html">
+            
+                <a href="notes/faq.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="notes/large_scale_deployments.html">
+            
+                <a href="notes/large_scale_deployments.html">
+            
+                    
+                    对于大规模部署的特点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="notes/multiprocessing.html">
+            
+                <a href="notes/multiprocessing.html">
+            
+                    
+                    多处理最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="notes/randomness.html">
+            
+                <a href="notes/randomness.html">
+            
+                    
+                    重复性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="notes/serialization.html">
+            
+                <a href="notes/serialization.html">
+            
+                    
+                    序列化语义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="notes/windows.html">
+            
+                <a href="notes/windows.html">
+            
+                    
+                    Windows 常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    社区
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="community/contribution_guide.html">
+            
+                <a href="community/contribution_guide.html">
+            
+                    
+                    PyTorch贡献说明书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="community/governance.html">
+            
+                <a href="community/governance.html">
+            
+                    
+                    PyTorch治理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="community/persons_of_interest.html">
+            
+                <a href="community/persons_of_interest.html">
+            
+                    
+                    PyTorch治理感兴趣的人
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    封装参考文献
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="torch.html">
+            
+                <a href="torch.html">
+            
+                    
+                    torch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="tensors.html">
+            
+                <a href="tensors.html">
+            
+                    
+                    torch.Tensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="tensor_attributes.html">
+            
+                <a href="tensor_attributes.html">
+            
+                    
+                    Tensor Attributes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="type_info.html">
+            
+                <a href="type_info.html">
+            
+                    
+                    Type Info
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="sparse.html">
+            
+                <a href="sparse.html">
+            
+                    
+                    torch.sparse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="cuda.html">
+            
+                <a href="cuda.html">
+            
+                    
+                    torch.cuda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="storage.html">
+            
+                <a href="storage.html">
+            
+                    
+                    torch.Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="nn.html">
+            
+                <a href="nn.html">
+            
+                    
+                    torch.nn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.9" data-path="nn.functional.html">
+            
+                <a href="nn.functional.html">
+            
+                    
+                    torch.nn.functional
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.10" data-path="nn.init.html">
+            
+                <a href="nn.init.html">
+            
+                    
+                    torch.nn.init
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.11" data-path="optim.html">
+            
+                <a href="optim.html">
+            
+                    
+                    torch.optim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.12" data-path="autograd.html">
+            
+                <a href="autograd.html">
+            
+                    
+                    torch.autograd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.13" data-path="distributed.html">
+            
+                <a href="distributed.html">
+            
+                    
+                    torch.distributed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.14" data-path="distributions.html">
+            
+                <a href="distributions.html">
+            
+                    
+                    torch.distributions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.15" data-path="hub.html">
+            
+                <a href="hub.html">
+            
+                    
+                    torch.hub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.16" data-path="jit.html">
+            
+                <a href="jit.html">
+            
+                    
+                    torch.jit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.17" data-path="multiprocessing.html">
+            
+                <a href="multiprocessing.html">
+            
+                    
+                    torch.multiprocessing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.18" data-path="random.html">
+            
+                <a href="random.html">
+            
+                    
+                    torch.random
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.19" data-path="bottleneck.html">
+            
+                <a href="bottleneck.html">
+            
+                    
+                    torch.utils.bottleneck
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.20" data-path="checkpoint.html">
+            
+                <a href="checkpoint.html">
+            
+                    
+                    torch.utils.checkpoint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.21" data-path="cpp_extension.html">
+            
+                <a href="cpp_extension.html">
+            
+                    
+                    torch.utils.cpp_extension
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3.22" data-path="data.html">
+            
+                <a href="data.html">
+            
+                    
+                    torch.utils.data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.23" data-path="dlpack.html">
+            
+                <a href="dlpack.html">
+            
+                    
+                    torch.utils.dlpack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.24" data-path="model_zoo.html">
+            
+                <a href="model_zoo.html">
+            
+                    
+                    torch.utils.model_zoo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.25" data-path="tensorboard.html">
+            
+                <a href="tensorboard.html">
+            
+                    
+                    torch.utils.tensorboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.26" data-path="onnx.html">
+            
+                <a href="onnx.html">
+            
+                    
+                    torch.onnx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.27" data-path="__config__.md">
+            
+                <span>
+            
+                    
+                    torch. config
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    torchvision 参考文献
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="torchvision/">
+            
+                <a href="torchvision/">
+            
+                    
+                    torchvision
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    torchaudio Reference
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" >
+            
+                <a target="_blank" href="https://pytorch.org/audio">
+            
+                    
+                    torchaudio
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" >
+            
+                <span>
+            
+                    
+                    torchtext Reference
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" >
+            
+                <a target="_blank" href="https://pytorch.org/text">
+            
+                    
+                    torchtext
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >torch.utils.data</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="torchutilsdata">torch.utils.data</h1>
+<p>&#x5728;PyTorch&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x5DE5;&#x5177;&#x7684;&#x5FC3;&#x810F;&#x662F; <code>torch.utils.data.DataLoader</code>&#x7C7B;&#x3002;&#x5B83;&#x4EE3;&#x8868;&#x4E86;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x7684;&#x4E00;&#x4E2A;Python&#x8FED;&#x4EE3;&#xFF0C;&#x4E0E;&#x652F;&#x6301;</p>
+<ul>
+<li><p>&#x56FE;&#x5F0F;&#x548C;&#x53EF;&#x8FED;&#x4EE3;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;</p>
+</li>
+<li><p>&#x5B9A;&#x5236;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;</p>
+</li>
+<li><p>&#x81EA;&#x52A8;&#x914D;&#x6599;</p>
+</li>
+<li><p>&#x5355;&#x548C;&#x591A;&#x5904;&#x7406;&#x6570;&#x636E;&#x52A0;&#x8F7D;</p>
+</li>
+<li><p>&#x81EA;&#x52A8;&#x5B58;&#x50A8;&#x5668;&#x9489;&#x624E;&#x3002;</p>
+</li>
+</ul>
+<p>&#x8FD9;&#x4E9B;&#x9009;&#x9879;&#x7531;&#x7684;&#x6784;&#x9020;&#x5668;&#x53C2;&#x6570;&#x6784;&#x6210;&#x7684; <code>&#x7684;DataLoader</code>&#xFF0C;&#x5176;&#x5177;&#x6709;&#x7B7E;&#x540D;&#xFF1A;</p>
+<pre><code>DataLoader(dataset, batch_size=1, shuffle=False, sampler=None,
+           batch_sampler=None, num_workers=0, collate_fn=None,
+           pin_memory=False, drop_last=False, timeout=0,
+           worker_init_fn=None)
+</code></pre><p>&#x4E0B;&#x9762;&#x7684;&#x7AE0;&#x8282;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#x4E86;&#x5F71;&#x54CD;&#x548C;&#x8FD9;&#x4E9B;&#x9009;&#x9879;&#x7684;&#x7528;&#x6CD5;&#x3002;</p>
+<h2 id="&#x6570;&#x636E;&#x96C6;&#x7C7B;&#x578B;">&#x6570;&#x636E;&#x96C6;&#x7C7B;&#x578B;</h2>
+<p>&#x7684; <code>&#x7684;DataLoader</code>&#x6784;&#x9020;&#x7684;&#x6700;&#x91CD;&#x8981;&#x7684;&#x53C2;&#x6570;&#x662F;<code>&#x6570;&#x636E;&#x96C6;</code>&#xFF0C;&#x5176;&#x6307;&#x793A;&#x6570;&#x636E;&#x96C6;&#x5BF9;&#x8C61;&#x4ECE;&#x52A0;&#x8F7D;&#x6570;&#x636E;&#x3002; PyTorch&#x652F;&#x6301;&#x4E24;&#x79CD;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x96C6;&#xFF1A;</p>
+<ul>
+<li><p>&#x56FE;&#x5F0F;&#x6570;&#x636E;&#x96C6;</p>
+</li>
+<li><p>&#x8FED;&#x4EE3;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;[HTG1&#x3002;</p>
+</li>
+</ul>
+<h3 id="&#x5730;&#x56FE;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;">&#x5730;&#x56FE;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;</h3>
+<p>&#x4E00;&#x79CD;&#x5730;&#x56FE;&#x98CE;&#x683C;&#x6570;&#x636E;&#x96C6;&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;<code>__getitem __&#xFF08;&#xFF09;</code>&#x548C;<code>__len __&#xFF08;&#xFF09;</code>&#x534F;&#x8BAE;&#xFF0C;&#x4EE5;&#x53CA;&#x8868;&#x793A;&#x4ECE;&#xFF08;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x5730;&#x56FE;&#x975E;&#x4E00;&#x4F53;&#xFF09;&#x7D22;&#x5F15;/&#x952E;&#x6570;&#x636E;&#x6837;&#x672C;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x5F53;&#x4E0E;<code>&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x96C6;[IDX]</code>&#xFF0C;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;<code>IDX</code>&#x4E2A;&#x56FE;&#x50CF;&#x548C;&#x5176;&#x76F8;&#x5E94;&#x7684;&#x6807;&#x7B7E;&#x4ECE;&#x78C1;&#x76D8;&#x4E0A;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x3002;</p>
+<p>&#x53C2;&#x89C1; <code>&#x6570;&#x636E;&#x96C6;</code>&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x8BE6;&#x60C5;&#x3002;</p>
+<h3 id="&#x53EF;&#x8FED;&#x4EE3;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;">&#x53EF;&#x8FED;&#x4EE3;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;</h3>
+<p>&#x53EF;&#x8FED;&#x4EE3;&#x5F0F;&#x6570;&#x636E;&#x96C6;&#x7684; <code>&#x4E00;&#x4E2A;&#x5B50;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;IterableDataset</code>&#x5B9E;&#x73B0;&#x4E86;<code>__iter __&#xFF08;&#xFF09;</code>&#x534F;&#x8BAE;&#x548C;&#x4EE3;&#x8868;&#x4E86;&#x6570;&#x636E;&#x6837;&#x672C;&#x53EF;&#x8FED;&#x4EE3;&#x3002;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x96C6;&#x7684;&#x7279;&#x522B;&#x9002;&#x5408;&#x4E8E;&#x60C5;&#x51B5;&#x4E0B;&#x968F;&#x673A;&#x8BFB;&#x53D6;&#x662F;&#x6602;&#x8D35;&#x7684;&#xFF0C;&#x751A;&#x81F3;&#x4E0D;&#x53EF;&#x80FD;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x5176;&#x4E2D;&#x6240;&#x8FF0;&#x6279;&#x91CF;&#x5927;&#x5C0F;&#x53D6;&#x51B3;&#x4E8E;&#x6240;&#x53D6;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x79F0;&#x4E3A;<code>&#x5F53;ITER&#xFF08;&#x6570;&#x636E;&#x96C6;&#xFF09;</code>&#xFF0C;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x8BFB;&#x53D6;&#x7684;&#x6D41;&#xFF0C;&#x6216;&#x751A;&#x81F3;&#x539F;&#x6728;&#x5B9E;&#x65F6;&#x751F;&#x6210;&#x3002;</p>
+<p>&#x53C2;&#x89C1; <code>IterableDataset</code>&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x8BE6;&#x60C5;&#x3002;</p>
+<p>&#x6CE8;&#x610F;</p>
+<p>&#x5F53;&#x4F7F;&#x7528; <code>IterableDataset</code>&#x4E0E;&#x591A;&#x8FDB;&#x7A0B;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x3002;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5BF9;&#x8C61;&#x88AB;&#x590D;&#x5236;&#x5728;&#x6BCF;&#x4E2A;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#xFF0C;&#x56E0;&#x6B64;&#x526F;&#x672C;&#x5FC5;&#x987B;&#x88AB;&#x4E0D;&#x540C;&#x5730;&#x914D;&#x7F6E;&#xFF0C;&#x4EE5;&#x907F;&#x514D;&#x91CD;&#x590D;&#x7684;&#x6570;&#x636E;&#x3002;&#x53C2;&#x89C1;
+<code>IterableDataset</code>&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x5355;&#x8BC1;&#x3002;</p>
+<h2 id="&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;&#x548C;-&#x53D6;&#x6837;">&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;&#x548C; <code>&#x53D6;&#x6837;</code></h2>
+<p>&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;&#x8FED;&#x4EE3;&#x4E3A;&#x53EF;&#x8FED;&#x4EE3;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;&#x5B8C;&#x5168;&#x7531;&#x63A7;&#x5236;&#x3002;&#x8FD9;&#x5141;&#x8BB8;&#x6570;&#x636E;&#x5757;&#x8BFB;&#x53D6;&#x548C;&#x52A8;&#x6001;&#x6279;&#x91CF;&#x5927;&#x5C0F;&#x7684;&#x66F4;&#x5BB9;&#x6613;&#x5B9E;&#x73B0;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x901A;&#x8FC7;&#x4EA7;&#x751F;&#x5728;&#x6BCF;&#x4E2A;&#x65F6;&#x95F4;&#x6210;&#x6279;&#x6837;&#x54C1;&#xFF09;&#x3002;</p>
+<p>&#x672C;&#x8282;&#x7684;&#x5176;&#x4F59;&#x90E8;&#x5206;&#x6D89;&#x53CA;&#x4E0E;&#x56FE;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;&#x7684;&#x60C5;&#x51B5;&#x3002;<code>torch.utils.data.Sampler</code>
+[HTG7&#x7C7B;&#x53EF;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x5728;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x7528;&#x4E8E;&#x7D22;&#x5F15;/&#x952E;&#x7684;&#x5E8F;&#x5217;&#x3002;&#x4ED6;&#x4EEC;&#x4EE3;&#x8868;&#x4E86;&#x7D22;&#x5F15;&#x5230;&#x7684;&#x6570;&#x636E;&#x96C6;&#x53EF;&#x8FED;&#x4EE3;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E0E;&#x968F;&#x673A;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#xFF08;SGD&#xFF09;&#x7684;&#x5E38;&#x89C1;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C; <code>&#x53D6;&#x6837;</code>
+&#x53EF;&#x4EE5;&#x968F;&#x673A;&#x7F6E;&#x6362;&#x6307;&#x6570;&#x5217;&#x8868;&#x548C;&#x5C48;&#x670D;&#x6BCF;&#x4E00;&#x6B21;&#x4E00;&#x4E2A;&#xFF0C;&#x6216;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x5C11;&#x6570;&#x4EBA;&#x7684;&#x5C0F;&#x6279;&#x91CF;SGD&#x3002;</p>
+<p>&#x4E00;&#x79CD;&#x987A;&#x5E8F;&#x6216;&#x6539;&#x7EC4;&#x91C7;&#x6837;&#x5668;&#x5C06;&#x57FA;&#x4E8E;&#x6240;&#x8FF0;<code>&#x6D17;&#x724C;</code>&#x53C2;&#x6570;&#x5411; <code>&#x7684;DataLoader</code>&#x81EA;&#x52A8;&#x6784;&#x9020;&#x3002;&#x53EF;&#x66FF;&#x6362;&#x5730;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>&#x53D6;&#x6837;</code>&#x53C2;&#x6570;&#x6765;&#x6307;&#x5B9A;&#x81EA;&#x5B9A;&#x4E49; <code>&#x53D6;&#x6837;</code>&#x5BF9;&#x8C61;&#x5728;&#x6BCF;&#x4E2A;&#x65F6;&#x95F4;&#x4EA7;&#x751F;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;/&#x952E;&#x83B7;&#x53D6;&#x3002;</p>
+<p>&#x81EA;&#x5B9A;&#x4E49; <code>&#x53D6;&#x6837;</code>&#x4E3A;&#x5728;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x4EA7;&#x751F;&#x4E00;&#x6279;&#x6307;&#x6570;&#x5217;&#x8868;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;<code>batch_sampler</code>&#x53C2;&#x6570;&#x4F20;&#x9012;&#x3002;&#x81EA;&#x52A8;&#x914D;&#x6599;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>&#x7684;batch_size</code>&#x548C;<code>drop_last</code>&#x53C2;&#x6570;&#x542F;&#x7528;&#x3002;&#x53C2;&#x89C1;&#x4E0B;&#x4E00;&#x8282;&#x672C;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x3002;</p>
+<p>Note</p>
+<p>&#x65E2;&#x4E0D;<code>&#x53D6;&#x6837;</code>&#x4E5F;&#x4E0D;<code>batch_sampler</code>&#x662F;&#x5177;&#x6709;&#x53EF;&#x8FED;&#x4EE3;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;&#x517C;&#x5BB9;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x6837;&#x7684;&#x6570;&#x636E;&#x96C6;&#x6CA1;&#x6709;&#x4E00;&#x4E2A;&#x952E;&#x6216;&#x7D22;&#x5F15;&#x7684;&#x6982;&#x5FF5;&#x3002;</p>
+<h2 id="&#x88C5;&#x8F7D;&#x6210;&#x6279;&#x548C;&#x975E;&#x6210;&#x6279;&#x6570;&#x636E;">&#x88C5;&#x8F7D;&#x6210;&#x6279;&#x548C;&#x975E;&#x6210;&#x6279;&#x6570;&#x636E;</h2>
+<p><code>&#x7684;DataLoader</code>&#x652F;&#x6301;&#x5355;&#x4E2A;&#x53D6;&#x51FA;&#x7684;&#x6570;&#x636E;&#x6837;&#x672C;&#x81EA;&#x52A8;&#x6574;&#x7406;&#x6210;&#x6279;&#x6B21;&#x7ECF;&#x7531;&#x53C2;&#x6570;<code>&#x7684;batch_size</code>&#xFF0C;<code>drop_last</code>&#x548C;<code>batch_sampler</code>&#x3002;</p>
+<h3 id="&#x81EA;&#x52A8;&#x914D;&#x6599;&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;htg0">&#x81EA;&#x52A8;&#x914D;&#x6599;&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;HTG0]</h3>
+<p>&#x8FD9;&#x662F;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x5E94;&#x4E8E;&#x63D0;&#x53D6;&#x6570;&#x636E;&#x7684;minibatch&#x5E76;&#x5C06;&#x5B83;&#x4EEC;&#x6574;&#x7406;&#x6210;&#x6279;&#x5904;&#x7406;&#x6837;&#x54C1;&#xFF0C;&#x5373;&#xFF0C;&#x542B;&#x6709;&#x4E0E;&#x5F20;&#x91CF;&#x4E00;&#x4E2A;&#x7EF4;&#x5EA6;&#x662F;&#x6240;&#x8FF0;&#x6279;&#x6599;&#x5C3A;&#x5BF8;&#xFF08;&#x901A;&#x5E38;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#xFF09;&#x3002;</p>
+<p>&#x5F53;<code>&#x7684;batch_size</code>&#xFF08;&#x9ED8;&#x8BA4;<code>1</code>&#xFF09;&#x4E0D;&#x662F;<code>&#x65E0;</code>&#xFF0C;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x5668;&#x7684;&#x4EA7;&#x7387;&#x6279;&#x91CF;&#x6837;&#x54C1;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E2A;&#x522B;&#x6837;&#x54C1;&#x3002; <code>&#x7684;batch_size</code>&#x548C;<code>drop_last</code>&#x53C2;&#x6570;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x5668;&#x5982;&#x4F55;&#x83B7;&#x5F97;&#x6570;&#x636E;&#x96C6;&#x5BC6;&#x94A5;&#x7684;&#x6279;&#x6B21;&#x3002;&#x5728;&#x5730;&#x56FE;&#x98CE;&#x683C;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x53E6;&#x5916;&#x6307;&#x5B9A;<code>batch_sampler</code>&#xFF0C;&#x5B83;&#x5728;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x4EA7;&#x751F;&#x5BC6;&#x94A5;&#x7684;&#x5217;&#x8868;&#x3002;</p>
+<p>Note</p>
+<p>&#x7684;<code>&#x7684;batch_size</code>&#x548C;<code>drop_last</code>&#x53C2;&#x6570;&#x57FA;&#x672C;&#x4E0A;&#x88AB;&#x7528;&#x4E8E;&#x4E00;&#x4E2A;<code>batch_sampler</code>&#x4ECE;&#x6784;&#x5EFA;<code>&#x53D6;&#x6837;</code>&#x3002;&#x5728;&#x5730;&#x56FE;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;&#x65F6;&#xFF0C;<code>&#x53D6;&#x6837;</code>&#x6216;&#x8005;&#x7531;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x7684;&#x6216;&#x6839;&#x636E;<code>&#x6D17;&#x724C;</code>&#x53C2;&#x6570;&#x6784;&#x6210;&#x3002;&#x5BF9;&#x4E8E;&#x8FED;&#x4EE3;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;&#x65F6;&#xFF0C;<code>&#x53D6;&#x6837;</code>&#x662F;&#x4F2A;&#x65E0;&#x9650;&#x4E4B;&#x4E00;&#x3002;&#x53C2;&#x89C1;&#x672C;&#x8282;&#x4E0A;&#x91C7;&#x6837;&#x7684;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x3002;</p>
+<p>Note</p>
+<p>&#x5F53;&#x4ECE;&#x8FED;&#x4EE3;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;&#x4E0E;&#x53D6;&#x591A;&#x5904;&#x7406;&#xFF0C;&#x5728;<code>drop_last</code>&#x53C2;&#x6570;&#x4E0B;&#x964D;&#x5230;&#x6700;&#x540E;&#x7684;&#x975E;&#x6574;&#x6279;&#x751F;&#x4EA7;&#x7684;&#x6BCF;&#x4E2A;&#x5458;&#x5DE5;&#x7684;&#x6570;&#x636E;&#x96C6;&#x590D;&#x5236;&#x54C1;&#x3002;</p>
+<p>&#x53D6;&#x4F7F;&#x7528;&#x4ECE;&#x91C7;&#x6837;&#x5668;&#x7684;&#x7D22;&#x5F15;&#x7684;&#x6837;&#x672C;&#x7684;&#x5217;&#x8868;&#x4E4B;&#x540E;&#xFF0C;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;<code>collat&#x200B;&#x200B;e_fn</code>&#x53C2;&#x6570;&#x88AB;&#x7528;&#x6765;&#x6821;&#x6838;&#x6837;&#x672C;&#x5217;&#x8868;&#x6210;&#x6279;&#x901A;&#x8FC7;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4ECE;&#x56FE;&#x5F0F;&#x96C6;&#x88C5;&#x662F;&#x5927;&#x81F4;&#x76F8;&#x5F53;&#x4E8E;&#xFF1A;</p>
+<pre><code>for indices in batch_sampler:
+    yield collate_fn([dataset[i] for i in indices])
+</code></pre><p>&#x5E76;&#x4ECE;&#x8FED;&#x4EE3;&#x5F0F;&#x96C6;&#x88C5;&#x662F;&#x5927;&#x81F4;&#x76F8;&#x5F53;&#x4E8E;&#xFF1A;</p>
+<pre><code>dataset_iter = iter(dataset)
+for indices in batch_sampler:
+    yield collate_fn([next(dataset_iter) for _ in indices])
+</code></pre><p>&#x81EA;&#x5B9A;&#x4E49;<code>collat&#x200B;&#x200B;e_fn</code>&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x4E8E;&#x5B9A;&#x5236;&#x7684;&#x5F52;&#x7C7B;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x586B;&#x5145;&#x987A;&#x5E8F;&#x6570;&#x636E;&#x81F3;&#x4E00;&#x6279;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x3002;&#x67E5;&#x770B;&#x66F4;&#x591A;&#x5173;&#x4E8E;<code>collat&#x200B;&#x200B;e_fn</code>
+&#x672C;&#x8282;[HTG5&#x3002;</p>
+<h3 id="&#x7981;&#x7528;&#x81EA;&#x52A8;&#x914D;&#x6599;">&#x7981;&#x7528;&#x81EA;&#x52A8;&#x914D;&#x6599;</h3>
+<p>&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x5C06;&#x5728;&#x6570;&#x636E;&#x96C6;&#x4EE3;&#x7801;&#x624B;&#x52A8;&#x5904;&#x7406;&#x914D;&#x6599;&#xFF0C;&#x6216;&#x7B80;&#x5355;&#x5730;&#x88C5;&#x8F7D;&#x5355;&#x4E2A;&#x6837;&#x54C1;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5B83;&#x53EF;&#x80FD;&#x66F4;&#x4FBF;&#x5B9C;&#x76F4;&#x63A5;&#x52A0;&#x8F7D;&#x6210;&#x6279;&#x6570;&#x636E;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x6279;&#x91CF;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x8BFB;&#x53D6;&#x6216;&#x8BFB;&#x53D6;&#x7684;&#x5B58;&#x50A8;&#x5668;&#x5927;&#x5757;&#x8FDE;&#x7EED;&#xFF09;&#x6216;&#x6279;&#x91CF;&#x5927;&#x5C0F;&#x662F;&#x4F9D;&#x8D56;&#x4E8E;&#x6570;&#x636E;&#x7684;&#xFF0C;&#x6216;&#x8005;&#x7A0B;&#x5E8F;&#x88AB;&#x8BBE;&#x8BA1;&#x4E3A;&#x5728;&#x5355;&#x4E2A;&#x6837;&#x54C1;&#x5DE5;&#x4F5C;&#x3002;&#x5728;&#x8FD9;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5F88;&#x53EF;&#x80FD;&#x66F4;&#x597D;&#xFF0C;&#x4E0D;&#x4F7F;&#x7528;&#x81EA;&#x52A8;&#x914D;&#x6599;&#xFF08;&#x5176;&#x4E2D;<code>collat&#x200B;&#x200B;e_fn</code>&#x88AB;&#x7528;&#x6765;&#x6821;&#x6838;&#x7684;&#x6837;&#x54C1;&#xFF09;&#xFF0C;&#x4F46;&#x8BA9;&#x6240;&#x8FF0;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x5668;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x7684;<code>&#x6BCF;&#x4E2A;&#x6210;&#x5458;&#x6570;&#x636E;&#x96C6;</code>&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x5F53;&#x4E24;&#x4E2A;<code>&#x7684;batch_size</code>&#x548C;<code>batch_sampler</code>&#x662F;<code>&#x65E0;</code>&#x4E3A;&#xFF08;&#x9ED8;&#x8BA4;&#x503C;<code>batch_sampler</code>&#x5DF2;&#x7ECF;<code>&#x65E0;</code>&#xFF09;&#xFF0C;&#x81EA;&#x52A8;&#x914D;&#x6599;&#x88AB;&#x7981;&#x7528;&#x3002;&#x4ECE;<code>&#x6570;&#x636E;&#x96C6;&#x83B7;&#x5F97;&#x7684;&#x6BCF;&#x4E2A;&#x6837;&#x54C1;</code>&#x4E0E;&#x4F5C;&#x4E3A;<code>collat&#x200B;&#x200B;e_fn</code>&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7684;&#x529F;&#x80FD;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</p>
+<p>[HTG0&#x5F53;&#x81EA;&#x52A8;&#x914D;&#x6599;&#x88AB;&#x7981;&#x7528;&#xFF0C;&#x9ED8;&#x8BA4;<code>collat&#x200B;&#x200B;e_fn</code>&#x7B80;&#x5355;&#x5730;NumPy&#x7684;&#x9635;&#x5217;&#x8F6C;&#x6362;&#x6210;PyTorch&#x5F20;&#x91CF;&#xFF0C;&#x5E76;&#x4FDD;&#x6301;&#x6240;&#x6709;&#x5176;&#x4ED6;&#x4E0D;&#x53D8;&#x3002;</p>
+<p>In this case, loading from a map-style dataset is roughly equivalent with:</p>
+<pre><code>for index in sampler:
+    yield collate_fn(dataset[index])
+</code></pre><p>and loading from an iterable-style dataset is roughly equivalent with:</p>
+<pre><code>for data in iter(dataset):
+    yield collate_fn(data)
+</code></pre><p>&#x67E5;&#x770B;&#x66F4;&#x591A;&#x5173;&#x4E8E;<code>collat&#x200B;&#x200B;e_fn</code>&#x672C;&#x8282;[HTG1&#x3002;</p>
+<h3 id="&#x4E0E;collat&#x200B;&#x200B;efn&#x5DE5;&#x4F5C;">&#x4E0E;<code>collat&#x200B;&#x200B;e_fn</code>&#x5DE5;&#x4F5C;</h3>
+<p>&#x5229;&#x7528;<code>collat&#x200B;&#x200B;e_fn</code>&#x5F53;&#x81EA;&#x52A8;&#x914D;&#x6599;&#x88AB;&#x542F;&#x7528;&#x6216;&#x7981;&#x7528;&#x7565;&#x6709;&#x4E0D;&#x540C;&#x3002;</p>
+<p>[HTG0&#x5F53;&#x81EA;&#x52A8;&#x914D;&#x6599;&#x88AB;&#x7981;&#x7528;&#xFF0C;<code>collat&#x200B;&#x200B;e_fn</code>&#x88AB;&#x79F0;&#x4E3A;&#x4E0E;&#x6BCF;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x6570;&#x636E;&#x6837;&#x672C;&#xFF0C;&#x5E76;&#x4E14;&#x8F93;&#x51FA;&#x4ECE;&#x6240;&#x8FF0;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x5668;&#x7684;&#x8FED;&#x4EE3;&#x5F97;&#x5230;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9ED8;&#x8BA4;<code>collat&#x200B;&#x200B;e_fn</code>&#x7B80;&#x5355;&#x5730;&#x8F6C;&#x6362;&#x5728;PyTorch&#x5F20;&#x91CF;NumPy&#x7684;&#x9635;&#x5217;&#x3002;</p>
+<p>[HTG0&#x5F53;&#x81EA;&#x52A8;&#x914D;&#x6599;&#x4F7F;&#x80FD;&#xFF0C;<code>collat&#x200B;&#x200B;e_fn</code>&#x8C03;&#x7528;&#x4E0E;&#x5404;&#x65F6;&#x523B;&#x7684;&#x6570;&#x636E;&#x6837;&#x672C;&#x7684;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x3002;&#x9884;&#x8BA1;&#x5230;&#x8F93;&#x5165;&#x6837;&#x672C;&#x6574;&#x7406;&#x6210;&#x6279;&#x5904;&#x7406;&#x4ECE;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x5668;&#x7684;&#x8FED;&#x4EE3;&#x5F97;&#x5230;&#x3002;&#x672C;&#x8282;&#x7684;&#x5176;&#x4F59;&#x90E8;&#x5206;&#x63CF;&#x8FF0;&#x4E86;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;<code>collat&#x200B;&#x200B;e_fn</code>&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x6837;&#x672C;&#x5305;&#x62EC;3&#x901A;&#x9053;&#x56FE;&#x50CF;&#x548C;&#x79EF;&#x5206;&#x7C7B;&#x522B;&#x6807;&#x7B7E;&#xFF0C;&#x5373;&#xFF0C;&#x8BE5;&#x6570;&#x636E;&#x96C6;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;<code>&#xFF08;&#x56FE;&#x50CF;&#xFF0C; class_index&#xFF09;</code>&#xFF0C;&#x9ED8;&#x8BA4;<code>collat&#x200B;&#x200B;e_fn</code>&#x6838;&#x5BF9;&#x8FD9;&#x6837;&#x5143;&#x7EC4;&#x7684;&#x5217;&#x8868;&#x6210;&#x6279;&#x5904;&#x7406;&#x56FE;&#x50CF;&#x5F20;&#x91CF;&#x7684;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#x548C;&#x6279;&#x5904;&#x7406;&#x7C7B;&#x522B;&#x6807;&#x7B7E;&#x5F20;&#x91CF;&#x3002;&#x5177;&#x4F53;&#x5730;&#xFF0C;&#x9ED8;&#x8BA4;<code>collat&#x200B;&#x200B;e_fn</code>&#x5177;&#x6709;&#x4EE5;&#x4E0B;&#x6027;&#x8D28;&#xFF1A;</p>
+<ul>
+<li><p>&#x5B83;&#x603B;&#x662F;&#x9884;&#x5148;&#x8003;&#x8651;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7EF4;&#x5EA6;&#x6279;&#x6B21;&#x5C3A;&#x5BF8;&#x3002;</p>
+</li>
+<li><p>&#x5B83;&#x81EA;&#x52A8;NumPy&#x7684;&#x9635;&#x5217;&#x548C;Python&#x6570;&#x503C;&#x8F6C;&#x6362;&#x6210;PyTorch&#x5F20;&#x91CF;&#x3002;</p>
+</li>
+<li><p>&#x5B83;&#x4FDD;&#x7559;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6BCF;&#x4E2A;&#x6837;&#x672C;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#xFF0C;&#x5B83;&#x8F93;&#x51FA;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x5BC6;&#x94A5;&#x96C6;&#x5408;&#xFF0C;&#x4F46;&#x5206;&#x6279;&#x5F20;&#x91CF;&#x4F5C;&#x4E3A;&#x503C;&#xFF08;&#x6216;&#x5217;&#x8868;&#xFF0C;&#x5982;&#x679C;&#x503C;&#x4E0D;&#x80FD;&#x88AB;&#x8F6C;&#x6362;&#x6210;&#x5F20;&#x91CF;&#xFF09;&#x7684;&#x5B57;&#x5178;&#x3002;&#x540C;&#x6837;&#x4E3A;<code>&#x5217;&#x8868;</code>S&#xFF0C;<code>&#x5143;&#x7EC4;</code>S&#xFF0C;<code>namedtuple</code>S&#x7B49;</p>
+</li>
+</ul>
+<p>&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B9A;&#x5236;<code>collat&#x200B;&#x200B;e_fn</code>&#x4EE5;&#x5B9E;&#x73B0;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x6599;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x6CBF;&#x9664;&#x5404;&#x79CD;&#x957F;&#x5EA6;&#xFF0C;&#x6216;&#x589E;&#x52A0;&#x5BF9;&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x652F;&#x6491;&#x4EF6;&#x7684;&#x7B2C;&#x4E00;&#xFF0C;&#x586B;&#x5145;&#x5E8F;&#x5217;&#x4EE5;&#x5916;&#x7684;&#x5C3A;&#x5BF8;&#x6838;&#x5BF9;&#x3002;</p>
+<h2 id="&#x5355;&#x548C;&#x591A;&#x8FDB;&#x7A0B;&#x6570;&#x636E;&#x8F7D;&#x5165;">&#x5355;&#x548C;&#x591A;&#x8FDB;&#x7A0B;&#x6570;&#x636E;&#x8F7D;&#x5165;</h2>
+<p>A<code>&#x7684;DataLoader</code>&#x7F3A;&#x7701;&#x4F7F;&#x7528;&#x5355;&#x8FDB;&#x7A0B;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x3002;</p>
+<p>&#x5185;&#x4E00;&#x4E2A;Python&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;<a href="https://wiki.python.org/moin/GlobalInterpreterLock" target="_blank">&#x5168;&#x5C40;&#x89E3;&#x91CA;&#x5668;&#x9501;&#xFF08;GIL&#xFF09;</a>&#x9632;&#x6B62;&#x771F;&#x6B63;&#x5B8C;&#x5168;&#x5E76;&#x884C;&#x8DE8;&#x7EBF;&#x7A0B;Python&#x4EE3;&#x7801;&#x3002;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x4E0E;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x963B;&#x65AD;&#x8BA1;&#x7B97;&#x4EE3;&#x7801;&#xFF0C;PyTorch&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x5F00;&#x5173;&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x5730;&#x5C06;&#x53C2;&#x6570;<code>num_workers</code>&#x8BBE;&#x7F6E;&#x4E3A;&#x4E00;&#x4E2A;&#x6B63;&#x6574;&#x6570;&#xFF0C;&#x4EE5;&#x6267;&#x884C;&#x591A;&#x5904;&#x7406;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x3002;</p>
+<h3 id="&#x5355;&#x8FDB;&#x7A0B;&#x7684;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;">&#x5355;&#x8FDB;&#x7A0B;&#x7684;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;</h3>
+<p>&#x5728;&#x6B64;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x6570;&#x636E;&#x88AB;&#x53D6;&#x5728;&#x76F8;&#x540C;&#x7684;&#x5DE5;&#x827A;&#x505A;&#x4E86; <code>&#x7684;DataLoader</code>
+&#x88AB;&#x521D;&#x59CB;&#x5316;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x53EF;&#x80FD;&#x4F1A;&#x963B;&#x6B62;&#x8BA1;&#x7B97;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x53EF;&#x88AB;&#x5F53;&#x5904;&#x7406;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x5171;&#x4EAB;&#x5B58;&#x50A8;&#x5668;&#xFF0C;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#xFF09;&#x4E4B;&#x95F4;&#x4F7F;&#x7528;&#x5171;&#x4EAB;&#x6570;&#x636E;&#x8D44;&#x6E90;&#xFF08;&#x591A;&#x4E2A;&#xFF09;&#x662F;&#x6709;&#x9650;&#x7684;&#xFF0C;&#x6216;&#x8005;&#x5F53;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x662F;&#x5C0F;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x5728;&#x5185;&#x5B58;&#x52A0;&#x8F7D;&#x4F18;&#x9009;&#x7684;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x5355;&#x8FDB;&#x7A0B;&#x52A0;&#x8F7D;&#x7ECF;&#x5E38;&#x663E;&#x793A;&#x66F4;&#x52A0;&#x53EF;&#x8BFB;&#x7684;&#x9519;&#x8BEF;&#x7684;&#x75D5;&#x8FF9;&#xFF0C;&#x56E0;&#x6B64;&#x5BF9;&#x4E8E;&#x8C03;&#x8BD5;&#x662F;&#x6709;&#x7528;&#x7684;&#x3002;</p>
+<h3 id="&#x591A;&#x8FDB;&#x7A0B;&#x6570;&#x636E;&#x52A0;&#x8F7D;">&#x591A;&#x8FDB;&#x7A0B;&#x6570;&#x636E;&#x52A0;&#x8F7D;</h3>
+<p>&#x8BBE;&#x7F6E;&#x53C2;&#x6570;<code>num_workers</code>&#x4F5C;&#x4E3A;&#x6B63;&#x6574;&#x6570;&#x5C06;&#x63A5;&#x901A;&#x7684;&#x591A;&#x8FDB;&#x7A0B;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x4E0E;&#x88C5;&#x8F7D;&#x673A;&#x7684;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x6307;&#x5B9A;&#x7684;&#x6B21;&#x6570;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x6BCF;&#x6B21;&#x8FED;&#x4EE3;&#x4E00;&#x4E2A; <code>&#x7684;DataLoader</code>&#xFF0C;&#x521B;&#x5EFA;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x5F53;&#x8C03;&#x7528;<code>&#x679A;&#x4E3E;&#xFF08;&#x7684;DataLoader&#xFF09;</code>&#xFF09;&#xFF0C;<code>num_workers</code>&#x88AB;&#x521B;&#x5EFA;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x3002;&#x5728;&#x8FD9;&#x4E00;&#x70B9;&#x4E0A;&#xFF0C;<code>&#x6570;&#x636E;&#x96C6;</code>&#xFF0C;<code>collat&#x200B;&#x200B;e_fn</code>&#x548C;<code>worker_init_fn</code>&#x88AB;&#x4F20;&#x9012;&#x5230;&#x6BCF;&#x4E2A;&#x5DE5;&#x4EBA;&#xFF0C;&#x5728;&#x90A3;&#x91CC;&#x5B83;&#x4EEC;&#x88AB;&#x7528;&#x6765;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5E76;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x6570;&#x636E;&#x96C6;&#x8BBF;&#x95EE;&#x5176;&#x5185;&#x90E8;IO&#x4E00;&#x8D77;&#xFF0C;&#x53D8;&#x6362;&#xFF08;&#x5305;&#x62EC;<code>collat&#x200B;&#x200B;e_fn</code>&#xFF09;&#x5728;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x4E2D;&#x8FD0;&#x884C;&#x3002;</p>
+<p><code>torch.utils.data.get_worker_info&#xFF08;&#xFF09;</code>
+&#x5728;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x8FD4;&#x56DE;&#x5404;&#x79CD;&#x6709;&#x7528;&#x7684;&#x4FE1;&#x606F;&#xFF08;&#x5305;&#x62EC;&#x5DE5;&#x4EBA;ID&#xFF0C;&#x6570;&#x636E;&#x96C6;&#x7684;&#x526F;&#x672C;&#xFF0C;&#x521D;&#x59CB;&#x79CD;&#x5B50;&#x7B49;&#xFF09;&#x5728;&#x4E3B;&#x5904;&#x7406;&#x4E2D;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;<code>&#x65E0;</code>&#x3002;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5728;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x4EE3;&#x7801;&#x4E2D;&#x4F7F;&#x7528;&#x6B64;&#x529F;&#x80FD;&#x548C;/&#x6216;<code>worker_init_fn</code>&#x5355;&#x72EC;&#x914D;&#x7F6E;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x7684;&#x526F;&#x672C;&#xFF0C;&#x5E76;&#x786E;&#x5B9A;&#x8BE5;&#x4EE3;&#x7801;&#x662F;&#x5426;&#x5728;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8FD9;&#x53EF;&#x4EE5;&#x662F;&#x5728;&#x5206;&#x7247;&#x6570;&#x636E;&#x96C6;&#x7279;&#x522B;&#x6709;&#x7528;&#x3002;</p>
+<p>&#x5728;&#x5730;&#x56FE;&#x98CE;&#x683C;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x4E3B;&#x5904;&#x7406;&#x4F7F;&#x7528;<code>&#x53D6;&#x6837;</code>&#x4EA7;&#x751F;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5E76;&#x5C06;&#x5B83;&#x4EEC;&#x53D1;&#x9001;&#x7ED9;&#x5DE5;&#x4EBA;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4EFB;&#x4F55;&#x6D17;&#x724C;&#x968F;&#x673A;&#x5316;&#xFF0C;&#x5176;&#x4E2D;&#x901A;&#x8FC7;&#x5206;&#x914D;&#x6307;&#x6807;&#x6765;&#x52A0;&#x8F7D;&#x5F15;&#x5BFC;&#x52A0;&#x8F7D;&#x4E3B;&#x8FDB;&#x7A0B;&#x5B8C;&#x6210;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x8FED;&#x4EE3;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x56E0;&#x4E3A;&#x6BCF;&#x4E2A;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x5F97;&#x5230;<code>&#x6570;&#x636E;&#x96C6;</code>&#x5BF9;&#x8C61;&#x7684;&#x526F;&#x672C;&#xFF0C;&#x5E7C;&#x7A1A;&#x591A;&#x8FDB;&#x7A0B;&#x52A0;&#x8F7D;&#x901A;&#x5E38;&#x5C06;&#x5BFC;&#x81F4;&#x590D;&#x5236;&#x7684;&#x6570;&#x636E;&#x3002;&#x4F7F;&#x7528; <code>torch.utils.data.get_worker_info&#xFF08;&#xFF09;</code>&#x548C;/&#x6216;<code>worker_init_fn</code>&#x4E2D;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x6BCF;&#x4E2A;&#x590D;&#x5236;&#x54C1;&#x72EC;&#x7ACB;&#x3002;
+&#xFF08;&#x53C2;&#x89C1; <code>IterableDataset</code>&#x5355;&#x8BC1;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x70B9;&#x3002;&#xFF09;&#x5BF9;&#x4E8E;&#x7C7B;&#x4F3C;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x5728;&#x591A;&#x8FDB;&#x7A0B;&#x52A0;&#x8F7D;&#x65F6;&#xFF0C;<code>drop_last</code>&#x53C2;&#x6570;&#x4E0B;&#x964D;&#x5230;&#x6700;&#x540E;&#x7684;&#x975E;&#x6574;&#x6279;&#x751F;&#x4EA7;&#x7684;&#x6BCF;&#x4E2A;&#x5DE5;&#x4EBA;&#x7684;&#x8FED;&#x4EE3;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;&#x526F;&#x672C;&#x3002;</p>
+<p>&#x5DE5;&#x4EBA;&#x88AB;&#x5173;&#x95ED;&#x4E00;&#x65E6;&#x8FBE;&#x5230;&#x8FED;&#x4EE3;&#x7ED3;&#x675F;&#x65F6;&#xFF0C;&#x6216;&#x8005;&#x5F53;&#x8FED;&#x4EE3;&#x5668;&#x5C06;&#x53D8;&#x4E3A;&#x5783;&#x573E;&#x6536;&#x96C6;&#x3002;</p>
+<p>&#x8B66;&#x544A;</p>
+<p>&#x5B83;&#x4E00;&#x822C;&#x4E0D;&#x5EFA;&#x8BAE;&#x6062;&#x590D;&#x5728;&#x591A;&#x8FDB;&#x7A0B;&#x52A0;&#x8F7D;CUDA&#x5F20;&#x91CF;&#xFF0C;&#x56E0;&#x4E3A;&#x8BB8;&#x591A;&#x5FAE;&#x5999;&#x4E4B;&#x5904;&#x4F7F;&#x7528;CUDA&#x548C;&#x591A;&#x5206;&#x4EAB;CUDA&#x5F20;&#x91CF;&#xFF08;&#x89C1;&#x591A;&#x5904;&#x7406; <a href="notes/multiprocessing.html#multiprocessing-cuda-%0Anote">
+CUDA&#xFF09;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x81EA;&#x52A8;&#x5B58;&#x50A8;&#x5668;&#x9489;&#x624E;&#xFF08;&#x5373;&#xFF0C;&#x8BBE;&#x7F6E;<code>pin_memory =&#x771F;</code>&#xFF09;&#xFF0C;&#x8FD9;&#x4F7F;&#x5F97;&#x80FD;&#x591F;&#x5FEB;&#x901F;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x5230;&#x652F;&#x6301;CUDA&#x7684;GPU&#x3002;</a></p>
+<h4 id="&#x7279;&#x5B9A;&#x4E8E;&#x5E73;&#x53F0;&#x7684;&#x884C;&#x4E3A;">&#x7279;&#x5B9A;&#x4E8E;&#x5E73;&#x53F0;&#x7684;&#x884C;&#x4E3A;</h4>
+<p>&#x7531;&#x4E8E;&#x5DE5;&#x4EBA;&#x4F9D;&#x9760;Python&#x7684;<a href="https://docs.python.org/3/library/multiprocessing.html#module-
+multiprocessing" title="\(in Python v3.7\)" target="_blank"> <code>&#x591A;&#x91CD;&#x5904;&#x7406;</code>
+</a>&#xFF0C;&#x5DE5;&#x4EBA;&#x53D1;&#x5C04;&#x884C;&#x4E3A;&#x662F;&#x5728;Windows&#x4E0A;&#x7684;&#x4E0D;&#x540C;&#x6BD4;&#x7684;Unix&#x3002;</p>
+<ul>
+<li><p>&#x5728;Unix&#xFF0C;<code>&#x53C9;&#xFF08;&#xFF09;</code>&#x4E3A;&#x9ED8;&#x8BA4;<a href="https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing" title="\(in Python v3.7\)" target="_blank"> <code>&#x591A;&#x5904;&#x7406;</code></a>&#x542F;&#x52A8;&#x65B9;&#x6CD5;&#x3002;&#x4F7F;&#x7528;<code>&#x53C9;&#xFF08;&#xFF09;</code>&#xFF0C;&#x7AE5;&#x5DE5;&#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x514B;&#x9686;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;<code>&#x6570;&#x636E;&#x96C6;</code>&#x548C;Python&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#x8BBF;&#x95EE;&#x3002;</p>
+</li>
+<li><p>&#x5728;Windows&#x4E2D;&#xFF0C;<code>&#x4EA7;&#x5375;&#xFF08;&#xFF09;</code>&#x4E3A;&#x9ED8;&#x8BA4;<a href="https://docs.python.org/3/library/multiprocessing.html#module-multiprocessing" title="\(in Python v3.7\)" target="_blank"> <code>&#x591A;&#x5904;&#x7406;</code></a>&#x542F;&#x52A8;&#x65B9;&#x6CD5;&#x3002;&#x4F7F;&#x7528;<code>&#x91CD;&#x751F;&#xFF08;&#xFF09;</code>&#xFF0C;&#x53E6;&#x4E00;&#x79CD;&#x89E3;&#x91CA;&#x662F;&#x63A8;&#x51FA;&#x662F;&#x8FD0;&#x884C;&#x5728;&#x4E3B;&#x811A;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x7531;&#x63A5;&#x6536;<code>&#x6570;&#x636E;&#x96C6;</code>&#x5185;&#x90E8;&#x804C;&#x5DE5;&#x529F;&#x80FD;&#xFF0C; <code>collat&#x200B;&#x200B;e_fn</code>&#x548C;&#x901A;&#x8FC7;<a href="https://docs.python.org/3/library/pickle.html#module-pickle" title="\(in Python v3.7\)" target="_blank"> <code>&#x6CE1;&#x83DC;</code></a>&#x5E8F;&#x5217;&#x7684;&#x5176;&#x5B83;&#x53C2;&#x6570;&#x3002;</p>
+</li>
+</ul>
+<p>&#x8FD9;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x5E8F;&#x5217;&#x5316;&#x610F;&#x5473;&#x7740;&#x4F60;&#x5E94;&#x8BE5;&#x91C7;&#x53D6;&#x4E24;&#x4E2A;&#x6B65;&#x9AA4;&#xFF0C;&#x4EE5;&#x786E;&#x4FDD;&#x60A8;&#x4E0E;Windows&#x517C;&#x5BB9;&#xFF0C;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x591A;&#x8FDB;&#x7A0B;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#xFF1A;</p>
+<ul>
+<li><p>&#x5305;&#x88F9;&#x5185;<code>&#x4F60;&#x4EEC;&#x4E2D;&#x7684;&#x5927;&#x591A;&#x6570;&#x4E3B;&#x8981;&#x811A;&#x672C;&#x4EE3;&#x7801;&#xFF0C;&#x5982;&#x679C; __name__  ==  &apos;__main__&apos;&#xFF1A;</code>&#x5757;&#xFF0C;&#x4F7F;&#x786E;&#x4FDD;&#x5B83;&#x4E0D;&#x4F1A;&#x518D;&#x6B21;&#x8FD0;&#x884C;&#xFF08;&#x6700;&#x6709;&#x53EF;&#x80FD;&#x4EA7;&#x751F;&#x8BEF;&#x5DEE;&#xFF09;&#x65F6;&#xFF0C;&#x6BCF;&#x4E2A;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x542F;&#x52A8;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x60A8;&#x7684;&#x6570;&#x636E;&#x96C6;&#x548C; <code>&#x7684;DataLoader</code>&#x5B9E;&#x4F8B;&#x521B;&#x5EFA;&#x903B;&#x8F91;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x5DE5;&#x4EBA;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x3002;</p>
+</li>
+<li><p>&#x786E;&#x4FDD;&#x4EFB;&#x4F55;&#x81EA;&#x5B9A;&#x4E49;<code>collat&#x200B;&#x200B;e_fn</code>&#xFF0C;<code>worker_init_fn</code>&#x6216;<code>&#x6570;&#x636E;&#x96C6;</code>&#x4EE3;&#x7801;&#x58F0;&#x660E;&#x9876;&#x5C42;&#x5B9A;&#x4E49;&#xFF0C;<code>__main__</code>&#x68C0;&#x67E5;&#x4E4B;&#x5916;&#x3002;&#x8FD9;&#x786E;&#x4FDD;&#x4E86;&#x4ED6;&#x4EEC;&#x5728;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x53EF;&#x7528;&#x3002; &#xFF08;&#x8FD9;&#x662F;&#x9700;&#x8981;&#xFF0C;&#x56E0;&#x4E3A;&#x529F;&#x80FD;&#x9178;&#x6D17;&#x4F5C;&#x4E3A;&#x53C2;&#x8003;&#x800C;&#x5DF2;&#xFF0C;&#x4E0D;&#x662F;<code>&#x5B57;&#x8282;&#x7801;</code>&#xFF09;&#x3002;</p>
+</li>
+</ul>
+<h4 id="&#x968F;&#x673A;&#x6027;&#x5728;&#x591A;&#x8FDB;&#x7A0B;&#x6570;&#x636E;&#x52A0;&#x8F7D;">&#x968F;&#x673A;&#x6027;&#x5728;&#x591A;&#x8FDB;&#x7A0B;&#x6570;&#x636E;&#x52A0;&#x8F7D;</h4>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6BCF;&#x4E2A;&#x5DE5;&#x4EBA;&#x5C06;&#x5177;&#x6709;&#x5176;PyTorch&#x79CD;&#x5B50;&#x8BBE;&#x4E3A;<code>base_seed  +  worker_id</code>&#xFF0C;&#x5176;&#x4E2D;<code>base_seed</code>&#x662F;&#x4E00;&#x4E2A;&#x957F;&#x671F;&#x7684;&#xFF0C;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x5176;RNG&#x4E3B;&#x8FC7;&#x7A0B;&#x4E2D;&#x4EA7;&#x751F;&#x7684;&#xFF08;&#x4ECE;&#x800C;&#xFF0C;&#x6D88;&#x8017;&#x4E86;RNG&#x72B6;&#x6001;&#x5F3A;&#x5236;&#xFF09;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x79CD;&#x5B50;&#x5E93;&#x53EF;&#x4EE5;&#x5728;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4EBA;&#xFF08;W.G.&#xFF0C;NumPy&#x7684;&#xFF09;&#xFF0C;&#x4F7F;&#x6BCF;&#x4E2A;&#x5DE5;&#x4EBA;&#x8FD4;&#x56DE;&#x76F8;&#x540C;&#x7684;&#x968F;&#x673A;&#x6570;&#x88AB;&#x590D;&#x5236;&#x3002;
+&#xFF08;&#x53C2;&#x89C1;<a href="notes/faq.html#dataloader-workers-random-seed"> &#x672C;&#x90E8;&#x5206; </a>&#x5728;FAQ&#xFF09;&#x3002;</p>
+<p>&#x5728;<code>worker_init_fn</code>&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;PyTorch&#x79CD;&#x5B50;&#x96C6;&#x5BF9;&#x6BCF;&#x4E2A;&#x5DE5;&#x4EBA;&#x7528;&#x4EFB;&#x4E00; <code>torch.utils.data.get_worker_info&#xFF08;&#xFF09;&#x3002;&#x79CD;&#x5B50;</code>&#x6216;<a href="torch.html#torch.initial_seed" title="torch.initial_seed"> <code>torch.initial_seed&#xFF08;&#xFF09;</code>
+</a>&#xFF0C;&#x5E76;&#x7528;&#x5B83;&#x7684;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x4E4B;&#x524D;&#x79CD;&#x5B50;&#x5176;&#x4ED6;&#x5E93;&#x3002;</p>
+<h2 id="&#x5B58;&#x50A8;&#x5668;&#x94A2;&#x9489;">&#x5B58;&#x50A8;&#x5668;&#x94A2;&#x9489;</h2>
+<p>&#x4E3B;&#x673A;&#x5230;GPU&#x526F;&#x672C;&#x8981;&#x5FEB;&#x5F97;&#x591A;&#xFF0C;&#x5F53;&#x4ED6;&#x4EEC;&#x4ECE;&#x56FA;&#x5B9A;&#xFF08;&#x9501;&#x5B9A;&#x9875;&#xFF09;&#x5185;&#x5B58;&#x8D77;&#x6E90;&#x3002;&#x53C2;&#x89C1;<a href="notes/cuda.html#cuda-memory-%0Apinning"> &#x4F7F;&#x7528;&#x56FA;&#x5B9A;&#x7684;&#x5185;&#x5B58;&#x7F13;&#x51B2;&#x533A; </a>&#x6709;&#x5173;&#x4F55;&#x65F6;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x4E00;&#x822C;&#x91C7;&#x7528;&#x56FA;&#x5B9A;&#x5185;&#x5B58;&#x7684;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x3002;</p>
+<p>&#x4E3A;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#xFF0C;&#x4F7F;<code>pin_memory =&#x771F;</code>&#x5BF9; <code>&#x7684;DataLoader</code>
+&#x5C06;&#x81EA;&#x52A8;&#x628A;&#x6240;&#x83B7;&#x53D6;&#x7684;&#x6570;&#x636E;&#x5F20;&#x91CF;&#x5728;&#x9489;&#x624E;&#x5B58;&#x50A8;&#x5668;&#xFF0C;&#x5E76;&#x56E0;&#x6B64;&#x80FD;&#x591F;&#x66F4;&#x5FEB;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x5230;&#x652F;&#x6301;CUDA&#x7684;GPU&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x5B58;&#x50A8;&#x5668;&#x9501;&#x5B9A;&#x903B;&#x8F91;&#x4EC5;&#x8BC6;&#x522B;&#x5F20;&#x91CF;&#x548C;&#x5730;&#x56FE;&#x4EE5;&#x53CA;&#x5305;&#x542B;&#x5F20;&#x91CF;iterables&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x9501;&#x5B9A;&#x903B;&#x8F91;&#x770B;&#x5230;&#x4E00;&#x4E2A;&#x6279;&#x6B21;&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#xFF08;&#x8FD9;&#x5C06;&#x5982;&#x679C;&#x60A8;&#x6709;&#x53D1;&#x751F;<code>collat&#x200B;&#x200B;e_fn
+&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x95F4;&#x6B47;&#x5F0F;</code>&#xFF09;&#xFF0C;&#x6216;&#x8005;&#x5982;&#x679C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x6279;&#x91CF;&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x9489;&#x624E;&#x903B;&#x8F91;&#x5C06;&#x65E0;&#x6CD5;&#x8BC6;&#x522B;&#x5B83;&#x4EEC;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x4F1A;&#x8FD4;&#x56DE;&#x8BE5;&#x6279;&#x6B21;&#xFF08;&#x6216;&#x90A3;&#x4E9B;&#x5143;&#x4EF6;&#xFF09;&#x800C;&#x6CA1;&#x6709;&#x9489;&#x624E;&#x7684;&#x5B58;&#x50A8;&#x5668;&#x3002;&#x4E3A;&#x4E86;&#x4F7F;&#x5B58;&#x50A8;&#x5668;&#x9489;&#x624E;&#x5B9A;&#x5236;&#x95F4;&#x6B47;&#x6216;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5B9A;&#x4E49;&#x4E0A;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#xFF08;&#x591A;&#x4E2A;&#xFF09;<code>pin_memory</code>&#xFF08;&#xFF09;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x8BF7;&#x53C2;&#x89C1;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x3002;</p>
+<p>&#x4F8B;&#xFF1A;</p>
+<pre><code>class SimpleCustomBatch:
+    def __init__(self, data):
+        transposed_data = list(zip(*data))
+        self.inp = torch.stack(transposed_data[0], 0)
+        self.tgt = torch.stack(transposed_data[1], 0)
+
+    # custom memory pinning method on custom type
+    def pin_memory(self):
+        self.inp = self.inp.pin_memory()
+        self.tgt = self.tgt.pin_memory()
+        return self
+
+def collate_wrapper(batch):
+    return SimpleCustomBatch(batch)
+
+inps = torch.arange(10 * 5, dtype=torch.float32).view(10, 5)
+tgts = torch.arange(10 * 5, dtype=torch.float32).view(10, 5)
+dataset = TensorDataset(inps, tgts)
+
+loader = DataLoader(dataset, batch_size=2, collate_fn=collate_wrapper,
+                    pin_memory=True)
+
+for batch_ndx, sample in enumerate(loader):
+    print(sample.inp.is_pinned())
+    print(sample.tgt.is_pinned())
+</code></pre><p><em>class</em><code>torch.utils.data.``DataLoader</code>( <em>dataset</em> , <em>batch_size=1</em> ,
+<em>shuffle=False</em> , <em>sampler=None</em> , <em>batch_sampler=None</em> , <em>num_workers=0</em> ,
+<em>collate_fn=None</em> , <em>pin_memory=False</em> , <em>drop_last=False</em> , <em>timeout=0</em> ,
+<em>worker_init_fn=None</em> , <em>multiprocessing_context=None</em>
+)<a href="_modules/torch/utils/data/dataloader.html#DataLoader">[source]</a></p>
+<p>&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x3002;&#x7ED3;&#x5408;&#x4E86;&#x6570;&#x636E;&#x96C6;&#x548C;&#x91C7;&#x6837;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x5728;&#x7ED9;&#x5B9A;&#x6570;&#x636E;&#x96C6;&#x7684;&#x8FED;&#x4EE3;&#x3002;</p>
+<p>&#x7684; <code>&#x7684;DataLoader</code>&#x540C;&#x65F6;&#x652F;&#x6301;&#x5730;&#x56FE;&#x98CE;&#x683C;&#x548C;&#x8FED;&#x4EE3;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;&#x4E0E;&#x5355;&#x6216;&#x591A;&#x8FDB;&#x7A0B;&#x52A0;&#x8F7D;&#xFF0C;&#x5B9A;&#x5236;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;&#x548C;&#x53EF;&#x9009;&#x7684;&#x81EA;&#x52A8;&#x914D;&#x6599;&#xFF08;&#x5BF9;&#x7167;&#xFF09;&#x548C;&#x5185;&#x5B58;&#x7275;&#x5236;&#x3002;</p>
+<p>&#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x89C1; <code>torch.utils.data</code>&#x6587;&#x6863;&#x9875;&#x9762;&#x3002;</p>
+<p>Parameters</p>
+<ul>
+<li><p><strong>&#x6570;&#x636E;&#x96C6;</strong> &#xFF08; <em>&#x6570;&#x636E;&#x96C6;</em> &#xFF09; - &#x4ECE;&#x8BE5;&#x6570;&#x636E;&#x96C6;&#x5230;&#x52A0;&#x8F7D;&#x6570;&#x636E;&#x3002;</p>
+</li>
+<li><p><strong>&#x7684;batch_size</strong> &#xFF08;<a href="https://docs.python.org/3/library/functions.html#int" title="\(in Python v3.7\)" target="_blank"> <em>INT</em> </a> <em>&#xFF0C;</em> <em>&#x53EF;&#x9009;</em> &#xFF09; - &#x5982;&#x4F55;&#x6BCF;&#x6279;&#x8BB8;&#x591A;&#x6837;&#x54C1;&#x52A0;&#x8F7D;&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;<code>1</code>&#xFF09;&#x3002;</p>
+</li>
+<li><p><strong>&#x6D17;&#x724C;</strong> &#xFF08;<a href="https://docs.python.org/3/library/functions.html#bool" title="\(in Python v3.7\)" target="_blank"> <em>&#x5E03;&#x5C14;</em> </a> <em>&#xFF0C;</em> <em>&#x53EF;&#x9009;</em> &#xFF09; - &#x8BBE;&#x7F6E;&#x4E3A;<code>&#x771F;</code>&#x4E3A;&#x5177;&#x6709;&#x5728;&#x6BCF;&#x4E2A;&#x5386;&#x5143;&#x6539;&#x7EC4;&#x7684;&#x6570;&#x636E;&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;<code>&#x5047;</code>&#xFF09;&#x3002;</p>
+</li>
+<li><p><strong>&#x53D6;&#x6837;</strong> &#xFF08; <em>&#x53D6;&#x6837;</em> <em>&#xFF0C;</em> <em>&#x53EF;&#x9009;</em> &#xFF09; - &#x5B9A;&#x4E49;&#x4ECE;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x5F97;&#x51FA;&#x6837;&#x54C1;&#x7684;&#x7B56;&#x7565;&#x3002;&#x5982;&#x679C;&#x6307;&#x5B9A;&#xFF0C;<code>&#x6D17;&#x724C;</code>&#x5FC5;&#x987B;<code>&#x5047; [HTG17&#x3002;</code></p>
+</li>
+<li><p><strong>batch_sampler</strong> &#xFF08; <em>&#x53D6;&#x6837;</em> <em>&#xFF0C;</em> <em>&#x53EF;&#x9009;</em> &#xFF09; - &#x8C61;<code>&#x53D6;&#x6837;</code>&#xFF0C;&#x4F46;&#x5728;&#x540C;&#x4E00;&#x65F6;&#x95F4;&#x8FD4;&#x56DE;&#x4E00;&#x6279;&#x6307;&#x6807;&#x3002;&#x4E92;&#x65A5;&#x4E0E;<code>&#x7684;batch_size</code>&#xFF0C;<code>&#x6D17;&#x724C;</code>&#xFF0C;<code>&#x53D6;&#x6837;</code>&#x548C;<code>drop_last</code>&#x3002;</p>
+</li>
+<li><p><strong>num_workers</strong> &#xFF08;<a href="https://docs.python.org/3/library/functions.html#int" title="\(in Python v3.7\)" target="_blank"> <em>INT</em> </a> <em>&#xFF0C;</em> <em>&#x53EF;&#x9009;</em> &#xFF09; - &#x591A;&#x5C11;&#x5B50;&#x8FC7;&#x7A0B;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x3002; <code>0</code>&#x610F;&#x5473;&#x7740;&#x6570;&#x636E;&#x5C06;&#x5728;&#x4E3B;&#x5904;&#x7406;&#x52A0;&#x8F7D;&#x3002; &#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;<code>0</code>&#xFF09;</p>
+</li>
+<li><p><strong>collat&#x200B;&#x200B;e_fn</strong> &#xFF08; <em>&#x53EF;&#x8C03;&#x7528;</em> <em>&#xFF0C;</em> <em>&#x53EF;&#x9009;</em> &#xFF09; - &#x5408;&#x5E76;&#x7684;&#x6837;&#x672C;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x4EE5;&#x5F62;&#x6210;&#x5C0F;&#x6279;&#x91CF;&#x5F20;&#x91CF;&#xFF08;S&#xFF09;&#x7684;&#x3002;&#x4F7F;&#x7528;&#x4ECE;&#x56FE;&#x5F0F;&#x96C6;&#x88C5;&#x6279;&#x5904;&#x7406;&#x65F6;&#x4F7F;&#x7528;&#x3002;</p>
+</li>
+<li><p><strong>pin_memory</strong> &#xFF08;<a href="https://docs.python.org/3/library/functions.html#bool" title="\(in Python v3.7\)" target="_blank"> <em>&#x5E03;&#x5C14;</em> </a> <em>&#xFF0C;</em> <em>&#x53EF;&#x9009;</em> &#xFF09; - &#x5982;&#x679C;<code>&#x771F;</code>&#xFF0C;&#x6570;&#x636E;&#x88C5;&#x8F7D;&#x5C06;&#x5728;&#x8FD4;&#x56DE;&#x4E4B;&#x524D;&#x590D;&#x5236;&#x5230;&#x5F20;&#x91CF;CUDA&#x56FA;&#x5B9A;&#x5185;&#x5B58;&#x3002;&#x5982;&#x679C;&#x6570;&#x636E;&#x5143;&#x7D20;&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#xFF0C;&#x6216;&#x4F60;&#x7684;<code>collat&#x200B;&#x200B;e_fn</code>&#x8FD4;&#x56DE;&#x4E00;&#x6279;&#x5373;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#xFF0C;&#x89C1;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x3002;</p>
+</li>
+<li><p><strong>drop_last</strong> &#xFF08;<a href="https://docs.python.org/3/library/functions.html#bool" title="\(in Python v3.7\)" target="_blank"> <em>&#x5E03;&#x5C14;</em> </a> <em>&#xFF0C;</em> <em>&#x53EF;&#x9009;</em> &#xFF09; - &#x8BBE;&#x7F6E;&#x4E3A;<code>&#x771F;</code>&#x653E;&#x5F03;&#x6700;&#x540E;&#x4E00;&#x6279;&#x4E0D;&#x5168;&#xFF0C;&#x5982;&#x679C;&#x6570;&#x636E;&#x96C6;&#x5927;&#x5C0F;&#x4E0D;&#x662F;&#x7531;&#x6279;&#x91CF;&#x5927;&#x5C0F;&#x6574;&#x9664;&#x3002;&#x5982;&#x679C;<code>&#x5047;</code>&#x548C;&#x6570;&#x636E;&#x96C6;&#x7684;&#x5927;&#x5C0F;&#x662F;&#x4E0D;&#x662F;&#x6279;&#x91CF;&#x5927;&#x5C0F;&#x6574;&#x9664;&#xFF0C;&#x5219;&#x6700;&#x540E;&#x4E00;&#x6279;&#x5C06;&#x8F83;&#x5C0F;&#x3002; &#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;<code>&#x5047;</code>&#xFF09;</p>
+</li>
+<li><p><strong>&#x8D85;&#x65F6;</strong> &#xFF08; <em>&#x6570;&#x5B57;</em> <em>&#xFF0C;</em> <em>&#x53EF;&#x9009;</em> &#xFF09; - &#x5982;&#x679C;&#x662F;&#x9633;&#x6027;&#x7684;&#xFF0C;&#x5BF9;&#x4E8E;&#x4ECE;&#x5DE5;&#x4EBA;&#x6536;&#x96C6;&#x4E00;&#x6279;&#x7684;&#x8D85;&#x65F6;&#x503C;&#x3002;&#x5E94;&#x59CB;&#x7EC8;&#x975E;&#x8D1F;&#x3002; &#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;<code>0</code>&#xFF09;</p>
+</li>
+<li><p><strong>worker_init_fn</strong> &#xFF08; <em>&#x53EF;&#x8C03;&#x7528;</em> <em>&#xFF0C;</em> <em>&#x53EF;&#x9009;</em> &#xFF09; - &#x5982;&#x679C;&#x672A;<code>&#x65E0;</code>&#xFF0C;&#x8FD9;&#x5C06;&#x662F;&#x53EB;&#x4E0A;&#x4E0E;&#x5DE5;&#x4EBA;ID&#x6BCF;&#x4E2A;&#x5DE5;&#x4EBA;&#x5B50;&#xFF08;&#x5728;<code>&#x4E00;&#x4E2A;int [0&#xFF0C; num_workers  -  1]</code>&#xFF09;&#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#xFF0C;&#x5728;&#x64AD;&#x79CD;&#x4E4B;&#x540E;&#x548C;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x4E4B;&#x524D;&#x3002; &#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;<code>&#x65E0;</code>&#xFF09;</p>
+</li>
+</ul>
+<p>Warning</p>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528;<code>&#x83CC;&#x79CD;</code>&#x542F;&#x52A8;&#x65B9;&#x6CD5;&#xFF0C;<code>worker_init_fn</code>&#x4E0D;&#x80FD;&#x662F;unpicklable&#x5BF9;&#x8C61;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;lambda&#x51FD;&#x6570;&#x3002;&#x53C2;&#x89C1;<a href="notes/multiprocessing.html#multiprocessing-best-%0Apractices"> &#x591A;&#x5904;&#x7406;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;
+</a>&#x5728;PyTorch&#x5230;&#x591A;&#x5904;&#x7406;&#x76F8;&#x5173;&#x7684;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x3002;</p>
+<p>Note</p>
+<p><code>LEN&#xFF08;&#x7684;DataLoader&#xFF09;</code>&#x542F;&#x53D1;&#x5F0F;&#x662F;&#x57FA;&#x4E8E;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x53D6;&#x6837;&#x5668;&#x7684;&#x957F;&#x5EA6;&#x3002;&#x5F53;<code>&#x6570;&#x636E;&#x96C6;</code>&#x662F; <code>IterableDataset</code>
+&#xFF0C;&#x5C06;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x65E0;&#x9650;&#x91C7;&#x6837;&#x5668;&#xFF0C;&#x5176;<code>__len__ &#xFF08;&#xFF09;</code>&#x672A;&#x5B9E;&#x73B0;&#xFF0C;&#x56E0;&#x4E3A;&#x5B9E;&#x9645;&#x7684;&#x957F;&#x5EA6;&#x53D6;&#x51B3;&#x4E8E;&#x4E24;&#x4E2A;&#x53EF;&#x8FED;&#x4EE3;&#x4EE5;&#x53CA;&#x591A;&#x8FDB;&#x7A0B;&#x52A0;&#x8F7D;&#x6784;&#x9020;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x9664;&#x975E;&#x4ED6;&#x4EEC;&#x6709;&#x5730;&#x56FE;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5DE5;&#x4F5C;&#xFF0C;&#x4E00;&#x4E2A;&#x4E0D;&#x5E94;&#x8BE5;&#x67E5;&#x8BE2;&#x8BE5;&#x65B9;&#x6CD5;&#x3002;&#x53C2;&#x89C1;&#x6570;&#x636E;&#x96C6;&#x7C7B;&#x578B;&#x5173;&#x4E8E;&#x8FD9;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x96C6;&#x7684;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x3002;</p>
+<p><em>class</em><code>torch.utils.data.``Dataset</code><a href="_modules/torch/utils/data/dataset.html#Dataset">[source]</a></p>
+<p>&#x8868;&#x793A; <code>&#x6570;&#x636E;&#x96C6;</code>&#x7684;&#x62BD;&#x8C61;&#x7C7B;&#x3002;</p>
+<p>&#x8868;&#x793A;&#x4ECE;&#x952E;&#x6570;&#x636E;&#x6837;&#x672C;&#x7684;&#x5730;&#x56FE;&#x6240;&#x6709;&#x6570;&#x636E;&#x96C6;&#x5E94;&#x8BE5;&#x7EE7;&#x627F;&#x5B83;&#x3002;&#x6240;&#x6709;&#x5B50;&#x7C7B;&#x5E94;&#x8BE5;overrite <code>__getitem __&#xFF08;&#xFF09;</code>&#xFF0C;&#x652F;&#x6301;&#x83B7;&#x53D6;&#x5BF9;&#x4E8E;&#x7ED9;&#x5B9A;&#x7684;&#x5BC6;&#x94A5;&#x6570;&#x636E;&#x6837;&#x672C;&#x3002;&#x5B50;&#x7C7B;&#x8FD8;&#x53EF;&#x4EE5;&#x4EFB;&#x9009;&#x5730;&#x8986;&#x76D6;<code>__len __&#xFF08;&#xFF09;</code>&#xFF0C;&#x9884;&#x8BA1;&#x7531;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x96C6;&#x7684;&#x5927;&#x5C0F;&#x8BB8;&#x591A; <code>&#x53D6;&#x6837;</code>&#x5B9E;&#x65BD;&#x65B9;&#x5F0F;&#x548C;&#x7684; <code>&#x7684;DataLoader</code>&#x7684;&#x9ED8;&#x8BA4;&#x9009;&#x9879;&#x3002;</p>
+<p>Note</p>
+<p><code>&#x7684;DataLoader</code>&#x7F3A;&#x7701;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x91C7;&#x6837;&#x80FD;&#x4EA7;&#x751F;&#x6574;&#x6570;&#x6307;&#x6570;&#x3002;&#x4E3A;&#x4E86;&#x4F7F;&#x5B83;&#x4E0E;&#x5730;&#x56FE;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x96C6;&#x4E0E;&#x975E;&#x6574;&#x6307;&#x6570;/&#x952E;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x81EA;&#x5B9A;&#x4E49;&#x91C7;&#x6837;&#x3002;</p>
+<p><em>class</em><code>torch.utils.data.``IterableDataset</code><a href="_modules/torch/utils/data/dataset.html#IterableDataset">[source]</a></p>
+<p>&#x53EF;&#x8FED;&#x4EE3;&#x7684;&#x6570;&#x636E;&#x96C6;&#x3002;</p>
+<p>&#x4EE3;&#x8868;&#x6570;&#x636E;&#x6837;&#x672C;&#x7684;&#x8FED;&#x4EE3;&#x6240;&#x6709;&#x6570;&#x636E;&#x96C6;&#x5E94;&#x8BE5;&#x7EE7;&#x627F;&#x5B83;&#x3002;&#x5F53;&#x6570;&#x636E;&#x6765;&#x81EA;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x6D41;&#x7684;&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#x662F;&#x7279;&#x522B;&#x6709;&#x7528;&#x7684;&#x3002;</p>
+<p>&#x6240;&#x6709;&#x5B50;&#x7C7B;&#x5E94;&#x8BE5;overrite <code>__iter __&#xFF08;&#xFF09;</code>&#xFF0C;&#x8FD9;&#x5C06;&#x8FD4;&#x56DE;&#x6837;&#x672C;&#x7684;&#x8FED;&#x4EE3;&#x5728;&#x8BE5;&#x6570;&#x636E;&#x96C6;&#x3002;</p>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x5B50;&#x7C7B;&#x4F7F;&#x7528;&#x5177;&#x6709; <code>&#x7684;DataLoader</code>&#xFF0C;&#x5728;&#x6570;&#x636E;&#x96C6;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x9879;&#x76EE;&#x5C06;&#x88AB;&#x4ECE;&#x5F97;&#x5230;&#x7684; <code>&#x7684;DataLoader</code>&#x8FED;&#x4EE3;&#x5668;&#x3002;&#x5F53;<code>num_workers  &amp; GT ;  0</code>&#xFF0C;&#x6BCF;&#x4E2A;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x5C06;&#x5177;&#x6709;&#x6570;&#x636E;&#x96C6;&#x5BF9;&#x8C61;&#x7684;&#x4E0D;&#x540C;&#x62F7;&#x8D1D;&#xFF0C;&#x56E0;&#x6B64;&#x901A;&#x5E38;&#x5E0C;&#x671B;&#x72EC;&#x7ACB;&#x5730;&#x914D;&#x7F6E;&#x6BCF;&#x4E2A;&#x62F7;&#x8D1D;&#xFF0C;&#x4EE5;&#x907F;&#x514D;&#x4ECE;&#x5DE5;&#x4EBA;&#x8FD4;&#x56DE;&#x91CD;&#x590D;&#x6570;&#x636E;&#x3002;<code>get_worker_info&#xFF08;&#xFF09;</code>&#xFF0C;&#x5728;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x5173;&#x4E8E;&#x5DE5;&#x4EBA;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4E00;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x96C6;&#x7684;<code>__iter __&#xFF08;&#xFF09;</code>&#x65B9;&#x6CD5;&#x6216; <code>&#x7684;DataLoader</code>&#x7684;<code>worker_init_fn</code>&#x9009;&#x9879;&#x6765;&#x4FEE;&#x6539;&#x6BCF;&#x4E2A;&#x526F;&#x672C;&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
+<p>&#x5B9E;&#x65BD;&#x4F8B;1&#xFF1A;&#x5728;&#x6240;&#x6709;&#x5DE5;&#x4EBA;&#x5206;&#x88C2;&#x5DE5;&#x4F5C;&#x91CF;<code>__iter __&#xFF08;&#xFF09;</code>&#xFF1A;</p>
+<pre><code>&gt;&gt;&gt; class MyIterableDataset(torch.utils.data.IterableDataset):
+...     def __init__(self, start, end):
+...         super(MyIterableDataset).__init__()
+...         assert end &gt; start, &quot;this example code only works with end &gt;= start&quot;
+...         self.start = start
+...         self.end = end
+...
+...     def __iter__(self):
+...         worker_info = torch.utils.data.get_worker_info()
+...         if worker_info is None:  # single-process data loading, return the full iterator
+...             iter_start = self.start
+...             iter_end = self.end
+...         else:  # in a worker process
+...             # split workload
+...             per_worker = int(math.ceil((self.end - self.start) / float(worker_info.num_workers)))
+...             worker_id = worker_info.id
+...             iter_start = self.start + worker_id * per_worker
+...             iter_end = min(iter_start + per_worker, self.end)
+...         return iter(range(iter_start, iter_end))
+...
+&gt;&gt;&gt; # should give same set of data as range(3, 7), i.e., [3, 4, 5, 6].
+&gt;&gt;&gt; ds = MyIterableDataset(start=3, end=7)
+
+&gt;&gt;&gt; # Single-process loading
+&gt;&gt;&gt; print(list(torch.utils.data.DataLoader(ds, num_workers=0)))
+[3, 4, 5, 6]
+
+&gt;&gt;&gt; # Mult-process loading with two worker processes
+&gt;&gt;&gt; # Worker 0 fetched [3, 4].  Worker 1 fetched [5, 6].
+&gt;&gt;&gt; print(list(torch.utils.data.DataLoader(ds, num_workers=2)))
+[3, 5, 4, 6]
+
+&gt;&gt;&gt; # With even more workers
+&gt;&gt;&gt; print(list(torch.utils.data.DataLoader(ds, num_workers=20)))
+[3, 4, 5, 6]
+</code></pre><p>&#x5B9E;&#x65BD;&#x4F8B;2&#xFF1A;&#x4F7F;&#x7528;<code>&#x5728;&#x6240;&#x6709;&#x5DE5;&#x4EBA;&#x5206;&#x88C2;&#x5DE5;&#x4F5C;&#x91CF;worker_init_fn</code>&#xFF1A;</p>
+<pre><code>&gt;&gt;&gt; class MyIterableDataset(torch.utils.data.IterableDataset):
+...     def __init__(self, start, end):
+...         super(MyIterableDataset).__init__()
+...         assert end &gt; start, &quot;this example code only works with end &gt;= start&quot;
+...         self.start = start
+...         self.end = end
+...
+...     def __iter__(self):
+...         return iter(range(self.start, self.end))
+...
+&gt;&gt;&gt; # should give same set of data as range(3, 7), i.e., [3, 4, 5, 6].
+&gt;&gt;&gt; ds = MyIterableDataset(start=3, end=7)
+
+&gt;&gt;&gt; # Single-process loading
+&gt;&gt;&gt; print(list(torch.utils.data.DataLoader(ds, num_workers=0)))
+[3, 4, 5, 6]
+&gt;&gt;&gt;
+&gt;&gt;&gt; # Directly doing multi-process loading yields duplicate data
+&gt;&gt;&gt; print(list(torch.utils.data.DataLoader(ds, num_workers=2)))
+[3, 3, 4, 4, 5, 5, 6, 6]
+
+&gt;&gt;&gt; # Define a `worker_init_fn`that configures each dataset copy differently
+&gt;&gt;&gt; def worker_init_fn(worker_id):
+...     worker_info = torch.utils.data.get_worker_info()
+...     dataset = worker_info.dataset  # the dataset copy in this worker process
+...     overall_start = dataset.start
+...     overall_end = dataset.end
+...     # configure the dataset to only process the split workload
+...     per_worker = int(math.ceil((overall_end - overall_start) / float(worker_info.num_workers)))
+...     worker_id = worker_info.id
+...     dataset.start = overall_start + worker_id * per_worker
+...     dataset.end = min(dataset.start + per_worker, overall_end)
+...
+
+&gt;&gt;&gt; # Mult-process loading with the custom `worker_init_fn`
+&gt;&gt;&gt; # Worker 0 fetched [3, 4].  Worker 1 fetched [5, 6].
+&gt;&gt;&gt; print(list(torch.utils.data.DataLoader(ds, num_workers=2, worker_init_fn=worker_init_fn)))
+[3, 5, 4, 6]
+
+&gt;&gt;&gt; # With even more workers
+&gt;&gt;&gt; print(list(torch.utils.data.DataLoader(ds, num_workers=20, worker_init_fn=worker_init_fn)))
+[3, 4, 5, 6]
+</code></pre><p><em>class</em><code>torch.utils.data.``TensorDataset</code>( <em>*tensors</em>
+)<a href="_modules/torch/utils/data/dataset.html#TensorDataset">[source]</a></p>
+<p>&#x6570;&#x636E;&#x96C6;&#x5305;&#x88C5;&#x5F20;&#x91CF;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x6837;&#x54C1;&#x5C06;&#x6CBF;&#x6240;&#x8FF0;&#x7B2C;&#x4E00;&#x7EF4;&#x5EA6;&#x7684;&#x7D22;&#x5F15;&#x5F20;&#x91CF;&#x8FDB;&#x884C;&#x68C0;&#x7D22;&#x3002;</p>
+<p>Parameters</p>
+<p><strong>*&#x5F20;&#x91CF;</strong> &#xFF08;<a href="tensors.html#torch.Tensor" title="torch.Tensor"> <em>&#x5F20;&#x91CF;</em> </a>&#xFF09; -
+&#x5177;&#x6709;&#x6240;&#x8FF0;&#x7B2C;&#x4E00;&#x5C3A;&#x5BF8;&#x7684;&#x5927;&#x5C0F;&#x76F8;&#x540C;&#x5F20;&#x91CF;&#x3002;</p>
+<p><em>class</em><code>torch.utils.data.``ConcatDataset</code>( <em>datasets</em>
+)<a href="_modules/torch/utils/data/dataset.html#ConcatDataset">[source]</a></p>
+<p>&#x6570;&#x636E;&#x96C6;&#x4F5C;&#x4E3A;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x7684;&#x4E32;&#x8054;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x7C7B;&#x662F;&#x7EC4;&#x88C5;&#x4E0D;&#x540C;&#x7684;&#x73B0;&#x6709;&#x6570;&#x636E;&#x96C6;&#x662F;&#x6709;&#x7528;&#x7684;&#x3002;</p>
+<p>Parameters</p>
+<p><strong>&#x6570;&#x636E;&#x96C6;</strong> &#xFF08; <em>&#x5E8F;&#x5217;</em> &#xFF09; - &#x6570;&#x636E;&#x96C6;&#x7684;&#x5217;&#x8868;&#x8981;&#x8FDE;&#x63A5;</p>
+<p><em>class</em><code>torch.utils.data.``ChainDataset</code>( <em>datasets</em>
+)<a href="_modules/torch/utils/data/dataset.html#ChainDataset">[source]</a></p>
+<p>&#x6570;&#x636E;&#x96C6;chainning&#x591A;&#x4E2A; <code>IterableDataset</code>&#x79D2;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x7C7B;&#x662F;&#x7EC4;&#x88C5;&#x4E0D;&#x540C;&#x7684;&#x73B0;&#x6709;&#x6570;&#x636E;&#x96C6;&#x6D41;&#x662F;&#x6709;&#x7528;&#x7684;&#x3002;&#x8BE5;chainning&#x64CD;&#x4F5C;&#x4E0A;&#x5373;&#x65F6;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x4E32;&#x8054;&#x4E0E;&#x6B64;&#x7C7B;&#x5927;&#x578B;&#x6570;&#x636E;&#x96C6;&#x5C06;&#x662F;&#x6709;&#x6548;&#x7684;&#x3002;</p>
+<p>Parameters</p>
+<p><strong>&#x6570;&#x636E;&#x96C6;</strong> &#xFF08; <em>IterableDataset</em> &#x7684;&#x8FED;&#x4EE3;&#xFF09; - &#x6570;&#x636E;&#x96C6;&#x94FE;&#x63A5;&#x5728;&#x4E00;&#x8D77;</p>
+<p><em>class</em><code>torch.utils.data.``Subset</code>( <em>dataset</em> , <em>indices</em>
+)<a href="_modules/torch/utils/data/dataset.html#Subset">[source]</a></p>
+<p>&#x5728;&#x6307;&#x5B9A;&#x7684;&#x7D22;&#x5F15;&#x6570;&#x636E;&#x96C6;&#x7684;&#x5B50;&#x96C6;&#x3002;</p>
+<p>Parameters</p>
+<ul>
+<li><p><strong>&#x6570;&#x636E;&#x96C6;</strong> &#xFF08; <em>&#x6570;&#x636E;&#x96C6;</em> &#xFF09; - &#x6574;&#x4E2A;&#x6570;&#x636E;&#x96C6;</p>
+</li>
+<li><p><strong>&#x6307;&#x6570;</strong> &#xFF08; <em>&#x5E8F;&#x5217;</em> &#xFF09; - &#x5728;&#x6574;&#x4E2A;&#x7EC4;&#x7D22;&#x5F15;&#x9009;&#x62E9;&#x7684;&#x5B50;&#x96C6;</p>
+</li>
+</ul>
+<p><code>torch.utils.data.``get_worker_info</code>()<a href="_modules/torch/utils/data/_utils/worker.html#get_worker_info">[source]</a></p>
+<p>&#x8FD4;&#x56DE;&#x5F53;&#x524D; <code>&#x7684;DataLoader</code>&#x8FED;&#x4EE3;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x5DE5;&#x4EBA;&#x53EB;&#xFF0C;&#x8FD9;&#x5C06;&#x8FD4;&#x56DE;&#x4FDD;&#x8BC1;&#x5177;&#x6709;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<ul>
+<li><p><code>ID</code>&#xFF1A;&#x5F53;&#x524D;&#x4F5C;&#x4E1A;&#x4EBA;&#x5458;ID&#x3002;</p>
+</li>
+<li><p><code>num_workers</code>&#xFF1A;&#x5DE5;&#x4EBA;&#x7684;&#x603B;&#x6570;&#x3002;</p>
+</li>
+<li><p><code>&#x79CD;&#x5B50;</code>&#xFF1A;&#x5F53;&#x524D;&#x5DE5;&#x4EBA;&#x968F;&#x673A;&#x79CD;&#x5B50;&#x96C6;&#x3002;&#x6B64;&#x503C;&#x7531;&#x4E3B;&#x8FDB;&#x7A0B;RNG&#x548C;&#x5DE5;&#x4EBA;&#x7684;ID&#x6765;&#x786E;&#x5B9A;&#x3002;&#x53C2;&#x89C1; <code>&#x7684;DataLoader</code>&#x7684;&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x7684;&#x6587;&#x6863;&#x3002;</p>
+</li>
+<li><p><code>&#x6570;&#x636E;&#x96C6;</code>&#xFF1A;&#x6570;&#x636E;&#x96C6;&#x5BF9;&#x8C61;&#x5728; <strong>&#x8FD9;&#x91CC;</strong> &#x8FC7;&#x7A0B;&#x7684;&#x526F;&#x672C;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x5C06;&#x662F;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x8FDB;&#x7A0B;&#x6BD4;&#x4E00;&#x4E2A;&#x4E3B;&#x5904;&#x7406;&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+</li>
+</ul>
+<p>&#x5F53;&#x4E3B;&#x8FC7;&#x7A0B;&#x8C03;&#x7528;&#xFF0C;&#x8FD9;&#x5C06;&#x8FD4;&#x56DE;<code>&#x65E0;</code>&#x3002;</p>
+<p>Note</p>
+<p>&#x5F53;&#x6240;&#x4F7F;&#x7528;&#x7684;<code>worker_init_fn</code>&#x4F20;&#x9012;&#x5230; <code>&#x7684;DataLoader</code>&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x662F;&#x8BBE;&#x7F6E;&#x6BCF;&#x4E2A;&#x5DE5;&#x4EBA;&#x6709;&#x7528;&#x8FC7;&#x7A0B;&#x4E0D;&#x540C;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x4F7F;&#x7528;<code>worker_id</code>&#x914D;&#x7F6E;<code>&#x6570;&#x636E;&#x96C6;</code>&#x76EE;&#x7684;&#x662F;&#x53EA;&#x8BFB;&#x5206;&#x7247;&#x6570;&#x636E;&#x96C6;&#x7684;&#x7279;&#x5B9A;&#x90E8;&#x5206;&#xFF0C;&#x6216;&#x4F7F;&#x7528;<code>&#x79CD;&#x5B50;</code>&#x79CD;&#x5B50;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x96C6;&#x7684;&#x4EE3;&#x7801;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;NumPy&#x7684;&#xFF09;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x6587;&#x5E93;&#x3002;</p>
+<p><code>torch.utils.data.``random_split</code>( <em>dataset</em> , <em>lengths</em>
+)<a href="_modules/torch/utils/data/dataset.html#random_split">[source]</a></p>
+<p>&#x968F;&#x673A;&#x5206;&#x5272;&#x6570;&#x636E;&#x96C6;&#x5230;&#x7ED9;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x975E;&#x91CD;&#x53E0;&#x7684;&#x65B0;&#x7684;&#x6570;&#x636E;&#x96C6;&#x3002;</p>
+<p>Parameters</p>
+<ul>
+<li><p><strong>&#x6570;&#x636E;&#x96C6;</strong> &#xFF08; <em>&#x6570;&#x636E;&#x96C6;</em> &#xFF09; - &#x6570;&#x636E;&#x96C6;&#x8981;&#x88AB;&#x5206;&#x5272;</p>
+</li>
+<li><p><strong>&#x957F;&#x5EA6;</strong> &#xFF08; <em>&#x5E8F;&#x5217;</em> &#xFF09; - &#x8981;&#x4EA7;&#x751F;&#x88C2;&#x7F1D;&#x7684;&#x957F;&#x5EA6;</p>
+</li>
+</ul>
+<p><em>class</em><code>torch.utils.data.``Sampler</code>( <em>data_source</em>
+)<a href="_modules/torch/utils/data/sampler.html#Sampler">[source]</a></p>
+<p>&#x57FA;&#x7C7B;&#x7684;&#x6240;&#x6709;&#x53D6;&#x6837;&#x3002;</p>
+<p>&#x6BCF;&#x91C7;&#x6837;&#x7684;&#x5B50;&#x7C7B;&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;<code>__iter __&#xFF08;&#xFF09;</code>&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x8FED;&#x4EE3;&#x6570;&#x636E;&#x96C6;&#x7684;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x548C;<code>__len __&#xFF08;&#xFF09;</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x8FD4;&#x56DE;&#x6240;&#x8FD4;&#x56DE;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x7684;&#x957F;&#x5EA6;&#x3002;</p>
+<p>Note</p>
+<p>&#x7684;<code>__len __&#xFF08;&#xFF09;</code>&#x65B9;&#x6CD5;&#x5E76;&#x4E0D;&#x4E25;&#x683C; <code>&#x7684;DataLoader</code>&#x5FC5;&#x9700;&#x7684;&#xFF0C;&#x4F46;&#x5728;&#x6D89;&#x53CA;&#x4EFB;&#x4F55;&#x8BA1;&#x7B97;&#x9884;&#x671F;&#x7684; <code>&#x7684;DataLoader</code>&#x7684;&#x957F;&#x5EA6;&#x3002;</p>
+<p><em>class</em><code>torch.utils.data.``SequentialSampler</code>( <em>data_source</em>
+)<a href="_modules/torch/utils/data/sampler.html#SequentialSampler">[source]</a></p>
+<p>&#x987A;&#x5E8F;&#x5730;&#x5C06;&#x6837;&#x54C1;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x603B;&#x662F;&#x4EE5;&#x76F8;&#x540C;&#x7684;&#x987A;&#x5E8F;&#x3002;</p>
+<p>Parameters</p>
+<p><strong>DATA_SOURCE</strong> &#xFF08; <em>&#x6570;&#x636E;&#x96C6;</em> &#xFF09; - &#x6570;&#x636E;&#x96C6;&#x4EE5;&#x4ECE;&#x91C7;&#x6837;</p>
+<p><em>class</em><code>torch.utils.data.``RandomSampler</code>( <em>data_source</em> , <em>replacement=False</em>
+, <em>num_samples=None</em>
+)<a href="_modules/torch/utils/data/sampler.html#RandomSampler">[source]</a></p>
+<p>&#x6837;&#x54C1;&#x5143;&#x4EF6;&#x4E2D;&#x968F;&#x673A;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x66F4;&#x6362;&#xFF0C;&#x7136;&#x540E;&#x4ECE;&#x4E00;&#x4E2A;&#x6D17;&#x724C;&#x7684;&#x6570;&#x636E;&#x96C6;&#x8FDB;&#x884C;&#x91C7;&#x6837;&#x3002;&#x5982;&#x679C;&#x5177;&#x6709;&#x7F6E;&#x6362;&#xFF0C;&#x7136;&#x540E;&#x7528;&#x6237;&#x53EF;&#x6307;&#x5B9A;<code>num_samples</code>&#x7ED8;&#x5236;&#x3002;</p>
+<p>Parameters</p>
+<ul>
+<li><p><strong>data_source</strong> ( <em>Dataset</em>) &#x2013; dataset to sample from</p>
+</li>
+<li><p><strong>&#x66FF;&#x6362;</strong> &#xFF08;<a href="https://docs.python.org/3/library/functions.html#bool" title="\(in Python v3.7\)" target="_blank"> <em>&#x5E03;&#x5C14;</em> </a>&#xFF09; - &#x6837;&#x54C1;&#x7ED8;&#x5236;&#x66FF;&#x6362;&#x5982;&#x679C;<code>&#x771F;</code>&#xFF0C;&#x9ED8;&#x8BA4;=<code>False</code></p>
+</li>
+<li><p><strong>num_samples</strong> &#xFF08;<a href="https://docs.python.org/3/library/functions.html#int" title="\(in Python v3.7\)" target="_blank"> <em>INT</em> </a>&#xFF09; - &#x6837;&#x672C;&#x7684;&#x6570;&#x76EE;&#x6765;&#x7ED8;&#x5236;&#xFF0C;&#x9ED8;&#x8BA4;=<code>LEN&#xFF08;&#x6570;&#x636E;&#x96C6;&#xFF09;</code>&#x3002;&#x8BE5;&#x53C2;&#x6570;&#x5E94;&#x8BE5;&#x5F53;&#x66FF;&#x6362;&#x662F;<code>&#x771F;</code>&#x4EC5;&#x88AB;&#x6307;&#x5B9A;&#x3002;</p>
+</li>
+</ul>
+<p><em>class</em><code>torch.utils.data.``SubsetRandomSampler</code>( <em>indices</em>
+)<a href="_modules/torch/utils/data/sampler.html#SubsetRandomSampler">[source]</a></p>
+<p>&#x968F;&#x673A;&#x6837;&#x672C;&#x5143;&#x7D20;&#x4ECE;&#x6307;&#x6570;&#x7684;&#x5B9A;&#x5217;&#x8868;&#xFF0C;&#x65E0;&#x9700;&#x66F4;&#x6362;&#x3002;</p>
+<p>Parameters</p>
+<p><strong>&#x6307;&#x6570;</strong> &#xFF08; <em>&#x5E8F;&#x5217;</em> &#xFF09; - &#x7D22;&#x5F15;&#x7684;&#x5E8F;&#x5217;</p>
+<p><em>class</em><code>torch.utils.data.``WeightedRandomSampler</code>( <em>weights</em> , <em>num_samples</em> ,
+<em>replacement=True</em>
+)<a href="_modules/torch/utils/data/sampler.html#WeightedRandomSampler">[source]</a></p>
+<p>&#x4ECE;<code>&#x6837;&#x54C1;&#x5143;&#x7D20;[0&#xFF0C;..&#xFF0C;LEN&#xFF08;&#x6743;&#x91CD;&#xFF09;-1]</code>&#x4E0E;&#x7ED9;&#x5B9A;&#x7684;&#x6982;&#x7387;&#xFF08;&#x6743;&#x91CD;&#xFF09;&#x3002;</p>
+<p>Parameters</p>
+<ul>
+<li><p><strong>&#x6743;&#x91CD;</strong> &#xFF08; <em>&#x5E8F;&#x5217;</em> &#xFF09; - &#x6743;&#x91CD;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x603B;&#x7ED3;&#x5230;&#x4E00;&#x4E2A;</p>
+</li>
+<li><p><strong>num_samples</strong> &#xFF08;<a href="https://docs.python.org/3/library/functions.html#int" title="\(in Python v3.7\)" target="_blank"> <em>INT</em> </a>&#xFF09; - &#x6837;&#x672C;&#x7684;&#x6570;&#x76EE;&#x6765;&#x7ED8;&#x5236;</p>
+</li>
+<li><p><strong>&#x66FF;&#x6362;</strong> &#xFF08;<a href="https://docs.python.org/3/library/functions.html#bool" title="\(in Python v3.7\)" target="_blank"> <em>&#x5E03;&#x5C14;</em> </a>&#xFF09; - &#x5982;&#x679C;<code>&#x771F;</code>&#xFF0C;&#x6837;&#x54C1;&#x7ED8;&#x5236;&#x66F4;&#x6362;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x662F;&#xFF0C;&#x4ED6;&#x4EEC;&#x7ED8;&#x5236;&#x65E0;&#x9700;&#x66F4;&#x6362;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5F53;&#x6307;&#x6570;&#x6837;&#x672C;&#x7ED8;&#x5236;&#x4E3A;&#x884C;&#xFF0C;&#x4E0D;&#x80FD;&#x518D;&#x4E3A;&#x8BE5;&#x884C;&#x753B;&#x51FA;&#x3002;</p>
+</li>
+</ul>
+<p>&#x4F8B;</p>
+<pre><code>&gt;&gt;&gt; list(WeightedRandomSampler([0.1, 0.9, 0.4, 0.7, 3.0, 0.6], 5, replacement=True))
+[0, 0, 0, 1, 0]
+&gt;&gt;&gt; list(WeightedRandomSampler([0.9, 0.4, 0.05, 0.2, 0.3, 0.1], 5, replacement=False))
+[0, 1, 4, 3, 2]
+</code></pre><p><em>class</em><code>torch.utils.data.``BatchSampler</code>( <em>sampler</em> , <em>batch_size</em> ,
+<em>drop_last</em> )<a href="_modules/torch/utils/data/sampler.html#BatchSampler">[source]</a></p>
+<p>&#x5305;&#x88C5;&#x53E6;&#x4E00;&#x4E2A;&#x91C7;&#x6837;&#xFF0C;&#x4EE5;&#x4EA7;&#x751F;&#x5C0F;&#x6279;&#x91CF;&#x6307;&#x6570;&#x3002;</p>
+<p>Parameters</p>
+<ul>
+<li><p><strong>&#x53D6;&#x6837;</strong> &#xFF08; <em>&#x53D6;&#x6837;</em> &#xFF09; - &#x57FA;&#x91C7;&#x6837;&#x5668;&#x3002;</p>
+</li>
+<li><p><strong>&#x7684;batch_size</strong> &#xFF08;<a href="https://docs.python.org/3/library/functions.html#int" title="\(in Python v3.7\)" target="_blank"> <em>INT</em> </a>&#xFF09; - &#x5C0F;&#x6279;&#x91CF;&#x7684;&#x5927;&#x5C0F;&#x3002;</p>
+</li>
+<li><p><strong>drop_last</strong> &#xFF08;<a href="https://docs.python.org/3/library/functions.html#bool" title="\(in Python v3.7\)" target="_blank"> <em>&#x5E03;&#x5C14;</em> </a>&#xFF09; - &#x5982;&#x679C;<code>&#x771F;</code>&#xFF0C;&#x91C7;&#x6837;&#x5668;&#x5C06;&#x4E0B;&#x964D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6279;&#xFF0C;&#x5982;&#x679C;&#x5B83;&#x7684;&#x89C4;&#x6A21;&#x5C06;&#x662F;&#x5C0F;&#x4E8E;<code>&#x7684;batch_size</code></p>
+</li>
+</ul>
+<p>Example</p>
+<pre><code>&gt;&gt;&gt; list(BatchSampler(SequentialSampler(range(10)), batch_size=3, drop_last=False))
+[[0, 1, 2], [3, 4, 5], [6, 7, 8], [9]]
+&gt;&gt;&gt; list(BatchSampler(SequentialSampler(range(10)), batch_size=3, drop_last=True))
+[[0, 1, 2], [3, 4, 5], [6, 7, 8]]
+</code></pre><p><em>class</em><code>torch.utils.data.distributed.``DistributedSampler</code>( <em>dataset</em> ,
+<em>num_replicas=None</em> , <em>rank=None</em> , <em>shuffle=True</em>
+)<a href="_modules/torch/utils/data/distributed.html#DistributedSampler">[source]</a></p>
+<p>&#x53D6;&#x6837;&#x5668;&#xFF0C;&#x9650;&#x5236;&#x6570;&#x636E;&#x52A0;&#x8F7D;&#x5230;&#x6570;&#x636E;&#x96C6;&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x96C6;&#x3002;</p>
+<p>&#x5B83;&#x4E0E;<a href="nn.html#torch.nn.parallel.DistributedDataParallel" title="torch.nn.parallel.DistributedDataParallel"> <code>torch.nn.parallel.DistributedDataParallel</code>
+</a>&#x7ED3;&#x5408;&#x7279;&#x522B;&#x6709;&#x7528;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6BCF;&#x4E2A;&#x8FC7;&#x7A0B;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;DistributedSampler&#x5B9E;&#x4F8B;&#x4F5C;&#x4E3A;&#x7684;DataLoader&#x91C7;&#x6837;&#x5668;&#xFF0C;&#x5E76;&#x52A0;&#x8F7D;&#x539F;&#x59CB;&#x6570;&#x636E;&#x96C6;&#x5373;&#x6392;&#x5B83;&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x96C6;&#x3002;</p>
+<p>Note</p>
+<p>&#x6570;&#x636E;&#x96C6;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x6052;&#x5B9A;&#x7684;&#x5927;&#x5C0F;&#x3002;</p>
+<p>Parameters</p>
+<ul>
+<li><p><strong>&#x6570;&#x636E;&#x96C6;</strong> - &#x6570;&#x636E;&#x96C6;&#x7528;&#x4E8E;&#x91C7;&#x6837;&#x3002;</p>
+</li>
+<li><p><strong>num_replicas</strong> &#xFF08; <em>&#x53EF;&#x9009;</em> &#xFF09; - &#x7684;&#x53C2;&#x4E0E;&#x5206;&#x5E03;&#x5F0F;&#x8BAD;&#x7EC3;&#x7684;&#x8FDB;&#x7A0B;&#x6570;&#x3002;</p>
+</li>
+<li><p><strong>&#x79E9;</strong> &#xFF08; <em>&#x53EF;&#x9009;</em> &#xFF09; - num_replicas&#x5185;&#x7684;&#x5F53;&#x524D;&#x8FC7;&#x7A0B;&#x7684;&#x79E9;&#x3002;</p>
+</li>
+<li><p><strong>&#x6D17;&#x724C;</strong> &#xFF08; <em>&#x53EF;&#x9009;</em> &#xFF09; - &#x5982;&#x679C;&#x4E3A;true&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#xFF09;&#xFF0C;&#x91C7;&#x6837;&#x5668;&#x5C06;&#x4F1A;&#x6D17;&#x724C;&#x6307;&#x6570;</p>
+</li>
+</ul>
+<p><a href="dlpack.html" title="torch.utils.dlpack">Next <img src="_static/images/chevron-right-orange.svg" alt=""></a> <a href="cpp_extension.html" title="torch.utils.cpp_extension"><img src="_static/images/chevron-right-orange.svg" alt="">
+Previous</a></p>
+<hr>
+<p>&#xA9;&#x7248;&#x6743;&#x6240;&#x6709;2019&#x5E74;&#xFF0C;Torch &#x8D21;&#x732E;&#x8005;&#x3002;</p>
+<p><hr></p>
+<div align="center">
+    <p><a href="http://www.apachecn.org" target="_blank"><font face="KaiTi" size="6" color="red">&#x6211;&#x4EEC;&#x4E00;&#x76F4;&#x5728;&#x52AA;&#x529B;</font></a></p>
+    <p><a href="https://github.com/apachecn/pytorch-doc-zh/" target="_blank">apachecn/pytorch-doc-zh</a></p>
+    <p><iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=pytorch-doc-zh&amp;type=watch&amp;count=true&amp;v=2" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=pytorch-doc-zh&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=pytorch-doc-zh&amp;type=fork&amp;count=true" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <a target="_blank" href="shang.qq.com/wpa/qunwpa"><img border="0" src="http://data.apachecn.org/img/logo/ApacheCN-group.png" alt="ML | ApacheCN" title="ML | ApacheCN"></a></p>
+</div>
+ <div style="text-align:center;margin:0 0 10.5px;">
+     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3565452474788507" data-ad-slot="2543897000">
+     </ins>
+     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?38525fdac4b5d4403900b943d4e7dd91";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102475051-10"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-102475051-10');
+    </script>
+</div>
+
+<p><meta name="google-site-verification" content="pyo9N70ZWyh8JB43bIu633mhxesJ1IcwWCZlM3jUfFo"></p>
+<p><iframe src="https://www.bilibili.com/read/cv2710377" style="display:none"></iframe>
+<img src="http://t.cn/AiCoDHwb" hidden="hidden"></p>
+<div>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+    <div id="gitalk-container"></div>
+    <script type="text/javascript">
+        const gitalk = new Gitalk({
+        clientID: '2e62dee5b9896e2eede6',
+        clientSecret: 'ca6819a54656af0d87960af15315320f8a628a53',
+        repo: 'pytorch-doc-zh',
+        owner: 'apachecn',
+        admin: ['jiangzhonglian', 'wizardforcel'],
+        id: md5(location.pathname),
+        distractionFreeMode: false
+        })
+        gitalk.render('gitalk-container')
+    </script>
+</div>
+
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; ibooker.org.cn 2019 all right reserved&#xFF0C;&#x7531; ApacheCN &#x56E2;&#x961F;&#x63D0;&#x4F9B;&#x652F;&#x6301;</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A; 
+2019-09-24 01:39:32
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="cpp_extension.html" class="navigation navigation-prev " aria-label="Previous page: torch.utils.cpp_extension">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="dlpack.html" class="navigation navigation-next " aria-label="Next page: torch.utils.dlpack">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"torch.utils.data","level":"1.3.3.22","depth":3,"next":{"title":"torch.utils.dlpack","level":"1.3.3.23","depth":3,"path":"dlpack.md","ref":"dlpack.md","articles":[]},"previous":{"title":"torch.utils.cpp_extension","level":"1.3.3.21","depth":3,"path":"cpp_extension.md","ref":"cpp_extension.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","github-buttons","-sharing","insert-logo","sharing-plus","back-to-top-button","code","copy-code-button","mathjax","pageview-count","edit-link","emphasize","alerts","auto-scroll-table","popup","hide-element","page-toc-button","tbfed-pagefooter","sitemap","advanced-emoji","expandable-chapters","splitter","search-pro"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy ibooker.org.cn 2019","modify_label":"该文件修订时间： ","modify_format":"YYYY-MM-DD HH:mm:ss"},"emphasize":{},"github":{"url":"https://github.com/apachecn/pytorch-doc-zh"},"splitter":{},"search-pro":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sitemap":{"hostname":"http://pytorch.apachecn.org"},"page-toc-button":{"maxTocDepth":4,"minTocSize":4},"back-to-top-button":{},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"apachecn","repo":"pytorch-doc-zh","type":"star","count":true,"size":"small"}]},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["qq","douban","facebook","google","linkedin","twitter","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"whatsapp":false,"twitter":false,"line":false,"google":false,"qzone":true},"edit-link":{"label":"编辑本页","base":"https://github.com/apachecn/pytorch-doc-zh/blob/master/docs/1.2"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 150px; min-height: 150px","url":"http://data.apachecn.org/img/logo.jpg"},"expandable-chapters":{}},"my_links":{"sidebar":{"Home":"https://www.baidu.com"}},"theme":"default","author":"ApacheCN","my_plugins":["donate","todo","-lunr","-search","expandable-chapters-small","chapter-fold","expandable-chapters","expandable-chapters-small","back-to-top-button","ga","baidu","sitemap","tbfed-pagefooter","advanced-emoji","sectionx","page-treeview","simple-page-toc","ancre-navigation","theme-apachecn@git+https://github.com/apachecn/theme-apachecn#HEAD","pagefooter-apachecn@git+https://github.com/apachecn/gitbook-plugin-pagefooter-apachecn#HEAD"],"my_pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"ignores":["node_modules"],"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"page-copyright":{"wisdom":"Designer, Frontend Developer & overall web enthusiast","noPowered":false,"copyright":"Copyright &#169; 你的名字","style":"normal","timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"你的签名","copyrightColor":"#666","description":"modified at"},"donate":{"wechat":"微信收款的二维码URL","alipay":"支付宝收款的二维码URL","title":"","button":"赏","alipayText":"支付宝打赏","wechatText":"微信打赏"},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"apachecn","repo":"pytorch-doc-zh","type":"star","count":true,"size":"small"},{"user":"apachecn","width":"160","type":"follow","count":true,"size":"small"}]},"ga":{"token":"UA-102475051-10"},"baidu":{"token":"75439e2cbd22bdd813226000e9dcc12f"},"pagefooter-apachecn":{"copyright":"Copyright &copy ibooker.org.cn 2019","modify_label":"该文件修订时间： ","modify_format":"YYYY-MM-DD HH:mm:ss"}},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Pytorch 中文文档","language":"zh-hans","gitbook":"*","description":"Pytorch 中文文档: 教程和文档"},"file":{"path":"data.md","mtime":"2019-09-23T17:39:32.928Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-05T02:49:52.963Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

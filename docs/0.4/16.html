@@ -1,0 +1,2268 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>torch.nn · Pytorch 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ApacheCN">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="17.html" />
+    
+    
+    <link rel="prev" href="15.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"apachecn","repo":"pytorch-doc-zh","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    PyTorch 0.4 中文文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="0.html">
+            
+                <a href="0.html">
+            
+                    
+                    笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    自动求导机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    广播语义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    CUDA语义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    扩展PyTorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    多进程最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    序列化语义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="8.html">
+            
+                <a href="8.html">
+            
+                    
+                    Windows 常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="9.html">
+            
+                <a href="9.html">
+            
+                    
+                    包参考
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    Torch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    torch.Tensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="12.html">
+            
+                <a href="12.html">
+            
+                    
+                    Tensor Attributes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="13.html">
+            
+                <a href="13.html">
+            
+                    
+                    torch.sparse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="14.html">
+            
+                <a href="14.html">
+            
+                    
+                    torch.cuda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="15.html">
+            
+                <a href="15.html">
+            
+                    
+                    torch.Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.7" data-path="16.html">
+            
+                <a href="16.html">
+            
+                    
+                    torch.nn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="17.html">
+            
+                <a href="17.html">
+            
+                    
+                    torch.nn.functional
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="18.html">
+            
+                <a href="18.html">
+            
+                    
+                    自动差异化包 - torch.autograd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="19.html">
+            
+                <a href="19.html">
+            
+                    
+                    torch.optim
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="20.html">
+            
+                <a href="20.html">
+            
+                    
+                    torch.nn.init
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="21.html">
+            
+                <a href="21.html">
+            
+                    
+                    torch.distributions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="22.html">
+            
+                <a href="22.html">
+            
+                    
+                    Multiprocessing包 - torch.multiprocessing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="23.html">
+            
+                <a href="23.html">
+            
+                    
+                    分布式通讯包 - torch.distributed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="24.html">
+            
+                <a href="24.html">
+            
+                    
+                    torch.utils.bottleneck
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="25.html">
+            
+                <a href="25.html">
+            
+                    
+                    torch.utils.checkpoint
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="26.html">
+            
+                <a href="26.html">
+            
+                    
+                    torch.utils.cpp_extension
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="27.html">
+            
+                <a href="27.html">
+            
+                    
+                    torch.utils.data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="28.html">
+            
+                <a href="28.html">
+            
+                    
+                    torch.utils.ffi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="29.html">
+            
+                <a href="29.html">
+            
+                    
+                    torch.utils.model_zoo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="30.html">
+            
+                <a href="30.html">
+            
+                    
+                    torch.onnx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="31.html">
+            
+                <a href="31.html">
+            
+                    
+                    遗留包 - torch.legacy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="32.html">
+            
+                <a href="32.html">
+            
+                    
+                    torchvision 参考
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="33.html">
+            
+                <a href="33.html">
+            
+                    
+                    torchvision
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="34.html">
+            
+                <a href="34.html">
+            
+                    
+                    torchvision.datasets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="35.html">
+            
+                <a href="35.html">
+            
+                    
+                    torchvision.models
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="36.html">
+            
+                <a href="36.html">
+            
+                    
+                    torchvision.transform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="37.html">
+            
+                <a href="37.html">
+            
+                    
+                    torchvision.utils
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >torch.nn</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="torchnn">torch.nn</h1>
+<ul>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#containers">Containers</a></li>
+</ul>
+<h2 id="parameters">Parameters</h2>
+<h3 id="class-torchnnparameter">class torch.nn.Parameter()</h3>
+<p>&#x4E00;&#x79CD;<code>Variable</code>&#xFF0C;&#x88AB;&#x89C6;&#x4E3A;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x53C2;&#x6570;&#x3002;</p>
+<p><code>Parameters</code> &#x662F; <code>Variable</code> &#x7684;&#x5B50;&#x7C7B;&#x3002;&#x5F53;&#x4E0E;<code>Module</code>&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x5B83;&#x4EEC;&#x5177;&#x6709;&#x975E;&#x5E38;&#x7279;&#x6B8A;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5F53;&#x5B83;&#x4EEC;&#x88AB;&#x5206;&#x914D;&#x4E3A;&#x6A21;&#x5757;&#x5C5E;&#x6027;&#x65F6;&#xFF0C;&#x5B83;&#x4EEC;&#x88AB;&#x81EA;&#x52A8;&#x6DFB;&#x52A0;&#x5230;&#x5176;&#x53C2;&#x6570;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x5E76;&#x5C06;&#x51FA;&#x73B0;&#x5728;&#x4F8B;&#x5982;<code>parameters()</code>&#x8FED;&#x4EE3;&#x5668;&#x4E2D;&#x3002;&#x5206;&#x914D;&#x53D8;&#x91CF;&#x6CA1;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x6548;&#x679C;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x4EBA;&#x4EEC;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x5728;&#x6A21;&#x578B;&#x4E2D;&#x7F13;&#x5B58;&#x4E00;&#x4E9B;&#x4E34;&#x65F6;&#x72B6;&#x6001;&#xFF0C;&#x5982;<code>RNN</code>&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x9690;&#x85CF;&#x72B6;&#x6001;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x73ED;&#x7EA7;<code>Parameter</code>&#xFF0C;&#x8FD9;&#x4E9B;&#x4E34;&#x65F6;&#x4EBA;&#x5458;&#x4E5F;&#x4F1A;&#x6CE8;&#x518C;&#x3002;</p>
+<p>&#x53E6;&#x4E00;&#x4E2A;&#x533A;&#x522B;&#x662F;&#xFF0C;<code>parameters</code>&#x4E0D;&#x80FD;&#x662F;<code>volatile</code>&#xFF0C;&#x4ED6;&#x4EEC;&#x9ED8;&#x8BA4;&#x8981;&#x6C42;&#x68AF;&#x5EA6;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</p>
+<ul>
+<li><p>data (Tensor) &#x2013; parameter tensor.</p>
+</li>
+<li><p>requires_grad (bool, optional) &#x2013; &#x5982;&#x679C;&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x5243;&#x5EA6;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://pytorch.org/docs/master/notes/autograd.html#excluding-subgraphs" target="_blank">&#x4ECE;&#x5411;&#x540E;&#x6392;&#x9664;&#x5B50;&#x56FE;</a></p>
+</li>
+</ul>
+<h2 id="containers&#xFF1A;">Containers&#xFF1A;</h2>
+<h3 id="class-torchnnmodule">class torch.nn.Module</h3>
+<p>&#x6240;&#x6709;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x6A21;&#x5757;&#x7684;&#x57FA;&#x7C7B;&#x3002;</p>
+<p>&#x4F60;&#x7684;&#x6A21;&#x578B;&#x4E5F;&#x5E94;&#x8BE5;&#x7EE7;&#x627F;&#x8FD9;&#x4E2A;&#x7C7B;&#x3002;</p>
+<p><code>Modules</code>&#x8FD8;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x5176;&#x4ED6;&#x6A21;&#x5757;&#xFF0C;&#x5141;&#x8BB8;&#x5C06;&#x5B83;&#x4EEC;&#x5D4C;&#x5957;&#x5728;&#x6811;&#x7ED3;&#x6784;&#x4E2D;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x5B50;&#x6A21;&#x5757;&#x5206;&#x914D;&#x4E3A;&#x5E38;&#x89C4;&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-keyword">import</span> torch.nn <span class="hljs-keyword">as</span> nn
+<span class="hljs-keyword">import</span> torch.nn.functional <span class="hljs-keyword">as</span> F
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Model</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(<span class="hljs-number">1</span>, <span class="hljs-number">20</span>, <span class="hljs-number">5</span>)<span class="hljs-comment"># submodule: Conv2d</span>
+        self.conv2 = nn.Conv2d(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>, <span class="hljs-number">5</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+       x = F.relu(self.conv1(x))
+       <span class="hljs-keyword">return</span> F.relu(self.conv2(x))
+</code></pre>
+<p>&#x4EE5;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x5206;&#x914D;&#x7684;&#x5B50;&#x6A21;&#x5757;&#x5C06;&#x88AB;&#x6CE8;&#x518C;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x8C03;&#x7528;<code>.cuda()</code>&#x7B49;&#x65F6;&#x4E5F;&#x4F1A;&#x8F6C;&#x6362;&#x53C2;&#x6570;&#x3002;</p>
+<h4 id="addmodulename-module">add_module(name, module)</h4>
+<p>&#x5C06;&#x4E00;&#x4E2A;&#x5B50;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x5F53;&#x524D;&#x6A21;&#x5757;&#x3002; &#x8BE5;&#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7ED9;&#x5B9A;&#x7684;&#x540D;&#x79F0;&#x4F5C;&#x4E3A;&#x5C5E;&#x6027;&#x8BBF;&#x95EE;&#x3002; &#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-keyword">import</span> torch.nn <span class="hljs-keyword">as</span> nn
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Model</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        super(Model, self).__init__()
+        self.add_module(<span class="hljs-string">&quot;conv&quot;</span>, nn.Conv2d(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">4</span>))
+        <span class="hljs-comment">#self.conv = nn.Conv2d(10, 20, 4) &#x548C;&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x589E;&#x52A0;module&#x7684;&#x65B9;&#x5F0F;&#x7B49;&#x4EF7;</span>
+model = Model()
+print(model.conv)
+</code></pre>
+<p>&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-py">Conv2d(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, kernel_size=(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>), stride=(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>))
+</code></pre>
+<h4 id="applyfn">apply(fn)</h4>
+<p>&#x9002;&#x7528;<code>fn</code>&#x9012;&#x5F52;&#x5230;&#x6BCF;&#x4E2A;&#x5B50;&#x6A21;&#x5757;&#xFF08;&#x5982;&#x8FD4;&#x56DE;<code>.children()</code>&#xFF09;&#xFF0C;&#x4EE5;&#x53CA;&#x81EA;&#x6211;&#x3002;&#x5178;&#x578B;&#x7528;&#x9014;&#x5305;&#x62EC;&#x521D;&#x59CB;&#x5316;&#x6A21;&#x578B;&#x7684;&#x53C2;&#x6570;&#xFF08;&#x53E6;&#x89C1;<code>torch-nn-init</code>&#xFF09;&#x3002; &#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-py">&gt;&gt;&gt; def init_weights(m):
+&gt;&gt;&gt;     print(m)
+&gt;&gt;&gt;     if type(m) == nn.Linear:
+&gt;&gt;&gt;         m.weight.data.fill_(1.0)
+&gt;&gt;&gt;         print(m.weight)
+&gt;&gt;&gt;
+&gt;&gt;&gt; net = nn.Sequential(nn.Linear(2, 2), nn.Linear(2, 2))
+&gt;&gt;&gt; net.apply(init_weights)
+Linear (2 -&gt; 2)
+Parameter containing:
+ 1  1
+ 1  1
+[torch.FloatTensor of size 2x2]
+Linear (2 -&gt; 2)
+Parameter containing:
+ 1  1
+ 1  1
+[torch.FloatTensor of size 2x2]
+Sequential (
+  (0): Linear (2 -&gt; 2)
+  (1): Linear (2 -&gt; 2)
+)
+</code></pre>
+<h4 id="children">children()</h4>
+<p>&#x8FD4;&#x56DE;&#x76F4;&#x63A5;&#x7684;&#x5B50;&#x6A21;&#x5757;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x3002;</p>
+<h4 id="cpudeviceidnone">cpu(device_id=None)</h4>
+<p>&#x5C06;&#x6240;&#x6709;&#x6A21;&#x578B;&#x53C2;&#x6570;&#x548C;&#x7F13;&#x51B2;&#x533A;&#x79FB;&#x52A8;&#x5230;CPU</p>
+<h4 id="cudadeviceidnone">cuda(device_id=None)</h4>
+<p>&#x5C06;&#x6240;&#x6709;&#x6A21;&#x578B;&#x53C2;&#x6570;&#x548C;&#x7F13;&#x51B2;&#x533A;&#x79FB;&#x52A8;&#x5230;GPU&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</p>
+<ul>
+<li>device_id (int, &#x53EF;&#x9009;) &#x2013; &#x5982;&#x679C;&#x6307;&#x5B9A;&#xFF0C;&#x6240;&#x6709;&#x53C2;&#x6570;&#x5C06;&#x88AB;&#x590D;&#x5236;&#x5230;&#x8BE5;&#x8BBE;&#x5907;</li>
+</ul>
+<h4 id="double">double()</h4>
+<p>&#x5C06;&#x6240;&#x6709;&#x53C2;&#x6570;&#x548C;&#x7F13;&#x51B2;&#x533A;&#x8F6C;&#x6362;&#x4E3A;&#x53CC;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;</p>
+<h4 id="eval">eval()</h4>
+<p>&#x5C06;&#x6A21;&#x578B;&#x8BBE;&#x7F6E;&#x6210;<code>evaluation</code>&#x6A21;&#x5F0F;</p>
+<p>&#x4EC5;&#x4EC5;&#x5F53;&#x6A21;&#x578B;&#x4E2D;&#x6709;<code>Dropout</code>&#x548C;<code>BatchNorm</code>&#x662F;&#x624D;&#x4F1A;&#x6709;&#x5F71;&#x54CD;&#x3002;</p>
+<h4 id="float">float()</h4>
+<p>&#x5C06;&#x6240;&#x6709;&#x53C2;&#x6570;&#x548C;&#x7F13;&#x51B2;&#x533A;&#x8F6C;&#x6362;&#x4E3A;float&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;</p>
+<h4 id="forward-input">forward(* input)</h4>
+<p>&#x5B9A;&#x4E49;&#x8BA1;&#x7B97;&#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x8C03;&#x7528;&#x6267;&#x884C;&#x3002; &#x5E94;&#x8BE5;&#x88AB;&#x6240;&#x6709;&#x5B50;&#x7C7B;&#x91CD;&#x5199;&#x3002;</p>
+<h4 id="half">half()</h4>
+<p>&#x5C06;&#x6240;&#x6709;&#x53C2;&#x6570;&#x548C;&#x7F13;&#x51B2;&#x533A;&#x8F6C;&#x6362;&#x4E3A;<code>half</code>&#x7C7B;&#x578B;&#x3002;</p>
+<h4 id="loadstatedictstatedict">load_state_dict(state_dict)</h4>
+<p>&#x5C06;&#x53C2;&#x6570;&#x548C;&#x7F13;&#x51B2;&#x533A;&#x590D;&#x5236;<code>state_dict</code>&#x5230;&#x6B64;&#x6A21;&#x5757;&#x53CA;&#x5176;&#x540E;&#x4EE3;&#x3002;&#x952E;<code>state_dict</code>&#x5FC5;&#x987B;&#x4E0E;&#x6B64;&#x6A21;&#x5757;<code>state_dict()</code>&#x529F;&#x80FD;&#x8FD4;&#x56DE;&#x7684;&#x952E;&#x5B8C;&#x5168;&#x76F8;&#x7B26;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</p>
+<ul>
+<li>state_dict (dict) &#x2013; &#x4FDD;&#x5B58;<code>parameters</code>&#x548C;<code>persistent buffers</code>&#x7684;<code>dict</code>&#x3002;</li>
+</ul>
+<h4 id="modules">modules()</h4>
+<p>&#x8FD4;&#x56DE;&#x7F51;&#x7EDC;&#x4E2D;&#x6240;&#x6709;&#x6A21;&#x5757;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x3002;</p>
+<blockquote>
+<p>NOTE&#xFF1A; &#x91CD;&#x590D;&#x7684;&#x6A21;&#x5757;&#x53EA;&#x8FD4;&#x56DE;&#x4E00;&#x6B21;&#x3002;&#x5728;&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;<code>l</code>&#x5C06;&#x4EC5;&#x8FD4;&#x56DE;&#x4E00;&#x6B21;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-py">&gt;&gt;&gt; l = nn.Linear(2, 2)
+&gt;&gt;&gt; net = nn.Sequential(l, l)
+&gt;&gt;&gt; for idx, m in enumerate(net.modules()):
+&gt;&gt;&gt;     print(idx, &apos;-&gt;&apos;, m)
+0 -&gt; Sequential (
+  (0): Linear (2 -&gt; 2)
+  (1): Linear (2 -&gt; 2)
+)
+1 -&gt; Linear (2 -&gt; 2)
+</code></pre>
+<h4 id="namedchildren">named_children()</h4>
+<p>&#x8FD4;&#x56DE;&#x5305;&#x542B;&#x5B50;&#x6A21;&#x5757;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#xFF0C;&#x540C;&#x65F6;&#x4EA7;&#x751F;&#x6A21;&#x5757;&#x7684;&#x540D;&#x79F0;&#x4EE5;&#x53CA;&#x6A21;&#x5757;&#x672C;&#x8EAB;&#x3002;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> name, module <span class="hljs-keyword">in</span> model.named_children():
+<span class="hljs-meta">&gt;&gt;&gt; </span>    <span class="hljs-keyword">if</span> name <span class="hljs-keyword">in</span> [<span class="hljs-string">&apos;conv4&apos;</span>, <span class="hljs-string">&apos;conv5&apos;</span>]:
+<span class="hljs-meta">&gt;&gt;&gt; </span>        print(module)
+</code></pre>
+<h4 id="namedmodulesmemonone-prefix">named_modules(memo=None, prefix=&apos;&apos;)</h4>
+<p>&#x8FD4;&#x56DE;&#x7F51;&#x7EDC;&#x4E2D;&#x6240;&#x6709;&#x6A21;&#x5757;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#xFF0C;&#x540C;&#x65F6;&#x4EA7;&#x751F;&#x6A21;&#x5757;&#x7684;&#x540D;&#x79F0;&#x4EE5;&#x53CA;&#x6A21;&#x5757;&#x672C;&#x8EAB;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A; &#x91CD;&#x590D;&#x7684;&#x6A21;&#x5757;&#x53EA;&#x8FD4;&#x56DE;&#x4E00;&#x6B21;&#x3002;&#x5728;&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;<code>l</code>&#x5C06;&#x4EC5;&#x8FD4;&#x56DE;&#x4E00;&#x6B21;&#x3002;</p>
+<pre><code class="lang-py">&amp;gt;&amp;gt; l = nn.Linear(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)
+&amp;gt;&amp;gt; net = nn.Sequential(l, l)
+&amp;gt;&amp;gt; <span class="hljs-keyword">for</span> idx, m <span class="hljs-keyword">in</span> enumerate(net.named_modules()):
+&amp;gt;&amp;gt;     print(idx, <span class="hljs-string">&apos;-&amp;gt;&apos;</span>, m)
+<span class="hljs-number">0</span> -&amp;gt; (<span class="hljs-string">&apos;&apos;</span>, Sequential (
+(<span class="hljs-number">0</span>): Linear (<span class="hljs-number">2</span> -&amp;gt; <span class="hljs-number">2</span>)
+(<span class="hljs-number">1</span>): Linear (<span class="hljs-number">2</span> -&amp;gt; <span class="hljs-number">2</span>)
+))
+<span class="hljs-number">1</span> -&amp;gt; (<span class="hljs-string">&apos;0&apos;</span>, Linear (<span class="hljs-number">2</span> -&amp;gt; <span class="hljs-number">2</span>))
+</code></pre>
+<h4 id="namedparametersmemonone-prefix">named_parameters(memo=None, prefix=&apos;&apos;)</h4>
+<p>&#x8FD4;&#x56DE;&#x6A21;&#x5757;&#x53C2;&#x6570;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#xFF0C;&#x540C;&#x65F6;&#x4EA7;&#x751F;&#x53C2;&#x6570;&#x7684;&#x540D;&#x79F0;&#x4EE5;&#x53CA;&#x53C2;&#x6570;&#x672C;&#x8EAB; &#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-py">&amp;gt;&amp;gt; <span class="hljs-keyword">for</span> name, param <span class="hljs-keyword">in</span> self.named_parameters():
+&amp;gt;&amp;gt;    <span class="hljs-keyword">if</span> name <span class="hljs-keyword">in</span> [<span class="hljs-string">&apos;bias&apos;</span>]:
+&amp;gt;&amp;gt;        print(param.size())
+</code></pre>
+</blockquote>
+<h4 id="parameters">parameters()</h4>
+<p>&#x8FD4;&#x56DE;&#x6A21;&#x5757;&#x53C2;&#x6570;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x3002; &#x8FD9;&#x901A;&#x5E38;&#x88AB;&#x4F20;&#x9012;&#x7ED9;&#x4F18;&#x5316;&#x5668;&#x3002;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py">for param in model.parameters():
+    print(type(param.data), param.size())
+
+&lt;class &apos;torch.FloatTensor&apos;&gt; (20L,)
+&lt;class &apos;torch.FloatTensor&apos;&gt; (20L, 1L, 5L, 5L)
+</code></pre>
+<h4 id="registerbackwardhookhook">register_backward_hook(hook)</h4>
+<p>&#x5728;&#x6A21;&#x5757;&#x4E0A;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x5411;&#x540E;&#x7684;&#x94A9;&#x5B50;&#x3002;</p>
+<p>&#x6BCF;&#x5F53;&#x8BA1;&#x7B97;&#x76F8;&#x5BF9;&#x4E8E;&#x6A21;&#x5757;&#x8F93;&#x5165;&#x7684;&#x68AF;&#x5EA6;&#x65F6;&#xFF0C;&#x5C06;&#x8C03;&#x7528;&#x8BE5;&#x94A9;&#x3002;&#x6302;&#x94A9;&#x5E94;&#x5177;&#x6709;&#x4EE5;&#x4E0B;&#x7B7E;&#x540D;&#xFF1A;</p>
+<pre><code class="lang-py">hook(module, grad_input, grad_output) -&gt; Variable or None
+</code></pre>
+<p>&#x5982;&#x679C;<code>module</code>&#x6709;&#x591A;&#x4E2A;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;<code>grad_input</code> <code>grad_output</code>&#x5C06;&#x4F1A;&#x662F;&#x4E2A;<code>tuple</code>&#x3002; <code>hook</code>&#x4E0D;&#x5E94;&#x8BE5;&#x4FEE;&#x6539;&#x5B83;&#x7684;<code>arguments</code>&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x6027;&#x7684;&#x8FD4;&#x56DE;&#x5173;&#x4E8E;&#x8F93;&#x5165;&#x7684;&#x68AF;&#x5EA6;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FD4;&#x56DE;&#x7684;&#x68AF;&#x5EA6;&#x5728;&#x540E;&#x7EED;&#x7684;&#x8BA1;&#x7B97;&#x4E2D;&#x4F1A;&#x66FF;&#x4EE3;<code>grad_input</code>&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53E5;&#x67C4;(<code>handle</code>)&#x3002;&#x5B83;&#x6709;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5; <code>handle.remove()</code>&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;<code>hook</code>&#x4ECE;<code>module</code>&#x79FB;&#x9664;&#x3002;</p>
+<h4 id="registerbuffername-tensor">register_buffer(name, tensor)</h4>
+<p>&#x7ED9;<code>module</code>&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6301;&#x4E45;&#x7F13;&#x51B2;&#x533A;&#x3002;</p>
+<p>&#x8FD9;&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x6CE8;&#x518C;&#x4E0D;&#x5E94;&#x88AB;&#x89C6;&#x4E3A;&#x6A21;&#x578B;&#x53C2;&#x6570;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x3002;&#x4F8B;&#x5982;&#xFF0C;BatchNorm running_mean &#x4E0D;&#x662F;&#x53C2;&#x6570;&#xFF0C;&#x800C;&#x662F;&#x6301;&#x4E45;&#x72B6;&#x6001;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x7F13;&#x51B2;&#x533A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7ED9;&#x5B9A;&#x7684;&#x540D;&#x79F0;&#x4F5C;&#x4E3A;&#x5C5E;&#x6027;&#x8BBF;&#x95EE;&#x3002;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py">self.register_buffer(<span class="hljs-string">&apos;running_mean&apos;</span>, torch.zeros(num_features))
+</code></pre>
+<h4 id="registerforwardhookhook">register_forward_hook(hook)</h4>
+<p>&#x5728;&#x6A21;&#x5757;&#x4E0A;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;<code>forward hook</code>&#x3002; &#x6BCF;&#x6B21;&#x8C03;&#x7528;<code>forward()</code>&#x8BA1;&#x7B97;&#x8F93;&#x51FA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x4E2A;<code>hook</code>&#x5C31;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x5B83;&#x5E94;&#x8BE5;&#x62E5;&#x6709;&#x4EE5;&#x4E0B;&#x7B7E;&#x540D;&#xFF1A;</p>
+<pre><code class="lang-py">hook(module, input, output) -&gt; None
+</code></pre>
+<p><code>hook</code>&#x4E0D;&#x5E94;&#x8BE5;&#x4FEE;&#x6539; <code>input</code>&#x548C;<code>output</code>&#x7684;&#x503C;&#x3002; &#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6709;<code>handle.remove()</code>&#x65B9;&#x6CD5;&#x7684;&#x53E5;&#x67C4;(<code>handle</code>)&#x3002;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;<code>hook</code>&#x4ECE;<code>module</code>&#x79FB;&#x9664;&#x3002;</p>
+<h4 id="registerparametername-param">register_parameter(name, param)</h4>
+<p>&#x5411;<code>module</code>&#x6DFB;&#x52A0; <code>parameter</code></p>
+<p>&#x8BE5;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7ED9;&#x5B9A;&#x7684;&#x540D;&#x79F0;&#x4F5C;&#x4E3A;&#x5C5E;&#x6027;&#x8BBF;&#x95EE;&#x3002;</p>
+<h4 id="statedictdestinationnone-prefix">state_dict(destination=None, prefix=&apos;&apos;)</h4>
+<p>&#x8FD4;&#x56DE;&#x5305;&#x542B;&#x6A21;&#x5757;&#x6574;&#x4F53;&#x72B6;&#x6001;&#x7684;&#x5B57;&#x5178;&#x3002;</p>
+<p>&#x5305;&#x62EC;&#x53C2;&#x6570;&#x548C;&#x6301;&#x4E45;&#x7F13;&#x51B2;&#x533A;&#xFF08;&#x4F8B;&#x5982;&#x8FD0;&#x884C;&#x5E73;&#x5747;&#x503C;&#xFF09;&#x3002;&#x952E;&#x662F;&#x76F8;&#x5E94;&#x7684;&#x53C2;&#x6570;&#x548C;&#x7F13;&#x51B2;&#x533A;&#x540D;&#x79F0;&#x3002;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py">module.state_dict().keys()
+<span class="hljs-comment"># [&apos;bias&apos;, &apos;weight&apos;]</span>
+</code></pre>
+<h4 id="trainmodetrue">train(mode=True)</h4>
+<p>&#x5C06;&#x6A21;&#x5757;&#x8BBE;&#x7F6E;&#x4E3A;&#x8BAD;&#x7EC3;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>&#x4EC5;&#x4EC5;&#x5F53;&#x6A21;&#x578B;&#x4E2D;&#x6709;<code>Dropout</code>&#x548C;<code>BatchNorm</code>&#x662F;&#x624D;&#x4F1A;&#x6709;&#x5F71;&#x54CD;&#x3002;</p>
+<h4 id="zerograd">zero_grad()</h4>
+<p>&#x5C06;&#x6240;&#x6709;&#x6A21;&#x578B;&#x53C2;&#x6570;&#x7684;&#x68AF;&#x5EA6;&#x8BBE;&#x7F6E;&#x4E3A;&#x96F6;&#x3002;</p>
+<h3 id="class-torchnnsequential-args">class torch.nn.Sequential(* args)</h3>
+<p>&#x4E00;&#x4E2A;&#x65F6;&#x5E8F;&#x5BB9;&#x5668;&#x3002;<code>Modules</code> &#x4F1A;&#x4EE5;&#x4ED6;&#x4EEC;&#x4F20;&#x5165;&#x7684;&#x987A;&#x5E8F;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x5BB9;&#x5668;&#x4E2D;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E00;&#x4E2A;<code>OrderedDict</code>&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x66F4;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#xFF0C;&#x7ED9;&#x51FA;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5C0F;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-comment"># Example of using Sequential</span>
+
+model = nn.Sequential(
+          nn.Conv2d(<span class="hljs-number">1</span>,<span class="hljs-number">20</span>,<span class="hljs-number">5</span>),
+          nn.ReLU(),
+          nn.Conv2d(<span class="hljs-number">20</span>,<span class="hljs-number">64</span>,<span class="hljs-number">5</span>),
+          nn.ReLU()
+        )
+<span class="hljs-comment"># Example of using Sequential with OrderedDict</span>
+model = nn.Sequential(OrderedDict([
+          (<span class="hljs-string">&apos;conv1&apos;</span>, nn.Conv2d(<span class="hljs-number">1</span>,<span class="hljs-number">20</span>,<span class="hljs-number">5</span>)),
+          (<span class="hljs-string">&apos;relu1&apos;</span>, nn.ReLU()),
+          (<span class="hljs-string">&apos;conv2&apos;</span>, nn.Conv2d(<span class="hljs-number">20</span>,<span class="hljs-number">64</span>,<span class="hljs-number">5</span>)),
+          (<span class="hljs-string">&apos;relu2&apos;</span>, nn.ReLU())
+        ]))
+</code></pre>
+<h3 id="class-torchnnmodulelistmodulesnone">class torch.nn.ModuleList(modules=None)</h3>
+<p>&#x5C06;<code>submodules</code>&#x4FDD;&#x5B58;&#x5728;&#x4E00;&#x4E2A;<code>list</code>&#x4E2D;&#x3002;</p>
+<p><code>ModuleList</code>&#x53EF;&#x4EE5;&#x50CF;&#x4E00;&#x822C;&#x7684;<code>Python list</code>&#x4E00;&#x6837;&#x88AB;<code>&#x7D22;&#x5F15;</code>&#x3002;&#x800C;&#x4E14;<code>ModuleList</code>&#x4E2D;&#x5305;&#x542B;&#x7684;<code>modules</code>&#x5DF2;&#x7ECF;&#x88AB;&#x6B63;&#x786E;&#x7684;&#x6CE8;&#x518C;&#xFF0C;&#x5BF9;&#x6240;&#x6709;&#x7684;<code>module method</code>&#x53EF;&#x89C1;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</p>
+<ul>
+<li>modules (list, optional) &#x2013; &#x8981;&#x6DFB;&#x52A0;&#x7684;&#x6A21;&#x5757;&#x5217;&#x8868;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;:</p>
+<pre><code class="lang-py"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyModule</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        super(MyModule, self).__init__()
+        self.linears = nn.ModuleList([nn.Linear(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>)])
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+        <span class="hljs-comment"># ModuleList can act as an iterable, or be indexed using ints</span>
+        <span class="hljs-keyword">for</span> i, l <span class="hljs-keyword">in</span> enumerate(self.linears):
+            x = self.linears[i // <span class="hljs-number">2</span>](x) + l(x)
+        <span class="hljs-keyword">return</span> x
+</code></pre>
+<h4 id="appendmodule">append(module)</h4>
+<p>&#x5728;&#x5217;&#x8868;&#x672B;&#x5C3E;&#x9644;&#x52A0;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x6A21;&#x5757;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</p>
+<ul>
+<li>module (nn.Module) &#x2013; &#x8981;&#x8FFD;&#x52A0;&#x7684;&#x6A21;&#x5757;</li>
+</ul>
+<h4 id="extendmodules">extend(modules)</h4>
+<p>&#x6700;&#x540E;&#x4ECE;Python&#x5217;&#x8868;&#x4E2D;&#x8FFD;&#x52A0;&#x6A21;&#x5757;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</p>
+<ul>
+<li>modules(list) &#x2013; &#x8981;&#x9644;&#x52A0;&#x7684;&#x6A21;&#x5757;&#x5217;&#x8868;</li>
+</ul>
+<h3 id="class-torchnnparameterlistparametersnone">class torch.nn.ParameterList(parameters=None)</h3>
+<p>&#x5728;&#x5217;&#x8868;&#x4E2D;&#x4FDD;&#x5B58;&#x53C2;&#x6570;&#x3002;</p>
+<p>ParameterList&#x53EF;&#x4EE5;&#x50CF;&#x666E;&#x901A;Python&#x5217;&#x8868;&#x4E00;&#x6837;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x5305;&#x542B;&#x7684;&#x53C2;&#x6570;&#x5DF2;&#x7ECF;&#x88AB;&#x6B63;&#x786E;&#x6CE8;&#x518C;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x88AB;&#x6240;&#x6709;&#x7684;Module&#x65B9;&#x6CD5;&#x90FD;&#x53EF;&#x89C1;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</p>
+<ul>
+<li>modules (list, &#x53EF;&#x9009;) &#x2013; nn.Parameter&#x8981;&#x6DFB;&#x52A0;&#x7684;&#x5217;&#x8868;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;:</p>
+<pre><code class="lang-py"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyModule</span><span class="hljs-params">(nn.Module)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        super(MyModule, self).__init__()
+        self.params = nn.ParameterList([nn.Parameter(torch.randn(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>)) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>)])
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">forward</span><span class="hljs-params">(self, x)</span>:</span>
+        <span class="hljs-comment"># ModuleList can act as an iterable, or be indexed using ints</span>
+        <span class="hljs-keyword">for</span> i, p <span class="hljs-keyword">in</span> enumerate(self.params):
+            x = self.params[i // <span class="hljs-number">2</span>].mm(x) + p.mm(x)
+        <span class="hljs-keyword">return</span> x
+</code></pre>
+<h4 id="appendparameter">append(parameter)</h4>
+<p>&#x5728;&#x5217;&#x8868;&#x672B;&#x5C3E;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</p>
+<ul>
+<li>parameter (nn.Parameter) &#x2013; &#x8981;&#x8FFD;&#x52A0;&#x7684;&#x53C2;&#x6570;</li>
+</ul>
+<h4 id="extendparameters">extend(parameters)</h4>
+<p>&#x5728;Python&#x5217;&#x8868;&#x4E2D;&#x9644;&#x52A0;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</p>
+<ul>
+<li>parameters (list) &#x2013; &#x8981;&#x8FFD;&#x52A0;&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;</li>
+</ul>
+<h2 id="&#x5377;&#x79EF;&#x5C42;">&#x5377;&#x79EF;&#x5C42;</h2>
+<h3 id="class-torchnnconv1dinchannels-outchannels-kernelsize-stride1-padding0-dilation1-groups1-biastrue">class torch.nn.Conv1d(in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True)</h3>
+<p>&#x4E00;&#x7EF4;&#x5377;&#x79EF;&#x5C42;&#xFF0C;&#x8F93;&#x5165;&#x7684;&#x5C3A;&#x5EA6;&#x662F;(N, C_in,L)&#xFF0C;&#x8F93;&#x51FA;&#x5C3A;&#x5EA6;&#xFF08; N,C_out,L_out&#xFF09;&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<p><script type="math/tex; "> out(N_i, C_{out_j})=bias(C_ {out_j})+\sum^{C_{in}-1}_{k=0}weight(C_{out_j},k)\bigotimes input(N_i,k) </script></p>
+<p><strong>&#x8BF4;&#x660E;</strong></p>
+<p><code>bigotimes</code>: &#x8868;&#x793A;&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x8BA1;&#x7B97;
+<code>stride</code>: &#x63A7;&#x5236;&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x7684;&#x8BA1;&#x7B97;&#x6B65;&#x957F;
+<code>dilation</code>: &#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5185;&#x6838;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#x5728;<a href="https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md" target="_blank">&#x8FD9;&#x91CC;</a>
+<code>groups</code>: &#x63A7;&#x5236;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x4E4B;&#x95F4;&#x7684;&#x8FDE;&#x63A5;&#xFF0C; <code>group=1</code>&#xFF0C;&#x8F93;&#x51FA;&#x662F;&#x6240;&#x6709;&#x7684;&#x8F93;&#x5165;&#x7684;&#x5377;&#x79EF;&#xFF1B;<code>group=2</code>&#xFF0C;&#x6B64;&#x65F6;&#x76F8;&#x5F53;&#x4E8E;&#x6709;&#x5E76;&#x6392;&#x7684;&#x4E24;&#x4E2A;&#x5377;&#x79EF;&#x5C42;&#xFF0C;&#x6BCF;&#x4E2A;&#x5377;&#x79EF;&#x5C42;&#x8BA1;&#x7B97;&#x8F93;&#x5165;&#x901A;&#x9053;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x5E76;&#x4E14;&#x4EA7;&#x751F;&#x7684;&#x8F93;&#x51FA;&#x662F;&#x8F93;&#x51FA;&#x901A;&#x9053;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x968F;&#x540E;&#x5C06;&#x8FD9;&#x4E24;&#x4E2A;&#x8F93;&#x51FA;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x3002;</p>
+<p><strong>Parameters&#xFF1A;</strong></p>
+<ul>
+<li>in_channels(<code>int</code>) &#x2013; &#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7684;&#x901A;&#x9053;</li>
+<li>out_channels(<code>int</code>) &#x2013; &#x5377;&#x79EF;&#x4EA7;&#x751F;&#x7684;&#x901A;&#x9053;</li>
+<li>kerner_size(<code>int</code> or <code>tuple</code>) - &#x5377;&#x79EF;&#x6838;&#x7684;&#x5C3A;&#x5BF8;</li>
+<li>stride(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x5377;&#x79EF;&#x6B65;&#x957F;</li>
+<li>padding (<code>int</code> or <code>tuple</code>, <code>optional</code>)- &#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+<li>dilation(<code>int</code> or <code>tuple</code>, `optional``) &#x2013; &#x5377;&#x79EF;&#x6838;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x8DDD;</li>
+<li>groups(<code>int</code>, <code>optional</code>) &#x2013; &#x4ECE;&#x8F93;&#x5165;&#x901A;&#x9053;&#x5230;&#x8F93;&#x51FA;&#x901A;&#x9053;&#x7684;&#x963B;&#x585E;&#x8FDE;&#x63A5;&#x6570;</li>
+<li>bias(<code>bool</code>, <code>optional</code>) - &#x5982;&#x679C;<code>bias=True</code>&#xFF0C;&#x6DFB;&#x52A0;&#x504F;&#x7F6E;</li>
+</ul>
+<p><strong>shape:</strong>
+&#x8F93;&#x5165;: (N,C_in,L_in)
+&#x8F93;&#x51FA;: (N,C_out,L_out)
+&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#xFF1A;
+<script type="math/tex; ">L_{out}=floor((L_{in}+2_padding-dilation_(kernerl_size-1)-1)/stride+1)</script></p>
+<p><strong>&#x53D8;&#x91CF;:</strong></p>
+<ul>
+<li>weight(<code>tensor</code>) - &#x5377;&#x79EF;&#x7684;&#x6743;&#x91CD;&#xFF0C;&#x5927;&#x5C0F;&#x662F;(<code>out_channels</code>, <code>in_channels</code>, <code>kernel_size</code>)</li>
+<li>bias(<code>tensor</code>) - &#x5377;&#x79EF;&#x7684;&#x504F;&#x7F6E;&#x7CFB;&#x6570;&#xFF0C;&#x5927;&#x5C0F;&#x662F;&#xFF08;<code>out_channel</code>&#xFF09;</li>
+</ul>
+<p><strong>example:</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Conv1d(<span class="hljs-number">16</span>, <span class="hljs-number">33</span>, <span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">16</span>, <span class="hljs-number">50</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h3 id="class-torchnnconv2dinchannels-outchannels-kernelsize-stride1-padding0-dilation1-groups1-biastrue">class torch.nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True)</h3>
+<p>&#x4E8C;&#x7EF4;&#x5377;&#x79EF;&#x5C42;, &#x8F93;&#x5165;&#x7684;&#x5C3A;&#x5EA6;&#x662F;(N, C_in,H,W)&#xFF0C;&#x8F93;&#x51FA;&#x5C3A;&#x5EA6;&#xFF08;N,C_out,H_out,W_out&#xFF09;&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<p><script type="math/tex; ">out(N_i, C_{out_j})=bias(C_{out_j})+\sum^{C_{in}-1}_{k=0}weight(C_{out_j},k)\bigotimes input(N_i,k)</script></p>
+<p><strong>&#x8BF4;&#x660E;</strong>
+<code>bigotimes</code>: &#x8868;&#x793A;&#x4E8C;&#x7EF4;&#x7684;&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x8BA1;&#x7B97; <code>stride</code>: &#x63A7;&#x5236;&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x7684;&#x8BA1;&#x7B97;&#x6B65;&#x957F;
+<code>dilation</code>: &#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5185;&#x6838;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#x5728;<a href="https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md" target="_blank">&#x8FD9;&#x91CC;</a>
+<code>groups</code>: &#x63A7;&#x5236;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x4E4B;&#x95F4;&#x7684;&#x8FDE;&#x63A5;&#xFF1A; <code>group=1</code>&#xFF0C;&#x8F93;&#x51FA;&#x662F;&#x6240;&#x6709;&#x7684;&#x8F93;&#x5165;&#x7684;&#x5377;&#x79EF;&#xFF1B;<code>group=2</code>&#xFF0C;&#x6B64;&#x65F6;&#x76F8;&#x5F53;&#x4E8E;&#x6709;&#x5E76;&#x6392;&#x7684;&#x4E24;&#x4E2A;&#x5377;&#x79EF;&#x5C42;&#xFF0C;&#x6BCF;&#x4E2A;&#x5377;&#x79EF;&#x5C42;&#x8BA1;&#x7B97;&#x8F93;&#x5165;&#x901A;&#x9053;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x5E76;&#x4E14;&#x4EA7;&#x751F;&#x7684;&#x8F93;&#x51FA;&#x662F;&#x8F93;&#x51FA;&#x901A;&#x9053;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x968F;&#x540E;&#x5C06;&#x8FD9;&#x4E24;&#x4E2A;&#x8F93;&#x51FA;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x3002;</p>
+<p>&#x53C2;&#x6570;<code>kernel_size</code>&#xFF0C;<code>stride,padding</code>&#xFF0C;<code>dilation</code>&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;<code>int</code>&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6B64;&#x65F6;&#x5377;&#x79EF;height&#x548C;width&#x503C;&#x76F8;&#x540C;;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;<code>tuple</code>&#x6570;&#x7EC4;&#xFF0C;<code>tuple</code>&#x7684;&#x7B2C;&#x4E00;&#x7EF4;&#x5EA6;&#x8868;&#x793A;height&#x7684;&#x6570;&#x503C;&#xFF0C;tuple&#x7684;&#x7B2C;&#x4E8C;&#x7EF4;&#x5EA6;&#x8868;&#x793A;width&#x7684;&#x6570;&#x503C;</p>
+<p><strong>Parameters&#xFF1A;</strong></p>
+<ul>
+<li>in_channels(<code>int</code>) &#x2013; &#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7684;&#x901A;&#x9053;</li>
+<li>out_channels(<code>int</code>) &#x2013; &#x5377;&#x79EF;&#x4EA7;&#x751F;&#x7684;&#x901A;&#x9053;</li>
+<li>kerner_size(<code>int</code> or <code>tuple</code>) - &#x5377;&#x79EF;&#x6838;&#x7684;&#x5C3A;&#x5BF8;</li>
+<li>stride(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x5377;&#x79EF;&#x6B65;&#x957F;</li>
+<li>padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+<li>dilation(<code>int</code> or <code>tuple</code>, <code>optional</code>) &#x2013; &#x5377;&#x79EF;&#x6838;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x8DDD;</li>
+<li>groups(<code>int</code>, <code>optional</code>) &#x2013; &#x4ECE;&#x8F93;&#x5165;&#x901A;&#x9053;&#x5230;&#x8F93;&#x51FA;&#x901A;&#x9053;&#x7684;&#x963B;&#x585E;&#x8FDE;&#x63A5;&#x6570;</li>
+<li>bias(<code>bool</code>, <code>optional</code>) - &#x5982;&#x679C;<code>bias=True</code>&#xFF0C;&#x6DFB;&#x52A0;&#x504F;&#x7F6E;</li>
+</ul>
+<p><strong>shape:</strong>
+input: (N,C_in,H_in,W_in)
+output: (N,C_out,H_out,W_out)
+<script type="math/tex; ">H_{out}=floor((H_{in}+2_padding[0]-dilation[0]_(kernerl_size[0]-1)-1)/stride[0]+1)</script></p>
+<p><script type="math/tex; ">W_{out}=floor((W_{in}+2_padding[1]-dilation[1]_(kernerl_size[1]-1)-1)/stride[1]+1)</script></p>
+<p><strong>&#x53D8;&#x91CF;:</strong>
+weight(<code>tensor</code>) - &#x5377;&#x79EF;&#x7684;&#x6743;&#x91CD;&#xFF0C;&#x5927;&#x5C0F;&#x662F;(<code>out_channels</code>, <code>in_channels</code>,<code>kernel_size</code>)
+bias(<code>tensor</code>) - &#x5377;&#x79EF;&#x7684;&#x504F;&#x7F6E;&#x7CFB;&#x6570;&#xFF0C;&#x5927;&#x5C0F;&#x662F;&#xFF08;<code>out_channel</code>&#xFF09;</p>
+<p>Examples:</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># With square kernels and equal stride</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Conv2d(<span class="hljs-number">16</span>, <span class="hljs-number">33</span>, <span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># non-square kernels and unequal stride and with padding</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Conv2d(<span class="hljs-number">16</span>, <span class="hljs-number">33</span>, (<span class="hljs-number">3</span>, <span class="hljs-number">5</span>), stride=(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>), padding=(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># non-square kernels and unequal stride and with padding and dilation</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Conv2d(<span class="hljs-number">16</span>, <span class="hljs-number">33</span>, (<span class="hljs-number">3</span>, <span class="hljs-number">5</span>), stride=(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>), padding=(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>), dilation=(<span class="hljs-number">3</span>, <span class="hljs-number">1</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">16</span>, <span class="hljs-number">50</span>, <span class="hljs-number">100</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h3 id="class-torchnnconv3dinchannels-outchannels-kernelsize-stride1-padding0-dilation1-groups1-biastrue">class torch.nn.Conv3d(in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True)</h3>
+<p>&#x4E09;&#x7EF4;&#x5377;&#x79EF;&#x5C42;, &#x8F93;&#x5165;&#x7684;&#x5C3A;&#x5EA6;&#x662F;(N, C_in,D,H,W)&#xFF0C;&#x8F93;&#x51FA;&#x5C3A;&#x5EA6;&#xFF08;N,C_out,D_out,H_out,W_out&#xFF09;&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#xFF1A;
+<script type="math/tex; ">out(N_i, C_{out_j})=bias(C_{out_j})+\sum^{C_{in}-1}_{k=0}weight(C_{out_j},k)\bigotimes input(N_i,k)</script></p>
+<p><strong>&#x8BF4;&#x660E;</strong>
+<code>bigotimes</code>: &#x8868;&#x793A;&#x4E8C;&#x7EF4;&#x7684;&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x8BA1;&#x7B97; <code>stride</code>: &#x63A7;&#x5236;&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x7684;&#x8BA1;&#x7B97;&#x6B65;&#x957F;
+<code>dilation</code>: &#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5185;&#x6838;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#x5728;<a href="https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md" target="_blank">&#x8FD9;&#x91CC;</a>
+<code>groups</code>: &#x63A7;&#x5236;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x4E4B;&#x95F4;&#x7684;&#x8FDE;&#x63A5;&#xFF1A; <code>group=1</code>&#xFF0C;&#x8F93;&#x51FA;&#x662F;&#x6240;&#x6709;&#x7684;&#x8F93;&#x5165;&#x7684;&#x5377;&#x79EF;&#xFF1B;<code>group=2</code>&#xFF0C;&#x6B64;&#x65F6;&#x76F8;&#x5F53;&#x4E8E;&#x6709;&#x5E76;&#x6392;&#x7684;&#x4E24;&#x4E2A;&#x5377;&#x79EF;&#x5C42;&#xFF0C;&#x6BCF;&#x4E2A;&#x5377;&#x79EF;&#x5C42;&#x8BA1;&#x7B97;&#x8F93;&#x5165;&#x901A;&#x9053;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x5E76;&#x4E14;&#x4EA7;&#x751F;&#x7684;&#x8F93;&#x51FA;&#x662F;&#x8F93;&#x51FA;&#x901A;&#x9053;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x968F;&#x540E;&#x5C06;&#x8FD9;&#x4E24;&#x4E2A;&#x8F93;&#x51FA;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x3002;
+&#x53C2;&#x6570;<code>kernel_size</code>&#xFF0C;<code>stride</code>&#xFF0C;<code>padding</code>&#xFF0C;<code>dilation</code>&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;<code>int</code>&#x7684;&#x6570;&#x636E; - &#x5377;&#x79EF;height&#x548C;width&#x503C;&#x76F8;&#x540C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x6709;&#x4E09;&#x4E2A;<code>int</code>&#x6570;&#x636E;&#x7684;<code>tuple</code>&#x6570;&#x7EC4;&#xFF0C;<code>tuple</code>&#x7684;&#x7B2C;&#x4E00;&#x7EF4;&#x5EA6;&#x8868;&#x793A;depth&#x7684;&#x6570;&#x503C;&#xFF0C;<code>tuple</code>&#x7684;&#x7B2C;&#x4E8C;&#x7EF4;&#x5EA6;&#x8868;&#x793A;height&#x7684;&#x6570;&#x503C;&#xFF0C;<code>tuple</code>&#x7684;&#x7B2C;&#x4E09;&#x7EF4;&#x5EA6;&#x8868;&#x793A;width&#x7684;&#x6570;&#x503C;</p>
+<p><strong>Parameters&#xFF1A;</strong></p>
+<ul>
+<li>in_channels(<code>int</code>) &#x2013; &#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7684;&#x901A;&#x9053;</li>
+<li>out_channels(<code>int</code>) &#x2013; &#x5377;&#x79EF;&#x4EA7;&#x751F;&#x7684;&#x901A;&#x9053;</li>
+<li>kernel_size(<code>int</code> or <code>tuple</code>) - &#x5377;&#x79EF;&#x6838;&#x7684;&#x5C3A;&#x5BF8;</li>
+<li>stride(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x5377;&#x79EF;&#x6B65;&#x957F;</li>
+<li>padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+<li>dilation(<code>int</code> or <code>tuple</code>, <code>optional</code>) &#x2013; &#x5377;&#x79EF;&#x6838;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x8DDD;</li>
+<li>groups(<code>int</code>, <code>optional</code>) &#x2013; &#x4ECE;&#x8F93;&#x5165;&#x901A;&#x9053;&#x5230;&#x8F93;&#x51FA;&#x901A;&#x9053;&#x7684;&#x963B;&#x585E;&#x8FDE;&#x63A5;&#x6570;</li>
+<li>bias(<code>bool</code>, <code>optional</code>) - &#x5982;&#x679C;<code>bias=True</code>&#xFF0C;&#x6DFB;&#x52A0;&#x504F;&#x7F6E;</li>
+</ul>
+<p><strong>shape:</strong>
+<code>input</code>: ((N, C<em>{in}, D</em>{in}, H<em>{in}, W</em>{in}))
+<code>output</code>: ((N, C<em>{out}, D</em>{out}, H<em>{out}, W</em>{out})) where (D<em>{out} = floor((D</em>{in} + 2 <em>padding[0] - dilation[0]</em> (kernel<em>size[0] - 1) - 1) / stride[0] + 1)) (H</em>{out} = floor((H<em>{in} + 2 _padding[1] - dilation[1]</em> (kernel<em>size[1] - 1) - 1) / stride[1] + 1)) (W</em>{out} = floor((W<em>{in} + 2 _padding[2] - dilation[2]</em> (kernel_size[2] - 1) - 1) / stride[2] + 1))</p>
+<p><strong>&#x53D8;&#x91CF;:</strong></p>
+<ul>
+<li>weight(<code>tensor</code>) - &#x5377;&#x79EF;&#x7684;&#x6743;&#x91CD;&#xFF0C;shape&#x662F;(<code>out_channels</code>, <code>in_channels</code>,<code>kernel_size</code>)`</li>
+<li>bias(<code>tensor</code>) - &#x5377;&#x79EF;&#x7684;&#x504F;&#x7F6E;&#x7CFB;&#x6570;&#xFF0C;shape&#x662F;&#xFF08;<code>out_channel</code>&#xFF09;</li>
+</ul>
+<p>Examples:</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># With square kernels and equal stride</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Conv3d(<span class="hljs-number">16</span>, <span class="hljs-number">33</span>, <span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># non-square kernels and unequal stride and with padding</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Conv3d(<span class="hljs-number">16</span>, <span class="hljs-number">33</span>, (<span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>), stride=(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>), padding=(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">16</span>, <span class="hljs-number">10</span>, <span class="hljs-number">50</span>, <span class="hljs-number">100</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h3 id="class-torchnnconvtranspose1dinchannels-outchannels-kernelsize-stride1-padding0-outputpadding0-groups1-biastrue-dilation1">class torch.nn.ConvTranspose1d(in_channels, out_channels, kernel_size, stride=1, padding=0, output_padding=0, groups=1, bias=True, dilation=1)</h3>
+<p>1&#x7EF4;&#x7684;&#x89E3;&#x5377;&#x79EF;&#x64CD;&#x4F5C;&#xFF08;<code>transposed convolution operator</code>&#xFF0C;&#x6CE8;&#x610F;&#x6539;&#x89C6;&#x4F5C;&#x64CD;&#x4F5C;&#x53EF;&#x89C6;&#x4F5C;&#x89E3;&#x5377;&#x79EF;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x5E76;&#x4E0D;&#x662F;&#x771F;&#x6B63;&#x7684;&#x89E3;&#x5377;&#x79EF;&#x64CD;&#x4F5C;&#xFF09; &#x8BE5;&#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;<code>Conv1d</code>&#x76F8;&#x5BF9;&#x4E8E;&#x5176;&#x8F93;&#x5165;&#x7684;&#x68AF;&#x5EA6;&#xFF0C;&#x6709;&#x65F6;&#xFF08;&#x4F46;&#x4E0D;&#x6B63;&#x786E;&#x5730;&#xFF09;&#x88AB;&#x79F0;&#x4E3A;&#x89E3;&#x5377;&#x79EF;&#x64CD;&#x4F5C;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;</strong>
+&#x7531;&#x4E8E;&#x5185;&#x6838;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x8F93;&#x5165;&#x7684;&#x6700;&#x540E;&#x7684;&#x4E00;&#x4E9B;&#x5217;&#x7684;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x4F1A;&#x4E22;&#x5931;&#x3002;&#x56E0;&#x4E3A;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x662F;&#x4E0D;&#x662F;&#x5B8C;&#x5168;&#x7684;&#x4E92;&#x76F8;&#x5173;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x9002;&#x5F53;&#x7684;&#x586B;&#x5145;&#xFF08;padding&#x64CD;&#x4F5C;&#xFF09;&#x3002;</p>
+<p><strong>&#x53C2;&#x6570;</strong></p>
+<ul>
+<li>in_channels(<code>int</code>) &#x2013; &#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7684;&#x901A;&#x9053;&#x6570;</li>
+<li>out_channels(<code>int</code>) &#x2013; &#x5377;&#x79EF;&#x4EA7;&#x751F;&#x7684;&#x901A;&#x9053;</li>
+<li>kernel_size(<code>int</code> or <code>tuple</code>) - &#x5377;&#x79EF;&#x6838;&#x7684;&#x5927;&#x5C0F;</li>
+<li>stride(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x5377;&#x79EF;&#x6B65;&#x957F;</li>
+<li>padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+<li>output_padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x51FA;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+<li>dilation(<code>int</code> or <code>tuple</code>, <code>optional</code>) &#x2013; &#x5377;&#x79EF;&#x6838;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x8DDD;</li>
+<li>groups(<code>int</code>, <code>optional</code>) &#x2013; &#x4ECE;&#x8F93;&#x5165;&#x901A;&#x9053;&#x5230;&#x8F93;&#x51FA;&#x901A;&#x9053;&#x7684;&#x963B;&#x585E;&#x8FDE;&#x63A5;&#x6570;</li>
+<li>bias(<code>bool</code>, <code>optional</code>) - &#x5982;&#x679C;<code>bias=True</code>&#xFF0C;&#x6DFB;&#x52A0;&#x504F;&#x7F6E;</li>
+</ul>
+<p><strong>shape:</strong>
+&#x8F93;&#x5165;: ((N, C<em>{in}, L</em>{in}))
+&#x8F93;&#x51FA;: ((N, C<em>{out}, L</em>{out})) where (L<em>{out} = (L</em>{in} - 1) <em>stride - 2</em> padding + kernel_size + output_padding)</p>
+<p><strong>&#x53D8;&#x91CF;:</strong></p>
+<ul>
+<li>weight(<code>tensor</code>) - &#x5377;&#x79EF;&#x7684;&#x6743;&#x91CD;&#xFF0C;&#x5927;&#x5C0F;&#x662F;(<code>in_channels</code>, <code>in_channels</code>,<code>kernel_size</code>)</li>
+<li>bias(<code>tensor</code>) - &#x5377;&#x79EF;&#x7684;&#x504F;&#x7F6E;&#x7CFB;&#x6570;&#xFF0C;&#x5927;&#x5C0F;&#x662F;(<code>out_channel</code>)</li>
+</ul>
+<h3 id="class-torchnnconvtranspose2dinchannels-outchannels-kernelsize-stride1-padding0-outputpadding0-groups1-biastrue-dilation1">class torch.nn.ConvTranspose2d(in_channels, out_channels, kernel_size, stride=1, padding=0, output_padding=0, groups=1, bias=True, dilation=1)</h3>
+<p>2&#x7EF4;&#x7684;&#x8F6C;&#x7F6E;&#x5377;&#x79EF;&#x64CD;&#x4F5C;&#xFF08;<code>transposed convolution operator</code>&#xFF0C;&#x6CE8;&#x610F;&#x6539;&#x89C6;&#x4F5C;&#x64CD;&#x4F5C;&#x53EF;&#x89C6;&#x4F5C;&#x89E3;&#x5377;&#x79EF;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x5E76;&#x4E0D;&#x662F;&#x771F;&#x6B63;&#x7684;&#x89E3;&#x5377;&#x79EF;&#x64CD;&#x4F5C;&#xFF09; &#x8BE5;&#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;<code>Conv2d</code>&#x76F8;&#x5BF9;&#x4E8E;&#x5176;&#x8F93;&#x5165;&#x7684;&#x68AF;&#x5EA6;&#xFF0C;&#x6709;&#x65F6;&#xFF08;&#x4F46;&#x4E0D;&#x6B63;&#x786E;&#x5730;&#xFF09;&#x88AB;&#x79F0;&#x4E3A;&#x89E3;&#x5377;&#x79EF;&#x64CD;&#x4F5C;&#x3002;</p>
+<p><strong>&#x8BF4;&#x660E;</strong></p>
+<p><code>stride</code>: &#x63A7;&#x5236;&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x7684;&#x8BA1;&#x7B97;&#x6B65;&#x957F;
+<code>dilation</code>: &#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5185;&#x6838;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#x5728;<a href="https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md" target="_blank">&#x8FD9;&#x91CC;</a>
+<code>groups</code>: &#x63A7;&#x5236;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x4E4B;&#x95F4;&#x7684;&#x8FDE;&#x63A5;&#xFF1A; <code>group=1</code>&#xFF0C;&#x8F93;&#x51FA;&#x662F;&#x6240;&#x6709;&#x7684;&#x8F93;&#x5165;&#x7684;&#x5377;&#x79EF;&#xFF1B;<code>group=2</code>&#xFF0C;&#x6B64;&#x65F6;&#x76F8;&#x5F53;&#x4E8E;&#x6709;&#x5E76;&#x6392;&#x7684;&#x4E24;&#x4E2A;&#x5377;&#x79EF;&#x5C42;&#xFF0C;&#x6BCF;&#x4E2A;&#x5377;&#x79EF;&#x5C42;&#x8BA1;&#x7B97;&#x8F93;&#x5165;&#x901A;&#x9053;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x5E76;&#x4E14;&#x4EA7;&#x751F;&#x7684;&#x8F93;&#x51FA;&#x662F;&#x8F93;&#x51FA;&#x901A;&#x9053;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x968F;&#x540E;&#x5C06;&#x8FD9;&#x4E24;&#x4E2A;&#x8F93;&#x51FA;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x3002;</p>
+<p>&#x53C2;&#x6570;<code>kernel_size</code>&#xFF0C;<code>stride</code>&#xFF0C;<code>padding</code>&#xFF0C;<code>dilation</code>&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A; &#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;<code>int</code>&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6B64;&#x65F6;&#x5377;&#x79EF;height&#x548C;width&#x503C;&#x76F8;&#x540C;; &#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;<code>tuple</code>&#x6570;&#x7EC4;&#xFF08;&#x5305;&#x542B;&#x6765;&#x4E24;&#x4E2A;<code>int</code>&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF09;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;<code>int</code>&#x6570;&#x636E;&#x8868;&#x793A;<code>height</code>&#x7684;&#x6570;&#x503C;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;<code>int</code>&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x8868;&#x793A;width&#x7684;&#x6570;&#x503C;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F; &#x7531;&#x4E8E;&#x5185;&#x6838;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x8F93;&#x5165;&#x7684;&#x6700;&#x540E;&#x7684;&#x4E00;&#x4E9B;&#x5217;&#x7684;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x4F1A;&#x4E22;&#x5931;&#x3002;&#x56E0;&#x4E3A;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x662F;&#x4E0D;&#x662F;&#x5B8C;&#x5168;&#x7684;&#x4E92;&#x76F8;&#x5173;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x9002;&#x5F53;&#x7684;&#x586B;&#x5145;&#xFF08;<code>padding</code>&#x64CD;&#x4F5C;&#xFF09;&#x3002;</p>
+</blockquote>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>in_channels(<code>int</code>) &#x2013; &#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7684;&#x901A;&#x9053;&#x6570;</li>
+<li>out_channels(<code>int</code>) &#x2013; &#x5377;&#x79EF;&#x4EA7;&#x751F;&#x7684;&#x901A;&#x9053;&#x6570;</li>
+<li>kerner_size(<code>int</code> or <code>tuple</code>) - &#x5377;&#x79EF;&#x6838;&#x7684;&#x5927;&#x5C0F;</li>
+<li>stride(<code>int</code> or <code>tuple</code>,<code>optional</code>) - &#x5377;&#x79EF;&#x6B65;&#x957F;</li>
+<li>padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+<li>output_padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x51FA;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+<li>dilation(<code>int</code> or <code>tuple</code>, <code>optional</code>) &#x2013; &#x5377;&#x79EF;&#x6838;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x8DDD;</li>
+<li>groups(<code>int</code>, <code>optional</code>) &#x2013; &#x4ECE;&#x8F93;&#x5165;&#x901A;&#x9053;&#x5230;&#x8F93;&#x51FA;&#x901A;&#x9053;&#x7684;&#x963B;&#x585E;&#x8FDE;&#x63A5;&#x6570;</li>
+<li>bias(<code>bool</code>, <code>optional</code>) - &#x5982;&#x679C;<code>bias=True</code>&#xFF0C;&#x6DFB;&#x52A0;&#x504F;&#x7F6E;</li>
+</ul>
+<p><strong>shape:</strong>
+&#x8F93;&#x5165;: ((N, C<em>{in}, H</em>{in}, W<em>{in})) &#x8F93;&#x51FA;: ((N, C</em>{out}, H<em>{out}, W</em>{out})) where (H<em>{out} = (H</em>{in} - 1) <em>stride[0] - 2</em> padding[0] + kernel<em>size[0] + output_padding[0]) (W</em>{out} = (W<em>{in} - 1) _stride[1] - 2</em> padding[1] + kernel_size[1] + output_padding[1])</p>
+<p><strong>&#x53D8;&#x91CF;:</strong></p>
+<ul>
+<li>weight(<code>tensor</code>) - &#x5377;&#x79EF;&#x7684;&#x6743;&#x91CD;&#xFF0C;&#x5927;&#x5C0F;&#x662F;(<code>in_channels</code>, <code>in_channels</code>,<code>kernel_size</code>)</li>
+<li>bias(<code>tensor</code>) - &#x5377;&#x79EF;&#x7684;&#x504F;&#x7F6E;&#x7CFB;&#x6570;&#xFF0C;&#x5927;&#x5C0F;&#x662F;&#xFF08;<code>out_channel</code>&#xFF09;</li>
+</ul>
+<p><strong>Example</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># With square kernels and equal stride</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.ConvTranspose2d(<span class="hljs-number">16</span>, <span class="hljs-number">33</span>, <span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># non-square kernels and unequal stride and with padding</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.ConvTranspose2d(<span class="hljs-number">16</span>, <span class="hljs-number">33</span>, (<span class="hljs-number">3</span>, <span class="hljs-number">5</span>), stride=(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>), padding=(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">16</span>, <span class="hljs-number">50</span>, <span class="hljs-number">100</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># exact output size can be also specified as an argument</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">1</span>, <span class="hljs-number">16</span>, <span class="hljs-number">12</span>, <span class="hljs-number">12</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>downsample = nn.Conv2d(<span class="hljs-number">16</span>, <span class="hljs-number">16</span>, <span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>, padding=<span class="hljs-number">1</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>upsample = nn.ConvTranspose2d(<span class="hljs-number">16</span>, <span class="hljs-number">16</span>, <span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>, padding=<span class="hljs-number">1</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>h = downsample(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>h.size()
+torch.Size([<span class="hljs-number">1</span>, <span class="hljs-number">16</span>, <span class="hljs-number">6</span>, <span class="hljs-number">6</span>])
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = upsample(h, output_size=input.size())
+<span class="hljs-meta">&gt;&gt;&gt; </span>output.size()
+torch.Size([<span class="hljs-number">1</span>, <span class="hljs-number">16</span>, <span class="hljs-number">12</span>, <span class="hljs-number">12</span>])
+</code></pre>
+<h3 id="class-torchnnconvtranspose3dinchannels-outchannels-kernelsize-stride1-padding0-outputpadding0-groups1-biastrue-dilation1">class torch.nn.ConvTranspose3d(in_channels, out_channels, kernel_size, stride=1, padding=0, output_padding=0, groups=1, bias=True, dilation=1)</h3>
+<p>3&#x7EF4;&#x7684;&#x8F6C;&#x7F6E;&#x5377;&#x79EF;&#x64CD;&#x4F5C;&#xFF08;<code>transposed convolution operator</code>&#xFF0C;&#x6CE8;&#x610F;&#x6539;&#x89C6;&#x4F5C;&#x64CD;&#x4F5C;&#x53EF;&#x89C6;&#x4F5C;&#x89E3;&#x5377;&#x79EF;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x5E76;&#x4E0D;&#x662F;&#x771F;&#x6B63;&#x7684;&#x89E3;&#x5377;&#x79EF;&#x64CD;&#x4F5C;&#xFF09; &#x8F6C;&#x7F6E;&#x5377;&#x79EF;&#x64CD;&#x4F5C;&#x5C06;&#x6BCF;&#x4E2A;&#x8F93;&#x5165;&#x503C;&#x548C;&#x4E00;&#x4E2A;&#x53EF;&#x5B66;&#x4E60;&#x6743;&#x91CD;&#x7684;&#x5377;&#x79EF;&#x6838;&#x76F8;&#x4E58;&#xFF0C;&#x8F93;&#x51FA;&#x6240;&#x6709;&#x8F93;&#x5165;&#x901A;&#x9053;&#x7684;&#x6C42;&#x548C;</p>
+<p>&#x8BE5;&#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;<code>Conv3d</code>&#x76F8;&#x5BF9;&#x4E8E;&#x5176;&#x8F93;&#x5165;&#x7684;&#x68AF;&#x5EA6;&#xFF0C;&#x6709;&#x65F6;&#xFF08;&#x4F46;&#x4E0D;&#x6B63;&#x786E;&#x5730;&#xFF09;&#x88AB;&#x79F0;&#x4E3A;&#x89E3;&#x5377;&#x79EF;&#x64CD;&#x4F5C;&#x3002;</p>
+<p><strong>&#x8BF4;&#x660E;</strong></p>
+<p><code>stride</code>: &#x63A7;&#x5236;&#x76F8;&#x5173;&#x7CFB;&#x6570;&#x7684;&#x8BA1;&#x7B97;&#x6B65;&#x957F;
+<code>dilation</code>: &#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5185;&#x6838;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#x5728;<a href="https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md" target="_blank">&#x8FD9;&#x91CC;</a>
+<code>groups</code>: &#x63A7;&#x5236;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x4E4B;&#x95F4;&#x7684;&#x8FDE;&#x63A5;&#xFF1A; <code>group=1</code>&#xFF0C;&#x8F93;&#x51FA;&#x662F;&#x6240;&#x6709;&#x7684;&#x8F93;&#x5165;&#x7684;&#x5377;&#x79EF;&#xFF1B;<code>group=2</code>&#xFF0C;&#x6B64;&#x65F6;&#x76F8;&#x5F53;&#x4E8E;&#x6709;&#x5E76;&#x6392;&#x7684;&#x4E24;&#x4E2A;&#x5377;&#x79EF;&#x5C42;&#xFF0C;&#x6BCF;&#x4E2A;&#x5377;&#x79EF;&#x5C42;&#x8BA1;&#x7B97;&#x8F93;&#x5165;&#x901A;&#x9053;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x5E76;&#x4E14;&#x4EA7;&#x751F;&#x7684;&#x8F93;&#x51FA;&#x662F;&#x8F93;&#x51FA;&#x901A;&#x9053;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x968F;&#x540E;&#x5C06;&#x8FD9;&#x4E24;&#x4E2A;&#x8F93;&#x51FA;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x3002;</p>
+<p>&#x53C2;&#x6570;<code>kernel\_size</code>&#xFF0C;<code>stride</code>, <code>padding</code>&#xFF0C;<code>dilation</code>&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A; &#x4E00;&#x4E2A;<code>int</code>&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6B64;&#x65F6;&#x5377;&#x79EF;height&#x548C;width&#x503C;&#x76F8;&#x540C;; &#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;<code>tuple</code>&#x6570;&#x7EC4;&#xFF08;&#x5305;&#x542B;&#x6765;&#x4E24;&#x4E2A;<code>int</code>&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF09;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;<code>int</code>&#x6570;&#x636E;&#x8868;&#x793A;height&#x7684;&#x6570;&#x503C;&#xFF0C;tuple&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;int&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x8868;&#x793A;width&#x7684;&#x6570;&#x503C;</p>
+<p><strong>&#x6CE8;&#x610F;</strong>
+&#x7531;&#x4E8E;&#x5185;&#x6838;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x8F93;&#x5165;&#x7684;&#x6700;&#x540E;&#x7684;&#x4E00;&#x4E9B;&#x5217;&#x7684;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x4F1A;&#x4E22;&#x5931;&#x3002;&#x56E0;&#x4E3A;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x662F;&#x4E0D;&#x662F;&#x5B8C;&#x5168;&#x7684;&#x4E92;&#x76F8;&#x5173;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x9002;&#x5F53;&#x7684;&#x586B;&#x5145;&#xFF08;padding&#x64CD;&#x4F5C;&#xFF09;&#x3002;</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>in_channels(<code>int</code>) &#x2013; &#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7684;&#x901A;&#x9053;&#x6570;</li>
+<li>out_channels(<code>int</code>) &#x2013; &#x5377;&#x79EF;&#x4EA7;&#x751F;&#x7684;&#x901A;&#x9053;&#x6570;</li>
+<li>kernel_size(<code>int</code> or <code>tuple</code>) - &#x5377;&#x79EF;&#x6838;&#x7684;&#x5927;&#x5C0F;</li>
+<li>stride(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x5377;&#x79EF;&#x6B65;&#x957F;</li>
+<li>padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+<li>output_padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x51FA;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+<li>dilation(<code>int</code> or <code>tuple</code>, <code>optional</code>) &#x2013; &#x5377;&#x79EF;&#x6838;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x8DDD;</li>
+<li>groups(<code>int</code>, <code>optional</code>) &#x2013; &#x4ECE;&#x8F93;&#x5165;&#x901A;&#x9053;&#x5230;&#x8F93;&#x51FA;&#x901A;&#x9053;&#x7684;&#x963B;&#x585E;&#x8FDE;&#x63A5;&#x6570;</li>
+<li>bias(<code>bool</code>, <code>optional</code>) - &#x5982;&#x679C;<code>bias=True</code>&#xFF0C;&#x6DFB;&#x52A0;&#x504F;&#x7F6E;</li>
+</ul>
+<p><strong>shape:</strong>
+&#x8F93;&#x5165;: ((N, C<em>{in}, D</em>{in}, H<em>{in}, W</em>{in})) &#x8F93;&#x51FA;: ((N, C<em>{out}, D</em>{out}, H<em>{out}, W</em>{out})) where (D<em>{out} = (D</em>{in} - 1) <em>stride[0] - 2</em> padding[0] + kernel<em>size[0] + output_padding[0]) (H</em>{out} = (H<em>{in} - 1) _stride[1] - 2</em> padding[1] + kernel<em>size[1] + output_padding[1]) (W</em>{out} = (W<em>{in} - 1) _stride[2] - 2</em> padding[2] + kernel_size[2] + output_padding[2])</p>
+<p><strong>&#x53D8;&#x91CF;:</strong></p>
+<ul>
+<li>weight(<code>tensor</code>) - &#x5377;&#x79EF;&#x7684;&#x6743;&#x91CD;&#xFF0C;&#x5927;&#x5C0F;&#x662F;(<code>in_channels</code>, <code>in_channels</code>,<code>kernel_size</code>)</li>
+<li>bias(<code>tensor</code>) - &#x5377;&#x79EF;&#x7684;&#x504F;&#x7F6E;&#x7CFB;&#x6570;&#xFF0C;&#x5927;&#x5C0F;&#x662F;&#xFF08;<code>out_channel</code>&#xFF09;</li>
+</ul>
+<p><strong>Example</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># With square kernels and equal stride</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.ConvTranspose3d(<span class="hljs-number">16</span>, <span class="hljs-number">33</span>, <span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># non-square kernels and unequal stride and with padding</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Conv3d(<span class="hljs-number">16</span>, <span class="hljs-number">33</span>, (<span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>), stride=(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>), padding=(<span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">16</span>, <span class="hljs-number">10</span>, <span class="hljs-number">50</span>, <span class="hljs-number">100</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h2 id="&#x6C60;&#x5316;&#x5C42;">&#x6C60;&#x5316;&#x5C42;</h2>
+<h3 id="class-torchnnmaxpool1dkernelsize-stridenone-padding0-dilation1-returnindicesfalse-ceilmodefalse">class torch.nn.MaxPool1d(kernel_size, stride=None, padding=0, dilation=1, return_indices=False, ceil_mode=False)</h3>
+<p>&#x5BF9;&#x4E8E;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7684;&#x8F93;&#x5165;&#x901A;&#x9053;&#xFF0C;&#x63D0;&#x4F9B;1&#x7EF4;&#x6700;&#x5927;&#x6C60;&#x5316;&#xFF08;<code>max pooling</code>&#xFF09;&#x64CD;&#x4F5C;</p>
+<p>&#x5982;&#x679C;&#x8F93;&#x5165;&#x7684;&#x5927;&#x5C0F;&#x662F;(N,C,L)&#xFF0C;&#x90A3;&#x4E48;&#x8F93;&#x51FA;&#x7684;&#x5927;&#x5C0F;&#x662F;(N,C,L_out)&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#x662F;&#xFF1A;
+<script type="math/tex; ">out(N_i, C_j,k)=max^{kernel_size-1}_{m=0}input(N_{i},C_j,stride*k+m)</script></p>
+<p>&#x5982;&#x679C;<code>padding</code>&#x4E0D;&#x662F;0&#xFF0C;&#x4F1A;&#x5728;&#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x8FB9;&#x6DFB;&#x52A0;&#x76F8;&#x5E94;&#x6570;&#x76EE;0
+<code>dilation</code>&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5185;&#x6838;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#x5728;<a href="https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md" target="_blank">&#x8FD9;&#x91CC;</a></p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>kernel_size(<code>int</code> or <code>tuple</code>) - max pooling&#x7684;&#x7A97;&#x53E3;&#x5927;&#x5C0F;</li>
+<li>stride(<code>int</code> or <code>tuple</code>, <code>optional</code>) - max pooling&#x7684;&#x7A97;&#x53E3;&#x79FB;&#x52A8;&#x7684;&#x6B65;&#x957F;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F;<code>kernel_size</code></li>
+<li>padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+<li>dilation(<code>int</code> or <code>tuple</code>, <code>optional</code>) &#x2013; &#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x7A97;&#x53E3;&#x4E2D;&#x5143;&#x7D20;&#x6B65;&#x5E45;&#x7684;&#x53C2;&#x6570;</li>
+<li>return_indices - &#x5982;&#x679C;&#x7B49;&#x4E8E;<code>True</code>&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x8F93;&#x51FA;&#x6700;&#x5927;&#x503C;&#x7684;&#x5E8F;&#x53F7;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E0A;&#x91C7;&#x6837;&#x64CD;&#x4F5C;&#x4F1A;&#x6709;&#x5E2E;&#x52A9;</li>
+<li>ceil_mode - &#x5982;&#x679C;&#x7B49;&#x4E8E;<code>True</code>&#xFF0C;&#x8BA1;&#x7B97;&#x8F93;&#x51FA;&#x4FE1;&#x53F7;&#x5927;&#x5C0F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;&#x5411;&#x4E0A;&#x53D6;&#x6574;&#xFF0C;&#x4EE3;&#x66FF;&#x9ED8;&#x8BA4;&#x7684;&#x5411;&#x4E0B;&#x53D6;&#x6574;&#x7684;&#x64CD;&#x4F5C;</li>
+</ul>
+<p><strong>shape:</strong>
+&#x8F93;&#x5165;: (N,C_in,L_in)
+&#x8F93;&#x51FA;: (N,C_out,L_out)
+<script type="math/tex; ">L_{out}=floor((L_{in} + 2_padding - dilation_(kernel_size - 1) - 1)/stride + 1</script></p>
+<p><strong>example:</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># pool of size=3, stride=2</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.MaxPool1d(<span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">16</span>, <span class="hljs-number">50</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h3 id="class-torchnnmaxpool2dkernelsize-stridenone-padding0-dilation1-returnindicesfalse-ceilmodefalse">class torch.nn.MaxPool2d(kernel_size, stride=None, padding=0, dilation=1, return_indices=False, ceil_mode=False)</h3>
+<p>&#x5BF9;&#x4E8E;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7684;&#x8F93;&#x5165;&#x901A;&#x9053;&#xFF0C;&#x63D0;&#x4F9B;2&#x7EF4;&#x6700;&#x5927;&#x6C60;&#x5316;&#xFF08;<code>max pooling</code>&#xFF09;&#x64CD;&#x4F5C;</p>
+<p>&#x5982;&#x679C;&#x8F93;&#x5165;&#x7684;&#x5927;&#x5C0F;&#x662F;(N,C,H,W)&#xFF0C;&#x90A3;&#x4E48;&#x8F93;&#x51FA;&#x7684;&#x5927;&#x5C0F;&#x662F;(N,C,H_out,W_out)&#x548C;&#x6C60;&#x5316;&#x7A97;&#x53E3;&#x5927;&#x5C0F;(kH,kW)&#x7684;&#x5173;&#x7CFB;&#x662F;&#xFF1A;
+<script type="math/tex; ">out(N_i, C_j,k)=max^{kH-1}_{m=0}max^{kW-1}_{m=0}input(N_{i},C_j,stride[0]_h+m,stride[1]_w+n)</script></p>
+<p>&#x5982;&#x679C;<code>padding</code>&#x4E0D;&#x662F;0&#xFF0C;&#x4F1A;&#x5728;&#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x8FB9;&#x6DFB;&#x52A0;&#x76F8;&#x5E94;&#x6570;&#x76EE;0
+<code>dilation</code>&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5185;&#x6838;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#x5728;<a href="https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md" target="_blank">&#x8FD9;&#x91CC;</a></p>
+<p>&#x53C2;&#x6570;<code>kernel_size</code>&#xFF0C;<code>stride</code>, <code>padding</code>&#xFF0C;<code>dilation</code>&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A; &#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;<code>int</code>&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6B64;&#x65F6;&#x5377;&#x79EF;height&#x548C;width&#x503C;&#x76F8;&#x540C;; &#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;<code>tuple</code>&#x6570;&#x7EC4;&#xFF08;&#x5305;&#x542B;&#x6765;&#x4E24;&#x4E2A;int&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF09;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;<code>int</code>&#x6570;&#x636E;&#x8868;&#x793A;height&#x7684;&#x6570;&#x503C;&#xFF0C;<code>tuple</code>&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;int&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x8868;&#x793A;width&#x7684;&#x6570;&#x503C;</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>kernel_size(<code>int</code> or <code>tuple</code>) - max pooling&#x7684;&#x7A97;&#x53E3;&#x5927;&#x5C0F;</li>
+<li>stride(<code>int</code> or <code>tuple</code>, <code>optional</code>) - max pooling&#x7684;&#x7A97;&#x53E3;&#x79FB;&#x52A8;&#x7684;&#x6B65;&#x957F;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F;<code>kernel_size</code></li>
+<li>padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+<li>dilation(<code>int</code> or <code>tuple</code>, <code>optional</code>) &#x2013; &#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x7A97;&#x53E3;&#x4E2D;&#x5143;&#x7D20;&#x6B65;&#x5E45;&#x7684;&#x53C2;&#x6570;</li>
+<li>return_indices - &#x5982;&#x679C;&#x7B49;&#x4E8E;<code>True</code>&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x8F93;&#x51FA;&#x6700;&#x5927;&#x503C;&#x7684;&#x5E8F;&#x53F7;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E0A;&#x91C7;&#x6837;&#x64CD;&#x4F5C;&#x4F1A;&#x6709;&#x5E2E;&#x52A9;</li>
+<li>ceil_mode - &#x5982;&#x679C;&#x7B49;&#x4E8E;<code>True</code>&#xFF0C;&#x8BA1;&#x7B97;&#x8F93;&#x51FA;&#x4FE1;&#x53F7;&#x5927;&#x5C0F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;&#x5411;&#x4E0A;&#x53D6;&#x6574;&#xFF0C;&#x4EE3;&#x66FF;&#x9ED8;&#x8BA4;&#x7684;&#x5411;&#x4E0B;&#x53D6;&#x6574;&#x7684;&#x64CD;&#x4F5C;</li>
+</ul>
+<p><strong>shape:</strong>
+&#x8F93;&#x5165;: (N,C,H_{in},W_in)
+&#x8F93;&#x51FA;: (N,C,H_out,W_out)
+<script type="math/tex; ">H_{out}=floor((H_{in} + 2_padding[0] - dilation[0]_(kernel_size[0] - 1) - 1)/stride[0] + 1</script></p>
+<p><script type="math/tex; ">W_{out}=floor((W_{in} + 2_padding[1] - dilation[1]_(kernel_size[1] - 1) - 1)/stride[1] + 1</script></p>
+<p><strong>example:</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># pool of square window of size=3, stride=2</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.MaxPool2d(<span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># pool of non-square window</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.MaxPool2d((<span class="hljs-number">3</span>, <span class="hljs-number">2</span>), stride=(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">16</span>, <span class="hljs-number">50</span>, <span class="hljs-number">32</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h3 id="class-torchnnmaxpool3dkernelsize-stridenone-padding0-dilation1-returnindicesfalse-ceilmodefalse">class torch.nn.MaxPool3d(kernel_size, stride=None, padding=0, dilation=1, return_indices=False, ceil_mode=False)</h3>
+<p>&#x5BF9;&#x4E8E;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7684;&#x8F93;&#x5165;&#x901A;&#x9053;&#xFF0C;&#x63D0;&#x4F9B;3&#x7EF4;&#x6700;&#x5927;&#x6C60;&#x5316;&#xFF08;max pooling&#xFF09;&#x64CD;&#x4F5C;</p>
+<p>&#x5982;&#x679C;&#x8F93;&#x5165;&#x7684;&#x5927;&#x5C0F;&#x662F;(N,C,D,H,W)&#xFF0C;&#x90A3;&#x4E48;&#x8F93;&#x51FA;&#x7684;&#x5927;&#x5C0F;&#x662F;(N,C,D,H_out,W_out)&#x548C;&#x6C60;&#x5316;&#x7A97;&#x53E3;&#x5927;&#x5C0F;(kD,kH,kW)&#x7684;&#x5173;&#x7CFB;&#x662F;&#xFF1A;
+<script type="math/tex; ">out(N_i,C_j,d,h,w)=max^{kD-1}_{m=0}max^{kH-1}_{m=0}max^{kW-1}_{m=0}</script></p>
+<p><script type="math/tex; ">input(N_{i},C_j,stride[0]_k+d,stride[1]_h+m,stride[2]*w+n)</script></p>
+<p>&#x5982;&#x679C;<code>padding</code>&#x4E0D;&#x662F;0&#xFF0C;&#x4F1A;&#x5728;&#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x8FB9;&#x6DFB;&#x52A0;&#x76F8;&#x5E94;&#x6570;&#x76EE;0
+<code>dilation</code>&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x5185;&#x6838;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#xFF0C;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#x5728;<a href="https://github.com/vdumoulin/conv_arithmetic/blob/master/README.md" target="_blank">&#x8FD9;&#x91CC;</a></p>
+<p>&#x53C2;&#x6570;<code>kernel_size</code>&#xFF0C;<code>stride</code>, <code>padding</code>&#xFF0C;<code>dilation</code>&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A; &#x53EF;&#x4EE5;&#x662F;<code>int</code>&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6B64;&#x65F6;&#x5377;&#x79EF;height&#x548C;width&#x503C;&#x76F8;&#x540C;; &#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;<code>tuple</code>&#x6570;&#x7EC4;&#xFF08;&#x5305;&#x542B;&#x6765;&#x4E24;&#x4E2A;<code>int</code>&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF09;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;<code>int</code>&#x6570;&#x636E;&#x8868;&#x793A;height&#x7684;&#x6570;&#x503C;&#xFF0C;<code>tuple</code>&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;<code>int</code>&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x8868;&#x793A;width&#x7684;&#x6570;&#x503C;</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>kernel_size(<code>int</code> or <code>tuple</code>) - max pooling&#x7684;&#x7A97;&#x53E3;&#x5927;&#x5C0F;</li>
+<li>stride(<code>int</code> or <code>tuple</code>, <code>optional</code>) - max pooling&#x7684;&#x7A97;&#x53E3;&#x79FB;&#x52A8;&#x7684;&#x6B65;&#x957F;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F;kernel_size</li>
+<li>padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+<li>dilation(<code>int</code> or <code>tuple</code>, <code>optional</code>) &#x2013; &#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x7A97;&#x53E3;&#x4E2D;&#x5143;&#x7D20;&#x6B65;&#x5E45;&#x7684;&#x53C2;&#x6570;</li>
+<li>return_indices - &#x5982;&#x679C;&#x7B49;&#x4E8E;<code>True</code>&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x8F93;&#x51FA;&#x6700;&#x5927;&#x503C;&#x7684;&#x5E8F;&#x53F7;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E0A;&#x91C7;&#x6837;&#x64CD;&#x4F5C;&#x4F1A;&#x6709;&#x5E2E;&#x52A9;</li>
+<li>ceil_mode - &#x5982;&#x679C;&#x7B49;&#x4E8E;<code>True</code>&#xFF0C;&#x8BA1;&#x7B97;&#x8F93;&#x51FA;&#x4FE1;&#x53F7;&#x5927;&#x5C0F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;&#x5411;&#x4E0A;&#x53D6;&#x6574;&#xFF0C;&#x4EE3;&#x66FF;&#x9ED8;&#x8BA4;&#x7684;&#x5411;&#x4E0B;&#x53D6;&#x6574;&#x7684;&#x64CD;&#x4F5C;</li>
+</ul>
+<p><strong>shape:</strong>
+&#x8F93;&#x5165;: (N,C,H_in,W_in)
+&#x8F93;&#x51FA;: (N,C,H_out,W_out)
+<script type="math/tex; ">D_{out}=floor((D_{in} + 2_padding[0] - dilation[0]_(kernel_size[0] - 1) - 1)/stride[0] + 1)</script></p>
+<p><script type="math/tex; ">H_{out}=floor((H_{in} + 2_padding[1] - dilation[1]_(kernel_size[0] - 1) - 1)/stride[1] + 1)</script></p>
+<p><script type="math/tex; ">W_{out}=floor((W_{in} + 2_padding[2] - dilation[2]_(kernel_size[2] - 1) - 1)/stride[2] + 1)</script></p>
+<p><strong>example:</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># pool of square window of size=3, stride=2</span>
+&gt;&gt;&gt;m = nn.MaxPool3d(<span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># pool of non-square window</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.MaxPool3d((<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>), stride=(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">16</span>, <span class="hljs-number">50</span>,<span class="hljs-number">44</span>, <span class="hljs-number">31</span>))  
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h4 id="class-torchnnmaxunpool1dkernelsize-stridenone-padding0">class torch.nn.MaxUnpool1d(kernel_size, stride=None, padding=0)</h4>
+<p><code>Maxpool1d</code>&#x7684;&#x9006;&#x8FC7;&#x7A0B;&#xFF0C;&#x4E0D;&#x8FC7;&#x5E76;&#x4E0D;&#x662F;&#x5B8C;&#x5168;&#x7684;&#x9006;&#x8FC7;&#x7A0B;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;<code>maxpool1d</code>&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E00;&#x4E9B;&#x6700;&#x5927;&#x503C;&#x7684;&#x5DF2;&#x7ECF;&#x4E22;&#x5931;&#x3002; <code>MaxUnpool1d</code>&#x8F93;&#x5165;<code>MaxPool1d</code>&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x5305;&#x62EC;&#x6700;&#x5927;&#x503C;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5E76;&#x8BA1;&#x7B97;&#x6240;&#x6709;<code>maxpool1d</code>&#x8FC7;&#x7A0B;&#x4E2D;&#x975E;&#x6700;&#x5927;&#x503C;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;&#x96F6;&#x7684;&#x90E8;&#x5206;&#x7684;&#x53CD;&#x5411;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong>
+<code>MaxPool1d</code>&#x53EF;&#x4EE5;&#x5C06;&#x591A;&#x4E2A;&#x8F93;&#x5165;&#x5927;&#x5C0F;&#x6620;&#x5C04;&#x5230;&#x76F8;&#x540C;&#x7684;&#x8F93;&#x51FA;&#x5927;&#x5C0F;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x53CD;&#x6F14;&#x8FC7;&#x7A0B;&#x53EF;&#x80FD;&#x4F1A;&#x53D8;&#x5F97;&#x6A21;&#x68F1;&#x4E24;&#x53EF;&#x3002; &#x4E3A;&#x4E86;&#x9002;&#x5E94;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8C03;&#x7528;&#x4E2D;&#x5C06;&#x8F93;&#x51FA;&#x5927;&#x5C0F;&#xFF08;<code>output_size</code>&#xFF09;&#x4F5C;&#x4E3A;&#x989D;&#x5916;&#x7684;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x3002; &#x5177;&#x4F53;&#x7528;&#x6CD5;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;&#x4E0B;&#x9762;&#x7684;&#x8F93;&#x5165;&#x548C;&#x793A;&#x4F8B;</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>kernel_size(<code>int</code> or <code>tuple</code>) - max pooling&#x7684;&#x7A97;&#x53E3;&#x5927;&#x5C0F;</li>
+<li>stride(<code>int</code> or <code>tuple</code>, <code>optional</code>) - max pooling&#x7684;&#x7A97;&#x53E3;&#x79FB;&#x52A8;&#x7684;&#x6B65;&#x957F;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F;<code>kernel_size</code></li>
+<li>padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+</ul>
+<p><strong>&#x8F93;&#x5165;&#xFF1A;</strong>
+<code>input</code>:&#x9700;&#x8981;&#x8F6C;&#x6362;&#x7684;<code>tensor</code> <code>indices</code>&#xFF1A;Maxpool1d&#x7684;&#x7D22;&#x5F15;&#x53F7; <code>output_size</code>:&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x5927;&#x5C0F;&#x7684;<code>torch.Size</code></p>
+<p><strong>shape:</strong>
+<code>input</code>: (N,C,H_in)
+<code>output</code>:(N,C,H_out)
+<script type="math/tex; ">H_{out}=(H_{in}-1)_stride[0]-2_padding[0]+kernel_size[0]</script>
+&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>output_size</code>&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x7684;&#x5927;&#x5C0F;</p>
+<p><strong>Example&#xFF1A;</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>pool = nn.MaxPool1d(<span class="hljs-number">2</span>, stride=<span class="hljs-number">2</span>, return_indices=<span class="hljs-keyword">True</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>unpool = nn.MaxUnpool1d(<span class="hljs-number">2</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = Variable(torch.Tensor([[[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>]]]))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output, indices = pool(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>unpool(output, indices)
+    Variable containing:
+    (<span class="hljs-number">0</span> ,.,.) =
+       <span class="hljs-number">0</span>   <span class="hljs-number">2</span>   <span class="hljs-number">0</span>   <span class="hljs-number">4</span>   <span class="hljs-number">0</span>   <span class="hljs-number">6</span>   <span class="hljs-number">0</span>   <span class="hljs-number">8</span>
+    [torch.FloatTensor of size <span class="hljs-number">1</span>x1x8]
+
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Example showcasing the use of output_size</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = Variable(torch.Tensor([[[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]]]))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output, indices = pool(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>unpool(output, indices, output_size=input.size())
+    Variable containing:
+    (<span class="hljs-number">0</span> ,.,.) =
+       <span class="hljs-number">0</span>   <span class="hljs-number">2</span>   <span class="hljs-number">0</span>   <span class="hljs-number">4</span>   <span class="hljs-number">0</span>   <span class="hljs-number">6</span>   <span class="hljs-number">0</span>   <span class="hljs-number">8</span>   <span class="hljs-number">0</span>
+    [torch.FloatTensor of size <span class="hljs-number">1</span>x1x9]
+<span class="hljs-meta">&gt;&gt;&gt; </span>unpool(output, indices)
+    Variable containing:
+    (<span class="hljs-number">0</span> ,.,.) =
+       <span class="hljs-number">0</span>   <span class="hljs-number">2</span>   <span class="hljs-number">0</span>   <span class="hljs-number">4</span>   <span class="hljs-number">0</span>   <span class="hljs-number">6</span>   <span class="hljs-number">0</span>   <span class="hljs-number">8</span>
+    [torch.FloatTensor of size <span class="hljs-number">1</span>x1x8]
+</code></pre>
+<h4 id="class-torchnnmaxunpool2dkernelsize-stridenone-padding0">class torch.nn.MaxUnpool2d(kernel_size, stride=None, padding=0)</h4>
+<p><code>Maxpool2d</code>&#x7684;&#x9006;&#x8FC7;&#x7A0B;&#xFF0C;&#x4E0D;&#x8FC7;&#x5E76;&#x4E0D;&#x662F;&#x5B8C;&#x5168;&#x7684;&#x9006;&#x8FC7;&#x7A0B;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;maxpool2d&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E00;&#x4E9B;&#x6700;&#x5927;&#x503C;&#x7684;&#x5DF2;&#x7ECF;&#x4E22;&#x5931;&#x3002; <code>MaxUnpool2d</code>&#x7684;&#x8F93;&#x5165;&#x662F;<code>MaxPool2d</code>&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x5305;&#x62EC;&#x6700;&#x5927;&#x503C;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5E76;&#x8BA1;&#x7B97;&#x6240;&#x6709;<code>maxpool2d</code>&#x8FC7;&#x7A0B;&#x4E2D;&#x975E;&#x6700;&#x5927;&#x503C;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;&#x96F6;&#x7684;&#x90E8;&#x5206;&#x7684;&#x53CD;&#x5411;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong>
+<code>MaxPool2d</code>&#x53EF;&#x4EE5;&#x5C06;&#x591A;&#x4E2A;&#x8F93;&#x5165;&#x5927;&#x5C0F;&#x6620;&#x5C04;&#x5230;&#x76F8;&#x540C;&#x7684;&#x8F93;&#x51FA;&#x5927;&#x5C0F;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x53CD;&#x6F14;&#x8FC7;&#x7A0B;&#x53EF;&#x80FD;&#x4F1A;&#x53D8;&#x5F97;&#x6A21;&#x68F1;&#x4E24;&#x53EF;&#x3002; &#x4E3A;&#x4E86;&#x9002;&#x5E94;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8C03;&#x7528;&#x4E2D;&#x5C06;&#x8F93;&#x51FA;&#x5927;&#x5C0F;&#xFF08;<code>output_size</code>&#xFF09;&#x4F5C;&#x4E3A;&#x989D;&#x5916;&#x7684;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x3002;&#x5177;&#x4F53;&#x7528;&#x6CD5;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;&#x4E0B;&#x9762;&#x793A;&#x4F8B;</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>kernel_size(<code>int</code> or <code>tuple</code>) - max pooling&#x7684;&#x7A97;&#x53E3;&#x5927;&#x5C0F;</li>
+<li>stride(<code>int</code> or <code>tuple</code>, <code>optional</code>) - max pooling&#x7684;&#x7A97;&#x53E3;&#x79FB;&#x52A8;&#x7684;&#x6B65;&#x957F;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F;<code>kernel_size</code></li>
+<li>padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+</ul>
+<p><strong>&#x8F93;&#x5165;&#xFF1A;</strong>
+<code>input</code>:&#x9700;&#x8981;&#x8F6C;&#x6362;&#x7684;<code>tensor</code>
+<code>indices</code>&#xFF1A;Maxpool1d&#x7684;&#x7D22;&#x5F15;&#x53F7;
+<code>output_size</code>:&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x5927;&#x5C0F;&#x7684;<code>torch.Size</code></p>
+<p><strong>&#x5927;&#x5C0F;&#xFF1A;</strong>
+<code>input</code>: (N,C,H_in,W_in)
+<code>output</code>:(N,C,H_out,W_out)</p>
+<p><script type="math/tex; ">H_{out}=(H_{in}-1)_stride[0]-2_padding[0]+kernel_size[0]</script></p>
+<p><script type="math/tex; ">W_{out}=(W_{in}-1)_stride[1]-2_padding[1]+kernel_size[1]</script></p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>output_size</code>&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x7684;&#x5927;&#x5C0F;</p>
+<p><strong>Example&#xFF1A;</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>pool = nn.MaxPool2d(<span class="hljs-number">2</span>, stride=<span class="hljs-number">2</span>, return_indices=<span class="hljs-keyword">True</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>unpool = nn.MaxUnpool2d(<span class="hljs-number">2</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = Variable(torch.Tensor([[[[ <span class="hljs-number">1</span>,  <span class="hljs-number">2</span>,  <span class="hljs-number">3</span>,  <span class="hljs-number">4</span>],
+    ...                                  [ <span class="hljs-number">5</span>,  <span class="hljs-number">6</span>,  <span class="hljs-number">7</span>,  <span class="hljs-number">8</span>],
+    ...                                  [ <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>],
+    ...                                  [<span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>]]]]))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output, indices = pool(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>unpool(output, indices)
+    Variable containing:
+    (<span class="hljs-number">0</span> ,<span class="hljs-number">0</span> ,.,.) =
+       <span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>
+       <span class="hljs-number">0</span>   <span class="hljs-number">6</span>   <span class="hljs-number">0</span>   <span class="hljs-number">8</span>
+       <span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>
+       <span class="hljs-number">0</span>  <span class="hljs-number">14</span>   <span class="hljs-number">0</span>  <span class="hljs-number">16</span>
+    [torch.FloatTensor of size <span class="hljs-number">1</span>x1x4x4]
+
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># specify a different output size than input size</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>unpool(output, indices, output_size=torch.Size([<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>]))
+    Variable containing:
+    (<span class="hljs-number">0</span> ,<span class="hljs-number">0</span> ,.,.) =
+       <span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>
+       <span class="hljs-number">6</span>   <span class="hljs-number">0</span>   <span class="hljs-number">8</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>
+       <span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>  <span class="hljs-number">14</span>   <span class="hljs-number">0</span>
+      <span class="hljs-number">16</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>
+       <span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>   <span class="hljs-number">0</span>
+    [torch.FloatTensor of size <span class="hljs-number">1</span>x1x5x5]
+</code></pre>
+<h4 id="class-torchnnmaxunpool3dkernelsize-stridenone-padding0">class torch.nn.MaxUnpool3d(kernel_size, stride=None, padding=0)</h4>
+<p><code>Maxpool3d</code>&#x7684;&#x9006;&#x8FC7;&#x7A0B;&#xFF0C;&#x4E0D;&#x8FC7;&#x5E76;&#x4E0D;&#x662F;&#x5B8C;&#x5168;&#x7684;&#x9006;&#x8FC7;&#x7A0B;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;<code>maxpool3d</code>&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E00;&#x4E9B;&#x6700;&#x5927;&#x503C;&#x7684;&#x5DF2;&#x7ECF;&#x4E22;&#x5931;&#x3002; <code>MaxUnpool3d</code>&#x7684;&#x8F93;&#x5165;&#x5C31;&#x662F;<code>MaxPool3d</code>&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x5305;&#x62EC;&#x6700;&#x5927;&#x503C;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5E76;&#x8BA1;&#x7B97;&#x6240;&#x6709;<code>maxpool3d</code>&#x8FC7;&#x7A0B;&#x4E2D;&#x975E;&#x6700;&#x5927;&#x503C;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;&#x96F6;&#x7684;&#x90E8;&#x5206;&#x7684;&#x53CD;&#x5411;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong>
+<code>MaxPool3d</code>&#x53EF;&#x4EE5;&#x5C06;&#x591A;&#x4E2A;&#x8F93;&#x5165;&#x5927;&#x5C0F;&#x6620;&#x5C04;&#x5230;&#x76F8;&#x540C;&#x7684;&#x8F93;&#x51FA;&#x5927;&#x5C0F;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x53CD;&#x6F14;&#x8FC7;&#x7A0B;&#x53EF;&#x80FD;&#x4F1A;&#x53D8;&#x5F97;&#x6A21;&#x68F1;&#x4E24;&#x53EF;&#x3002;&#x4E3A;&#x4E86;&#x9002;&#x5E94;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8C03;&#x7528;&#x4E2D;&#x5C06;&#x8F93;&#x51FA;&#x5927;&#x5C0F;&#xFF08;<code>output_size</code>&#xFF09;&#x4F5C;&#x4E3A;&#x989D;&#x5916;&#x7684;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x3002;&#x5177;&#x4F53;&#x7528;&#x6CD5;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;&#x4E0B;&#x9762;&#x7684;&#x8F93;&#x5165;&#x548C;&#x793A;&#x4F8B;</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>kernel_size(<code>int</code> or <code>tuple</code>) - Maxpooling&#x7A97;&#x53E3;&#x5927;&#x5C0F;</li>
+<li>stride(<code>int</code> or <code>tuple</code>, <code>optional</code>) - max pooling&#x7684;&#x7A97;&#x53E3;&#x79FB;&#x52A8;&#x7684;&#x6B65;&#x957F;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F;<code>kernel_size</code></li>
+<li>padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+</ul>
+<p><strong>&#x8F93;&#x5165;&#xFF1A;</strong>
+<code>input</code>:&#x9700;&#x8981;&#x8F6C;&#x6362;&#x7684;<code>tensor</code>
+<code>indices</code>&#xFF1A;<code>Maxpool1d</code>&#x7684;&#x7D22;&#x5F15;&#x5E8F;&#x6570;
+<code>output_size</code>:&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x5927;&#x5C0F;&#x7684;<code>torch.Size</code></p>
+<p><strong>&#x5927;&#x5C0F;:</strong>
+<code>input</code>: (N,C,D_in,H_in,W_in)
+<code>outpu</code>t:(N,C,D_out,H_out,W_out)
+<script type="math/tex; "> \begin{aligned} D_{out}=(D_{in}-1)_stride[0]-2_padding[0]+kernel_size[0]\
+H_{out}=(H_{in}-1)_stride[1]-2_padding[0]+kernel_size[1]\ W_{out}=(W_{in}-1)_stride[2]-2_padding[2]+kernel_size[2]
+\end{aligned} </script></p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>output_size</code>&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x7684;&#x5927;&#x5C0F;</p>
+<p><strong>Example&#xFF1A;</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># pool of square window of size=3, stride=2</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>pool = nn.MaxPool3d(<span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>, return_indices=<span class="hljs-keyword">True</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>unpool = nn.MaxUnpool3d(<span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>output, indices = pool(Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">16</span>, <span class="hljs-number">51</span>, <span class="hljs-number">33</span>, <span class="hljs-number">15</span>)))
+<span class="hljs-meta">&gt;&gt;&gt; </span>unpooled_output = unpool(output, indices)
+<span class="hljs-meta">&gt;&gt;&gt; </span>unpooled_output.size()
+torch.Size([<span class="hljs-number">20</span>, <span class="hljs-number">16</span>, <span class="hljs-number">51</span>, <span class="hljs-number">33</span>, <span class="hljs-number">15</span>])
+</code></pre>
+<h3 id="class-torchnnavgpool1dkernelsize-stridenone-padding0-ceilmodefalse-countincludepadtrue">class torch.nn.AvgPool1d(kernel_size, stride=None, padding=0, ceil_mode=False, count_include_pad=True)</h3>
+<p>&#x5BF9;&#x4FE1;&#x53F7;&#x7684;&#x8F93;&#x5165;&#x901A;&#x9053;&#xFF0C;&#x63D0;&#x4F9B;1&#x7EF4;&#x5E73;&#x5747;&#x6C60;&#x5316;&#xFF08;average pooling &#xFF09; &#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7684;&#x5927;&#x5C0F;(N,C,L)&#xFF0C;&#x8F93;&#x51FA;&#x5927;&#x5C0F;(N,C,L_out)&#x548C;&#x6C60;&#x5316;&#x7A97;&#x53E3;&#x5927;&#x5C0F;k&#x7684;&#x5173;&#x7CFB;&#x662F;&#xFF1A;
+<script type="math/tex; ">out(N_i,C_j,l)=1/k*\sum^{k}_{m=0}input(N_{i},C_{j},stride*l+m)</script>
+&#x5982;&#x679C;<code>padding</code>&#x4E0D;&#x662F;0&#xFF0C;&#x4F1A;&#x5728;&#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x8FB9;&#x6DFB;&#x52A0;&#x76F8;&#x5E94;&#x6570;&#x76EE;0</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>kernel_size(<code>int</code> or <code>tuple</code>) - &#x6C60;&#x5316;&#x7A97;&#x53E3;&#x5927;&#x5C0F;</li>
+<li>stride(<code>int</code> or <code>tuple</code>, <code>optional</code>) - max pooling&#x7684;&#x7A97;&#x53E3;&#x79FB;&#x52A8;&#x7684;&#x6B65;&#x957F;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F;<code>kernel_size</code></li>
+<li>padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+<li>dilation(<code>int</code> or <code>tuple</code>, <code>optional</code>) &#x2013; &#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x7A97;&#x53E3;&#x4E2D;&#x5143;&#x7D20;&#x6B65;&#x5E45;&#x7684;&#x53C2;&#x6570;</li>
+<li>return_indices - &#x5982;&#x679C;&#x7B49;&#x4E8E;<code>True</code>&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x8F93;&#x51FA;&#x6700;&#x5927;&#x503C;&#x7684;&#x5E8F;&#x53F7;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E0A;&#x91C7;&#x6837;&#x64CD;&#x4F5C;&#x4F1A;&#x6709;&#x5E2E;&#x52A9;</li>
+<li>ceil_mode - &#x5982;&#x679C;&#x7B49;&#x4E8E;<code>True</code>&#xFF0C;&#x8BA1;&#x7B97;&#x8F93;&#x51FA;&#x4FE1;&#x53F7;&#x5927;&#x5C0F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;&#x5411;&#x4E0A;&#x53D6;&#x6574;&#xFF0C;&#x4EE3;&#x66FF;&#x9ED8;&#x8BA4;&#x7684;&#x5411;&#x4E0B;&#x53D6;&#x6574;&#x7684;&#x64CD;&#x4F5C;</li>
+</ul>
+<p><strong>&#x5927;&#x5C0F;&#xFF1A;</strong>
+<code>input</code>:(N,C,L_in)
+<code>output</code>:(N,C,L_out)
+<script type="math/tex; ">L_{out}=floor((L_{in}+2*padding-kernel_size)/stride+1)</script></p>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># pool with window of size=3, stride=2</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.AvgPool1d(<span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>m(Variable(torch.Tensor([[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>]]])))
+Variable containing:
+    (<span class="hljs-number">0</span> ,.,.) =
+    <span class="hljs-number">2</span>  <span class="hljs-number">4</span>  <span class="hljs-number">6</span>
+    [torch.FloatTensor of size <span class="hljs-number">1</span>x1x3]
+</code></pre>
+<h3 id="class-torchnnavgpool2dkernelsize-stridenone-padding0-ceilmodefalse-countincludepadtrue">class torch.nn.AvgPool2d(kernel_size, stride=None, padding=0, ceil_mode=False, count_include_pad=True)</h3>
+<p>&#x5BF9;&#x4FE1;&#x53F7;&#x7684;&#x8F93;&#x5165;&#x901A;&#x9053;&#xFF0C;&#x63D0;&#x4F9B;2&#x7EF4;&#x7684;&#x5E73;&#x5747;&#x6C60;&#x5316;&#xFF08;average pooling &#xFF09;
+&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7684;&#x5927;&#x5C0F;(N,C,H,W)&#xFF0C;&#x8F93;&#x51FA;&#x5927;&#x5C0F;(N,C,H_out,W_out)&#x548C;&#x6C60;&#x5316;&#x7A97;&#x53E3;&#x5927;&#x5C0F;(kH,kW)&#x7684;&#x5173;&#x7CFB;&#x662F;&#xFF1A;
+<script type="math/tex; "> out(N_i,C_j,h,w)=1/(kH_kW)_\sum^{kH-1}_{m=0}\sum^{kW-1}_{n=0}input(N_{i},C_{j},stride[0]_h+m,stride[1]_w+n)</script></p>
+<p>&#x5982;&#x679C;<code>padding</code>&#x4E0D;&#x662F;0&#xFF0C;&#x4F1A;&#x5728;&#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x8FB9;&#x6DFB;&#x52A0;&#x76F8;&#x5E94;&#x6570;&#x76EE;0</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>kernel_size(<code>int</code> or <code>tuple</code>) - &#x6C60;&#x5316;&#x7A97;&#x53E3;&#x5927;&#x5C0F;</li>
+<li>stride(<code>int</code> or <code>tuple</code>, <code>optional</code>) - max pooling&#x7684;&#x7A97;&#x53E3;&#x79FB;&#x52A8;&#x7684;&#x6B65;&#x957F;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F;<code>kernel_size</code></li>
+<li>padding(<code>int</code> or <code>tuple</code>, <code>optional</code>) - &#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x8865;&#x5145;0&#x7684;&#x5C42;&#x6570;</li>
+<li>dilation(<code>int</code> or <code>tuple</code>, <code>optional</code>) &#x2013; &#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x7A97;&#x53E3;&#x4E2D;&#x5143;&#x7D20;&#x6B65;&#x5E45;&#x7684;&#x53C2;&#x6570;</li>
+<li>ceil_mode - &#x5982;&#x679C;&#x7B49;&#x4E8E;<code>True</code>&#xFF0C;&#x8BA1;&#x7B97;&#x8F93;&#x51FA;&#x4FE1;&#x53F7;&#x5927;&#x5C0F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;&#x5411;&#x4E0A;&#x53D6;&#x6574;&#xFF0C;&#x4EE3;&#x66FF;&#x9ED8;&#x8BA4;&#x7684;&#x5411;&#x4E0B;&#x53D6;&#x6574;&#x7684;&#x64CD;&#x4F5C;</li>
+<li>count_include_pad - &#x5982;&#x679C;&#x7B49;&#x4E8E;<code>True</code>&#xFF0C;&#x8BA1;&#x7B97;&#x5E73;&#x5747;&#x6C60;&#x5316;&#x65F6;&#xFF0C;&#x5C06;&#x5305;&#x62EC;<code>padding</code>&#x586B;&#x5145;&#x7684;0</li>
+</ul>
+<p><strong>shape&#xFF1A;</strong>
+<code>input</code>: (N,C,H_in,W_in)
+<code>output</code>: (N,C,H_out,W_out)
+<script type="math/tex; ">\begin{aligned} H_{out}=floor((H_{in}+2*padding[0]-kernel_size[0])/stride[0]+1)\
+W_{out}=floor((W_{in}+2*padding[1]-kernel_size[1])/stride[1]+1) \end{aligned} </script></p>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># pool of square window of size=3, stride=2</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.AvgPool2d(<span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># pool of non-square window</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.AvgPool2d((<span class="hljs-number">3</span>, <span class="hljs-number">2</span>), stride=(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">16</span>, <span class="hljs-number">50</span>, <span class="hljs-number">32</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h3 id="class-torchnnavgpool3dkernelsize-stridenone">class torch.nn.AvgPool3d(kernel_size, stride=None)</h3>
+<p>&#x5BF9;&#x4FE1;&#x53F7;&#x7684;&#x8F93;&#x5165;&#x901A;&#x9053;&#xFF0C;&#x63D0;&#x4F9B;3&#x7EF4;&#x7684;&#x5E73;&#x5747;&#x6C60;&#x5316;&#xFF08;<code>average pooling</code>&#xFF09; &#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x7684;&#x5927;&#x5C0F;(N,C,D,H,W)&#xFF0C;&#x8F93;&#x51FA;&#x5927;&#x5C0F;(N,C,D_out,H_out,W_out)&#x548C;&#x6C60;&#x5316;&#x7A97;&#x53E3;&#x5927;&#x5C0F;(kD,kH,kW)&#x7684;&#x5173;&#x7CFB;&#x662F;&#xFF1A;</p>
+<p><script type="math/tex; "> \begin{aligned} out(N_i,C_j,d,h,w)=1/(kD_kH_kW)*\sum^{kD-1}_{k=0}\sum^{kH-1}_{m=0}\sum^{kW-1}_{n=0}input(N_{i},C_{j},stride[0]_d+k,stride[1]_h+m,stride[2]*w+n) \end{aligned} </script> &#x5982;&#x679C;<code>padding</code>&#x4E0D;&#x662F;0&#xFF0C;&#x4F1A;&#x5728;&#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x8FB9;&#x6DFB;&#x52A0;&#x76F8;&#x5E94;&#x6570;&#x76EE;0</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>kernel_size(<code>int</code> or <code>tuple</code>) - &#x6C60;&#x5316;&#x7A97;&#x53E3;&#x5927;&#x5C0F;</li>
+<li>stride(<code>int</code> or <code>tuple</code>, <code>optional</code>) - max <code>pooling</code>&#x7684;&#x7A97;&#x53E3;&#x79FB;&#x52A8;&#x7684;&#x6B65;&#x957F;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x662F;<code>kernel_size</code></li>
+</ul>
+<p><strong>shape&#xFF1A;</strong>
+&#x8F93;&#x5165;&#x5927;&#x5C0F;:(N,C,D_in,H_in,W_in)
+&#x8F93;&#x51FA;&#x5927;&#x5C0F;:(N,C,D_out,H_out,W_out) <script type="math/tex; ">\begin{aligned} D_{out}=floor((D_{in}+2*padding[0]-kernel_size[0])/stride[0]+1)\
+H_{out}=floor((H_{in}+2*padding[1]-kernel_size[1])/stride[1]+1)\
+W_{out}=floor((W_{in}+2*padding[2]-kernel_size[2])/stride[2]+1)
+\end{aligned} </script></p>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># pool of square window of size=3, stride=2</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.AvgPool3d(<span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># pool of non-square window</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.AvgPool3d((<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>), stride=(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">16</span>, <span class="hljs-number">50</span>,<span class="hljs-number">44</span>, <span class="hljs-number">31</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h3 id="class-torchnnfractionalmaxpool2dkernelsize-outputsizenone-outputrationone-returnindicesfalse-randomsamplesnone">class torch.nn.FractionalMaxPool2d(kernel_size, output_size=None, output_ratio=None, return_indices=False, _random_samples=None)</h3>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x63D0;&#x4F9B;2&#x7EF4;&#x7684;&#x5206;&#x6570;&#x6700;&#x5927;&#x5316;&#x6C60;&#x5316;&#x64CD;&#x4F5C; &#x5206;&#x6570;&#x6700;&#x5927;&#x5316;&#x6C60;&#x5316;&#x7684;&#x7EC6;&#x8282;&#x8BF7;&#x9605;&#x8BFB;<a href="https://arxiv.org/abs/1412.6071" target="_blank">&#x8BBA;&#x6587;</a> &#x7531;&#x76EE;&#x6807;&#x8F93;&#x51FA;&#x5927;&#x5C0F;&#x786E;&#x5B9A;&#x7684;&#x968F;&#x673A;&#x6B65;&#x957F;,&#x5728;$kH*kW$&#x533A;&#x57DF;&#x8FDB;&#x884C;&#x6700;&#x5927;&#x6C60;&#x5316;&#x64CD;&#x4F5C;&#x3002;&#x8F93;&#x51FA;&#x7279;&#x5F81;&#x548C;&#x8F93;&#x5165;&#x7279;&#x5F81;&#x7684;&#x6570;&#x91CF;&#x76F8;&#x540C;&#x3002;</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>kernel_size(<code>int</code> or <code>tuple</code>) - &#x6700;&#x5927;&#x6C60;&#x5316;&#x64CD;&#x4F5C;&#x65F6;&#x7684;&#x7A97;&#x53E3;&#x5927;&#x5C0F;&#x3002;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF08;&#x8868;&#x793A;<code>K*K</code>&#x7684;&#x7A97;&#x53E3;&#xFF09;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#xFF08;<code>kh*kw</code>&#xFF09;</li>
+<li>output_size - &#x8F93;&#x51FA;&#x56FE;&#x50CF;&#x7684;&#x5C3A;&#x5BF8;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;<code>tuple</code>&#x6307;&#x5B9A;(oH,oW)&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6570;&#x5B57;oH&#x6307;&#x5B9A;&#x4E00;&#x4E2A;oH*oH&#x7684;&#x8F93;&#x51FA;&#x3002;</li>
+<li>output_ratio &#x2013; &#x5C06;&#x8F93;&#x5165;&#x56FE;&#x50CF;&#x7684;&#x5927;&#x5C0F;&#x7684;&#x767E;&#x5206;&#x6BD4;&#x6307;&#x5B9A;&#x4E3A;&#x8F93;&#x51FA;&#x56FE;&#x7247;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x8303;&#x56F4;&#x5728;(0,1)&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x5B57;&#x6307;&#x5B9A;</li>
+<li>return_indices - &#x9ED8;&#x8BA4;&#x503C;<code>False</code>&#xFF0C;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;<code>True</code>&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x8F93;&#x51FA;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x7D22;&#x5F15;&#x5BF9; <code>nn.MaxUnpool2d</code>&#x6709;&#x7528;&#x3002;</li>
+</ul>
+<p><strong>Example&#xFF1A;</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># pool of square window of size=3, and target output size 13x12</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.FractionalMaxPool2d(<span class="hljs-number">3</span>, output_size=(<span class="hljs-number">13</span>, <span class="hljs-number">12</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># pool of square window and target output size being half of input image size</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.FractionalMaxPool2d(<span class="hljs-number">3</span>, output_ratio=(<span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">16</span>, <span class="hljs-number">50</span>, <span class="hljs-number">32</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h3 id="class-torchnnlppool2dnormtype-kernelsize-stridenone-ceilmodefalse">class torch.nn.LPPool2d(norm_type, kernel_size, stride=None, ceil_mode=False)</h3>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x63D0;&#x4F9B;2&#x7EF4;&#x7684;&#x5E42;&#x5E73;&#x5747;&#x6C60;&#x5316;&#x64CD;&#x4F5C;&#x3002; &#x8F93;&#x51FA;&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#xFF1A;
+<script type="math/tex; ">f(x)=pow(sum(X,p),1/p)</script></p>
+<ul>
+<li>&#x5F53;p&#x4E3A;&#x65E0;&#x7A77;&#x5927;&#x7684;&#x65F6;&#x5019;&#x65F6;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#x6700;&#x5927;&#x6C60;&#x5316;&#x64CD;&#x4F5C;</li>
+<li>&#x5F53;<code>p=1</code>&#x65F6;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#x5E73;&#x5747;&#x6C60;&#x5316;&#x64CD;&#x4F5C;</li>
+</ul>
+<p>&#x53C2;&#x6570;<code>kernel_size</code>, <code>stride</code>&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;</p>
+<ul>
+<li><code>int</code>&#xFF0C;&#x6C60;&#x5316;&#x7A97;&#x53E3;&#x7684;&#x5BBD;&#x548C;&#x9AD8;&#x76F8;&#x7B49;</li>
+<li><code>tuple</code>&#x6570;&#x7EC4;&#xFF08;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x7684;&#xFF09;&#xFF0C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x6C60;&#x5316;&#x7A97;&#x53E3;&#x7684;&#x9AD8;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x662F;&#x5BBD;</li>
+</ul>
+<p><strong>&#x53C2;&#x6570;</strong></p>
+<ul>
+<li>kernel_size: &#x6C60;&#x5316;&#x7A97;&#x53E3;&#x7684;&#x5927;&#x5C0F;</li>
+<li>stride&#xFF1A;&#x6C60;&#x5316;&#x7A97;&#x53E3;&#x79FB;&#x52A8;&#x7684;&#x6B65;&#x957F;&#x3002;<code>kernel_size</code>&#x662F;&#x9ED8;&#x8BA4;&#x503C;</li>
+<li>ceil_mode: <code>ceil_mode=True</code>&#x65F6;&#xFF0C;&#x5C06;&#x4F7F;&#x7528;&#x5411;&#x4E0B;&#x53D6;&#x6574;&#x4EE3;&#x66FF;&#x5411;&#x4E0A;&#x53D6;&#x6574;</li>
+</ul>
+<p><strong>shape</strong></p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;(N,C,H_in,W_in)</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;(N,C,H_out,W_out)
+<script type="math/tex; ">\begin{aligned} H_{out} = floor((H_{in}+2_padding[0]-dilation[0]_(kernel_size[0]-1)-1)/stride[0]+1)\ W_{out} = floor((W_{in}+2_padding[1]-dilation[1]_(kernel_size[1]-1)-1)/stride[1]+1) \end{aligned} </script></li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># power-2 pool of square window of size=3, stride=2</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.LPPool2d(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># pool of non-square window of power 1.2</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.LPPool2d(<span class="hljs-number">1.2</span>, (<span class="hljs-number">3</span>, <span class="hljs-number">2</span>), stride=(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">16</span>, <span class="hljs-number">50</span>, <span class="hljs-number">32</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h3 id="class-torchnnadaptivemaxpool1doutputsize-returnindicesfalse">class torch.nn.AdaptiveMaxPool1d(output_size, return_indices=False)</h3>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#xFF0C;&#x63D0;&#x4F9B;1&#x7EF4;&#x7684;&#x81EA;&#x9002;&#x5E94;&#x6700;&#x5927;&#x6C60;&#x5316;&#x64CD;&#x4F5C; &#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x8F93;&#x5165;&#x5927;&#x5C0F;&#x7684;&#x8F93;&#x5165;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x8F93;&#x51FA;&#x5C3A;&#x5BF8;&#x6307;&#x5B9A;&#x4E3A;H&#xFF0C;&#x4F46;&#x662F;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x7279;&#x5F81;&#x7684;&#x6570;&#x76EE;&#x4E0D;&#x4F1A;&#x53D8;&#x5316;&#x3002;</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>output_size: &#x8F93;&#x51FA;&#x4FE1;&#x53F7;&#x7684;&#x5C3A;&#x5BF8;</li>
+<li>return_indices: &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;<code>True</code>&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x8F93;&#x51FA;&#x7684;&#x7D22;&#x5F15;&#x3002;&#x5BF9; <code>nn.MaxUnpool1d</code>&#x6709;&#x7528;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;<code>False</code></li>
+</ul>
+<p><strong>Example&#xFF1A;</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># target output size of 5</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.AdaptiveMaxPool1d(<span class="hljs-number">5</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">1</span>, <span class="hljs-number">64</span>, <span class="hljs-number">8</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h3 id="class-torchnnadaptivemaxpool2doutputsize-returnindicesfalse">class torch.nn.AdaptiveMaxPool2d(output_size, return_indices=False)</h3>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#xFF0C;&#x63D0;&#x4F9B;2&#x7EF4;&#x7684;&#x81EA;&#x9002;&#x5E94;&#x6700;&#x5927;&#x6C60;&#x5316;&#x64CD;&#x4F5C; &#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x8F93;&#x5165;&#x5927;&#x5C0F;&#x7684;&#x8F93;&#x5165;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x8F93;&#x51FA;&#x5C3A;&#x5BF8;&#x6307;&#x5B9A;&#x4E3A;H*W&#xFF0C;&#x4F46;&#x662F;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x7279;&#x5F81;&#x7684;&#x6570;&#x76EE;&#x4E0D;&#x4F1A;&#x53D8;&#x5316;&#x3002;</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>output_size: &#x8F93;&#x51FA;&#x4FE1;&#x53F7;&#x7684;&#x5C3A;&#x5BF8;,&#x53EF;&#x4EE5;&#x7528;&#xFF08;H,W&#xFF09;&#x8868;&#x793A;<code>H*W</code>&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6570;&#x5B57;<code>H</code>&#x8868;&#x793A;<code>H*H</code>&#x5927;&#x5C0F;&#x7684;&#x8F93;&#x51FA;</li>
+<li>return_indices: &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;<code>True</code>&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x8F93;&#x51FA;&#x7684;&#x7D22;&#x5F15;&#x3002;&#x5BF9; <code>nn.MaxUnpool2d</code>&#x6709;&#x7528;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;<code>False</code></li>
+</ul>
+<p><strong>Example&#xFF1A;</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># target output size of 5x7</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.AdaptiveMaxPool2d((<span class="hljs-number">5</span>,<span class="hljs-number">7</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">1</span>, <span class="hljs-number">64</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># target output size of 7x7 (square)</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.AdaptiveMaxPool2d(<span class="hljs-number">7</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">1</span>, <span class="hljs-number">64</span>, <span class="hljs-number">10</span>, <span class="hljs-number">9</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h3 id="class-torchnnadaptiveavgpool1doutputsize">class torch.nn.AdaptiveAvgPool1d(output_size)</h3>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#xFF0C;&#x63D0;&#x4F9B;1&#x7EF4;&#x7684;&#x81EA;&#x9002;&#x5E94;&#x5E73;&#x5747;&#x6C60;&#x5316;&#x64CD;&#x4F5C; &#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x8F93;&#x5165;&#x5927;&#x5C0F;&#x7684;&#x8F93;&#x5165;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x8F93;&#x51FA;&#x5C3A;&#x5BF8;&#x6307;&#x5B9A;&#x4E3A;H*W&#xFF0C;&#x4F46;&#x662F;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x7279;&#x5F81;&#x7684;&#x6570;&#x76EE;&#x4E0D;&#x4F1A;&#x53D8;&#x5316;&#x3002;</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>output_size: &#x8F93;&#x51FA;&#x4FE1;&#x53F7;&#x7684;&#x5C3A;&#x5BF8;</li>
+</ul>
+<p><strong>Example&#xFF1A;</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># target output size of 5</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.AdaptiveAvgPool1d(<span class="hljs-number">5</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">1</span>, <span class="hljs-number">64</span>, <span class="hljs-number">8</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h3 id="class-torchnnadaptiveavgpool2doutputsize">class torch.nn.AdaptiveAvgPool2d(output_size)</h3>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#xFF0C;&#x63D0;&#x4F9B;2&#x7EF4;&#x7684;&#x81EA;&#x9002;&#x5E94;&#x5E73;&#x5747;&#x6C60;&#x5316;&#x64CD;&#x4F5C; &#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x8F93;&#x5165;&#x5927;&#x5C0F;&#x7684;&#x8F93;&#x5165;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x8F93;&#x51FA;&#x5C3A;&#x5BF8;&#x6307;&#x5B9A;&#x4E3A;<code>H*W</code>&#xFF0C;&#x4F46;&#x662F;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x7279;&#x5F81;&#x7684;&#x6570;&#x76EE;&#x4E0D;&#x4F1A;&#x53D8;&#x5316;&#x3002;</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li>output_size: &#x8F93;&#x51FA;&#x4FE1;&#x53F7;&#x7684;&#x5C3A;&#x5BF8;,&#x53EF;&#x4EE5;&#x7528;(H,W)&#x8868;&#x793A;<code>H*W</code>&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x803D;&#x6401;&#x6570;&#x5B57;H&#x8868;&#x793A;H*H&#x5927;&#x5C0F;&#x7684;&#x8F93;&#x51FA;</li>
+</ul>
+<p><strong>Example&#xFF1A;</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># target output size of 5x7</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.AdaptiveAvgPool2d((<span class="hljs-number">5</span>,<span class="hljs-number">7</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">1</span>, <span class="hljs-number">64</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># target output size of 7x7 (square)</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.AdaptiveAvgPool2d(<span class="hljs-number">7</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">1</span>, <span class="hljs-number">64</span>, <span class="hljs-number">10</span>, <span class="hljs-number">9</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<h2 id="non-linear-activations">Non-Linear Activations<a href="https://pytorch.org/docs/nn.html#non-linear-activations" target="_blank"></a></h2>
+<blockquote>
+<p>class torch.nn.ReLU(inplace=False)<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#ReLU" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x8FD0;&#x7528;&#x4FEE;&#x6B63;&#x7EBF;&#x6027;&#x5355;&#x5143;&#x51FD;&#x6570;${ReLU}(x)= max(0, x)$&#xFF0C;</p>
+<p>&#x53C2;&#x6570;&#xFF1A; inplace-&#x9009;&#x62E9;&#x662F;&#x5426;&#x8FDB;&#x884C;&#x8986;&#x76D6;&#x8FD0;&#x7B97;</p>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;$(N, <em>)$&#xFF0C;</em>&#x4EE3;&#x8868;&#x4EFB;&#x610F;&#x6570;&#x76EE;&#x9644;&#x52A0;&#x7EF4;&#x5EA6;</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;$(N, *)$&#xFF0C;&#x4E0E;&#x8F93;&#x5165;&#x62E5;&#x6709;&#x540C;&#x6837;&#x7684;shape&#x5C5E;&#x6027;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.ReLU()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.ReLU6(inplace=False)<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#ReLU6" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x8FD0;&#x7528;&#x51FD;&#x6570;${ReLU6}(x) = min(max(0,x), 6)$&#xFF0C;</p>
+<p>&#x53C2;&#x6570;&#xFF1A; inplace-&#x9009;&#x62E9;&#x662F;&#x5426;&#x8FDB;&#x884C;&#x8986;&#x76D6;&#x8FD0;&#x7B97;</p>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;$(N, <em>)$&#xFF0C;</em>&#x4EE3;&#x8868;&#x4EFB;&#x610F;&#x6570;&#x76EE;&#x9644;&#x52A0;&#x7EF4;&#x5EA6;</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;$(N, *)$&#xFF0C;&#x4E0E;&#x8F93;&#x5165;&#x62E5;&#x6709;&#x540C;&#x6837;&#x7684;shape&#x5C5E;&#x6027;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.ReLU6()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.ELU(alpha=1.0, inplace=False)<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#ELU" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x8FD0;&#x7528;&#x51FD;&#x6570;$f(x) = max(0,x) + min(0, alpha * (e^x - 1))$&#xFF0C;</p>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;$(N, *)$&#xFF0C;&#x661F;&#x53F7;&#x4EE3;&#x8868;&#x4EFB;&#x610F;&#x6570;&#x76EE;&#x9644;&#x52A0;&#x7EF4;&#x5EA6;</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;$(N, *)$&#x4E0E;&#x8F93;&#x5165;&#x62E5;&#x6709;&#x540C;&#x6837;&#x7684;shape&#x5C5E;&#x6027;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.ELU()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.PReLU(num_parameters=1, init=0.25)<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#PReLU" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x8FD0;&#x7528;&#x51FD;&#x6570;$PReLU(x) = max(0,x) + a * min(0,x)$&#xFF0C;<code>a</code>&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x5B66;&#x4E60;&#x53C2;&#x6570;&#x3002;&#x5F53;&#x6CA1;&#x6709;&#x58F0;&#x660E;&#x65F6;&#xFF0C;<code>nn.PReLU()</code>&#x5728;&#x6240;&#x6709;&#x7684;&#x8F93;&#x5165;&#x4E2D;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;<code>a</code>&#xFF1B;&#x5982;&#x679C;&#x662F;<code>nn.PReLU(nChannels)</code>&#xFF0C;<code>a</code>&#x5C06;&#x5E94;&#x7528;&#x5230;&#x6BCF;&#x4E2A;&#x8F93;&#x5165;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5F53;&#x4E3A;&#x4E86;&#x8868;&#x73B0;&#x66F4;&#x4F73;&#x7684;&#x6A21;&#x578B;&#x800C;&#x5B66;&#x4E60;&#x53C2;&#x6570;<code>a</code>&#x65F6;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x6743;&#x91CD;&#x8870;&#x51CF;&#xFF08;weight decay&#xFF09;</p>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>num_parameters&#xFF1A;&#x9700;&#x8981;&#x5B66;&#x4E60;&#x7684;<code>a</code>&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x7B49;&#x4E8E;1</li>
+<li>init&#xFF1A;<code>a</code>&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x9ED8;&#x8BA4;&#x7B49;&#x4E8E;0.25</li>
+</ul>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;$(N, <em>)$&#xFF0C;</em>&#x4EE3;&#x8868;&#x4EFB;&#x610F;&#x6570;&#x76EE;&#x9644;&#x52A0;&#x7EF4;&#x5EA6;</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;$(N, *)$&#xFF0C;&#x4E0E;&#x8F93;&#x5165;&#x62E5;&#x6709;&#x540C;&#x6837;&#x7684;shape&#x5C5E;&#x6027;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.PReLU()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.LeakyReLU(negative_slope=0.01, inplace=False)<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#LeakyReLU" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x8FD0;&#x7528;$f(x) = max(0, x) + {negative_slope} * min(0, x)$</p>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>negative_slope&#xFF1A;&#x63A7;&#x5236;&#x8D1F;&#x659C;&#x7387;&#x7684;&#x89D2;&#x5EA6;&#xFF0C;&#x9ED8;&#x8BA4;&#x7B49;&#x4E8E;0.01</li>
+<li>inplace-&#x9009;&#x62E9;&#x662F;&#x5426;&#x8FDB;&#x884C;&#x8986;&#x76D6;&#x8FD0;&#x7B97;</li>
+</ul>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;$(N, <em>)$&#xFF0C;</em>&#x4EE3;&#x8868;&#x4EFB;&#x610F;&#x6570;&#x76EE;&#x9644;&#x52A0;&#x7EF4;&#x5EA6;</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;$(N, *)$&#xFF0C;&#x4E0E;&#x8F93;&#x5165;&#x62E5;&#x6709;&#x540C;&#x6837;&#x7684;shape&#x5C5E;&#x6027;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.LeakyReLU(<span class="hljs-number">0.1</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.Threshold(threshold, value, inplace=False)<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#Threshold" target="_blank"></a></p>
+</blockquote>
+<p>Threshold&#x5B9A;&#x4E49;&#xFF1A;</p>
+<p><script type="math/tex; "> y = x ,if\ x &gt;= threshold\ y = value,if\ x &lt; threshold </script></p>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>threshold&#xFF1A;&#x9608;&#x503C;</li>
+<li>value&#xFF1A;&#x8F93;&#x5165;&#x503C;&#x5C0F;&#x4E8E;&#x9608;&#x503C;&#x5219;&#x4F1A;&#x88AB;value&#x4EE3;&#x66FF;</li>
+<li>inplace&#xFF1A;&#x9009;&#x62E9;&#x662F;&#x5426;&#x8FDB;&#x884C;&#x8986;&#x76D6;&#x8FD0;&#x7B97;</li>
+</ul>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;$(N, <em>)$&#xFF0C;</em>&#x4EE3;&#x8868;&#x4EFB;&#x610F;&#x6570;&#x76EE;&#x9644;&#x52A0;&#x7EF4;&#x5EA6;</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;$(N, *)$&#xFF0C;&#x4E0E;&#x8F93;&#x5165;&#x62E5;&#x6709;&#x540C;&#x6837;&#x7684;shape&#x5C5E;&#x6027;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Threshold(<span class="hljs-number">0.1</span>, <span class="hljs-number">20</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = Variable(torch.randn(<span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.Hardtanh(min_value=-1, max_value=1, inplace=False)<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#Hardtanh" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;</p>
+<p><script type="math/tex; "> f(x) = +1, if\ x &gt; 1;\ f(x) = -1, if\ x &lt; -1;\ f(x) = x, otherwise </script></p>
+<p>&#x7EBF;&#x6027;&#x533A;&#x57DF;&#x7684;&#x8303;&#x56F4;[-1,1]&#x53EF;&#x4EE5;&#x88AB;&#x8C03;&#x6574;</p>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>min_value&#xFF1A;&#x7EBF;&#x6027;&#x533A;&#x57DF;&#x8303;&#x56F4;&#x6700;&#x5C0F;&#x503C;</li>
+<li>max_value&#xFF1A;&#x7EBF;&#x6027;&#x533A;&#x57DF;&#x8303;&#x56F4;&#x6700;&#x5927;&#x503C;</li>
+<li>inplace&#xFF1A;&#x9009;&#x62E9;&#x662F;&#x5426;&#x8FDB;&#x884C;&#x8986;&#x76D6;&#x8FD0;&#x7B97;</li>
+</ul>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;(N, <em>)&#xFF0C;</em>&#x8868;&#x793A;&#x4EFB;&#x610F;&#x7EF4;&#x5EA6;&#x7EC4;&#x5408;</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;(N, *)&#xFF0C;&#x4E0E;&#x8F93;&#x5165;&#x6709;&#x76F8;&#x540C;&#x7684;shape&#x5C5E;&#x6027;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Hardtanh()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.Sigmoid<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#Sigmoid" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8FD0;&#x7528;Sigmoid&#x51FD;&#x6570;&#xFF0C;Sigmoid &#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><script type="math/tex; ">f(x) = 1 / ( 1 + e^{-x})</script></p>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;(N, <em>)&#xFF0C;</em>&#x8868;&#x793A;&#x4EFB;&#x610F;&#x7EF4;&#x5EA6;&#x7EC4;&#x5408;</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;(N, *)&#xFF0C;&#x4E0E;&#x8F93;&#x5165;&#x6709;&#x76F8;&#x540C;&#x7684;shape&#x5C5E;&#x6027;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Sigmoid()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.Tanh<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#Tanh" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;</p>
+<p><script type="math/tex; ">f(x) = \frac{e^{x} - e^{-x}} {e^{x} + e^{x}}</script></p>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;(N, <em>)&#xFF0C;</em>&#x8868;&#x793A;&#x4EFB;&#x610F;&#x7EF4;&#x5EA6;&#x7EC4;&#x5408;</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;(N, *)&#xFF0C;&#x4E0E;&#x8F93;&#x5165;&#x6709;&#x76F8;&#x540C;&#x7684;shape&#x5C5E;&#x6027;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Tanh()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.LogSigmoid<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#LogSigmoid" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;$LogSigmoid(x) = log( 1 / ( 1 + e^{-x}))$</p>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;(N, <em>)&#xFF0C;</em>&#x8868;&#x793A;&#x4EFB;&#x610F;&#x7EF4;&#x5EA6;&#x7EC4;&#x5408;</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;(N, *)&#xFF0C;&#x4E0E;&#x8F93;&#x5165;&#x6709;&#x76F8;&#x540C;&#x7684;shape&#x5C5E;&#x6027;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.LogSigmoid()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.Softplus(beta=1, threshold=20)<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#Softplus" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8FD0;&#x7528;Softplus&#x51FD;&#x6570;&#xFF0C;Softplus &#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><script type="math/tex; ">f(x) = \frac{1}{beta} _log(1 + e^{(beta_ x_i)})</script></p>
+<p>Softplus&#x51FD;&#x6570;&#x662F;ReLU&#x51FD;&#x6570;&#x7684;&#x5E73;&#x6ED1;&#x903C;&#x8FD1;&#xFF0C;Softplus&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x4F7F;&#x5F97;&#x8F93;&#x51FA;&#x503C;&#x9650;&#x5B9A;&#x4E3A;&#x6B63;&#x6570;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x6570;&#x503C;&#x7A33;&#x5B9A;&#x6027;&#xFF0C;&#x7EBF;&#x6027;&#x51FD;&#x6570;&#x7684;&#x8F6C;&#x6362;&#x53EF;&#x4EE5;&#x4F7F;&#x8F93;&#x51FA;&#x5927;&#x4E8E;&#x67D0;&#x4E2A;&#x503C;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>beta&#xFF1A;Softplus&#x51FD;&#x6570;&#x7684;beta&#x503C;</li>
+<li>threshold&#xFF1A;&#x9608;&#x503C;</li>
+</ul>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;(N, <em>)&#xFF0C;</em>&#x8868;&#x793A;&#x4EFB;&#x610F;&#x7EF4;&#x5EA6;&#x7EC4;&#x5408;</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;(N, *)&#xFF0C;&#x4E0E;&#x8F93;&#x5165;&#x6709;&#x76F8;&#x540C;&#x7684;shape&#x5C5E;&#x6027;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Softplus()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.Softshrink(lambd=0.5)<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#Softshrink" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8FD0;&#x7528;Softshrink&#x51FD;&#x6570;&#xFF0C;Softshrink&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><script type="math/tex; "> f(x) = x-lambda, if\ x &gt; lambda\ f(x) = x+lambda, if\ x &lt; -lambda\ f(x) = 0, otherwise </script></p>
+<p>&#x53C2;&#x6570;&#xFF1A;</p>
+<p>lambd&#xFF1A;Softshrink&#x51FD;&#x6570;&#x7684;lambda&#x503C;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;0.5</p>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;(N, <em>)&#xFF0C;</em>&#x8868;&#x793A;&#x4EFB;&#x610F;&#x7EF4;&#x5EA6;&#x7EC4;&#x5408;</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;(N, *)&#xFF0C;&#x4E0E;&#x8F93;&#x5165;&#x6709;&#x76F8;&#x540C;&#x7684;shape&#x5C5E;&#x6027;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Softshrink()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.Softsign<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#Softsign" target="_blank"></a></p>
+</blockquote>
+<p>$f(x) = x / (1 + |x|)$</p>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;(N, <em>)&#xFF0C;</em>&#x8868;&#x793A;&#x4EFB;&#x610F;&#x7EF4;&#x5EA6;&#x7EC4;&#x5408;</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;(N, *)&#xFF0C;&#x4E0E;&#x8F93;&#x5165;&#x6709;&#x76F8;&#x540C;&#x7684;shape&#x5C5E;&#x6027;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Softsign()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.Softshrink(lambd=0.5)<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#Softshrink" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8FD0;&#x7528;Tanhshrink&#x51FD;&#x6570;&#xFF0C;Tanhshrink&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><script type="math/tex; "> Tanhshrink(x) = x - Tanh(x) </script></p>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;(N, <em>)&#xFF0C;</em>&#x8868;&#x793A;&#x4EFB;&#x610F;&#x7EF4;&#x5EA6;&#x7EC4;&#x5408;</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;(N, *)&#xFF0C;&#x4E0E;&#x8F93;&#x5165;&#x6709;&#x76F8;&#x540C;&#x7684;shape&#x5C5E;&#x6027;</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Tanhshrink()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.Softmin<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#Softmin" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;n&#x7EF4;&#x8F93;&#x5165;&#x5F20;&#x91CF;&#x8FD0;&#x7528;Softmin&#x51FD;&#x6570;&#xFF0C;&#x5C06;&#x5F20;&#x91CF;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7F29;&#x653E;&#x5230;&#xFF08;0,1&#xFF09;&#x533A;&#x95F4;&#x4E14;&#x548C;&#x4E3A;1&#x3002;Softmin&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><script type="math/tex; ">f_i(x) = \frac{e^{(-x_i - shift)}} { \sum^j e^{(-x_j - shift)}},shift = max (x_i)</script></p>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;(N, L)</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;(N, L)</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Softmin()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<hr>
+<blockquote>
+<p>class torch.nn.Softmax<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#Softmax" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;n&#x7EF4;&#x8F93;&#x5165;&#x5F20;&#x91CF;&#x8FD0;&#x7528;Softmax&#x51FD;&#x6570;&#xFF0C;&#x5C06;&#x5F20;&#x91CF;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7F29;&#x653E;&#x5230;&#xFF08;0,1&#xFF09;&#x533A;&#x95F4;&#x4E14;&#x548C;&#x4E3A;1&#x3002;Softmax&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><script type="math/tex; ">f_i(x) = \frac{e^{(x_i - shift)}} { \sum^j e^{(x_j - shift)}},shift = max (x_i)</script></p>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;(N, L)</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;(N, L)</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x4E0E;&#x8F93;&#x5165;&#x7EF4;&#x5EA6;&#x76F8;&#x540C;&#x7684;&#x5F20;&#x91CF;&#xFF0C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x5728;&#xFF08;0,1&#xFF09;&#x533A;&#x95F4;&#x3002;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.Softmax()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<blockquote>
+<p>class torch.nn.LogSoftmax<a href="https://pytorch.org/docs/_modules/torch/nn/modules/activation.html#LogSoftmax" target="_blank"></a></p>
+</blockquote>
+<p>&#x5BF9;n&#x7EF4;&#x8F93;&#x5165;&#x5F20;&#x91CF;&#x8FD0;&#x7528;LogSoftmax&#x51FD;&#x6570;&#xFF0C;LogSoftmax&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><script type="math/tex; ">f_i(x) = log \frac{e^{(x_i)}} {a}, a = \sum^j e^{(x_j)}</script></p>
+<p>shape&#xFF1A;</p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;(N, L)</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;(N, L)</li>
+</ul>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.LogSoftmax()
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(input)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(m(input))
+</code></pre>
+<h2 id="normalization-layers">Normalization layers<a href="https://pytorch.org/docs/nn.html#normalization-layers" target="_blank"></a></h2>
+<h3 id="class-torchnnbatchnorm1dnumfeatures-eps1e-05-momentum01-affinetrue">class torch.nn.BatchNorm1d(num_features, eps=1e-05, momentum=0.1, affine=True)<a href="https://pytorch.org/docs/nn.html#torch.nn.BatchNorm1d" target="_blank"></a></h3>
+<p>&#x5BF9;&#x5C0F;&#x6279;&#x91CF;(mini-batch)&#x7684;2d&#x6216;3d&#x8F93;&#x5165;&#x8FDB;&#x884C;&#x6279;&#x6807;&#x51C6;&#x5316;(Batch Normalization)&#x64CD;&#x4F5C;</p>
+<p><script type="math/tex; "> y = \frac{x - mean[x]}{ \sqrt{Var[x]} + \epsilon} * gamma + beta </script></p>
+<p>&#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x5C0F;&#x6279;&#x91CF;&#xFF08;mini-batch&#xFF09;&#x6570;&#x636E;&#x4E2D;&#xFF0C;&#x8BA1;&#x7B97;&#x8F93;&#x5165;&#x5404;&#x4E2A;&#x7EF4;&#x5EA6;&#x7684;&#x5747;&#x503C;&#x548C;&#x6807;&#x51C6;&#x5DEE;&#x3002;gamma&#x4E0E;beta&#x662F;&#x53EF;&#x5B66;&#x4E60;&#x7684;&#x5927;&#x5C0F;&#x4E3A;C&#x7684;&#x53C2;&#x6570;&#x5411;&#x91CF;&#xFF08;C&#x4E3A;&#x8F93;&#x5165;&#x5927;&#x5C0F;&#xFF09;</p>
+<p>&#x5728;&#x8BAD;&#x7EC3;&#x65F6;&#xFF0C;&#x8BE5;&#x5C42;&#x8BA1;&#x7B97;&#x6BCF;&#x6B21;&#x8F93;&#x5165;&#x7684;&#x5747;&#x503C;&#x4E0E;&#x65B9;&#x5DEE;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x3002;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x9ED8;&#x8BA4;&#x7684;&#x52A8;&#x91CF;&#x503C;&#x4E3A;0.1&#x3002;</p>
+<p>&#x5728;&#x9A8C;&#x8BC1;&#x65F6;&#xFF0C;&#x8BAD;&#x7EC3;&#x6C42;&#x5F97;&#x7684;&#x5747;&#x503C;/&#x65B9;&#x5DEE;&#x5C06;&#x7528;&#x4E8E;&#x6807;&#x51C6;&#x5316;&#x9A8C;&#x8BC1;&#x6570;&#x636E;&#x3002;</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li><strong>num_features&#xFF1A;</strong> &#x6765;&#x81EA;&#x671F;&#x671B;&#x8F93;&#x5165;&#x7684;&#x7279;&#x5F81;&#x6570;&#xFF0C;&#x8BE5;&#x671F;&#x671B;&#x8F93;&#x5165;&#x7684;&#x5927;&#x5C0F;&#x4E3A;&apos;batch_size x num_features [x width]&apos;</li>
+<li><strong>eps&#xFF1A;</strong> &#x4E3A;&#x4FDD;&#x8BC1;&#x6570;&#x503C;&#x7A33;&#x5B9A;&#x6027;&#xFF08;&#x5206;&#x6BCD;&#x4E0D;&#x80FD;&#x8D8B;&#x8FD1;&#x6216;&#x53D6;0&#xFF09;,&#x7ED9;&#x5206;&#x6BCD;&#x52A0;&#x4E0A;&#x7684;&#x503C;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;1e-5&#x3002;</li>
+<li><strong>momentum&#xFF1A;</strong> &#x52A8;&#x6001;&#x5747;&#x503C;&#x548C;&#x52A8;&#x6001;&#x65B9;&#x5DEE;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x52A8;&#x91CF;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;0.1&#x3002;</li>
+<li><strong>affine&#xFF1A;</strong> &#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x5F53;&#x8BBE;&#x4E3A;true&#xFF0C;&#x7ED9;&#x8BE5;&#x5C42;&#x6DFB;&#x52A0;&#x53EF;&#x5B66;&#x4E60;&#x7684;&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#x53C2;&#x6570;&#x3002;</li>
+</ul>
+<p><strong>Shape&#xFF1A;</strong></p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;&#xFF08;N, C&#xFF09;&#x6216;&#x8005;(N, C, L)</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;&#xFF08;N, C&#xFF09;&#x6216;&#x8005;&#xFF08;N&#xFF0C;C&#xFF0C;L&#xFF09;&#xFF08;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x76F8;&#x540C;&#xFF09;</li>
+</ul>
+<p><strong>&#x4F8B;&#x5B50;</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># With Learnable Parameters</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.BatchNorm1d(<span class="hljs-number">100</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Without Learnable Parameters</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.BatchNorm1d(<span class="hljs-number">100</span>, affine=<span class="hljs-keyword">False</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">100</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<hr>
+<h3 id="class-torchnnbatchnorm2dnumfeatures-eps1e-05-momentum01-affinetrue">class torch.nn.BatchNorm2d(num_features, eps=1e-05, momentum=0.1, affine=True)<a href="https://pytorch.org/docs/_modules/torch/nn/modules/batchnorm.html#BatchNorm2d" target="_blank"></a></h3>
+<p>&#x5BF9;&#x5C0F;&#x6279;&#x91CF;(mini-batch)3d&#x6570;&#x636E;&#x7EC4;&#x6210;&#x7684;4d&#x8F93;&#x5165;&#x8FDB;&#x884C;&#x6279;&#x6807;&#x51C6;&#x5316;(Batch Normalization)&#x64CD;&#x4F5C;</p>
+<p><script type="math/tex; "> y = \frac{x - mean[x]}{ \sqrt{Var[x]} + \epsilon} * gamma + beta </script></p>
+<p>&#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x5C0F;&#x6279;&#x91CF;&#xFF08;mini-batch&#xFF09;&#x6570;&#x636E;&#x4E2D;&#xFF0C;&#x8BA1;&#x7B97;&#x8F93;&#x5165;&#x5404;&#x4E2A;&#x7EF4;&#x5EA6;&#x7684;&#x5747;&#x503C;&#x548C;&#x6807;&#x51C6;&#x5DEE;&#x3002;gamma&#x4E0E;beta&#x662F;&#x53EF;&#x5B66;&#x4E60;&#x7684;&#x5927;&#x5C0F;&#x4E3A;C&#x7684;&#x53C2;&#x6570;&#x5411;&#x91CF;&#xFF08;C&#x4E3A;&#x8F93;&#x5165;&#x5927;&#x5C0F;&#xFF09;</p>
+<p>&#x5728;&#x8BAD;&#x7EC3;&#x65F6;&#xFF0C;&#x8BE5;&#x5C42;&#x8BA1;&#x7B97;&#x6BCF;&#x6B21;&#x8F93;&#x5165;&#x7684;&#x5747;&#x503C;&#x4E0E;&#x65B9;&#x5DEE;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x3002;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x9ED8;&#x8BA4;&#x7684;&#x52A8;&#x91CF;&#x503C;&#x4E3A;0.1&#x3002;</p>
+<p>&#x5728;&#x9A8C;&#x8BC1;&#x65F6;&#xFF0C;&#x8BAD;&#x7EC3;&#x6C42;&#x5F97;&#x7684;&#x5747;&#x503C;/&#x65B9;&#x5DEE;&#x5C06;&#x7528;&#x4E8E;&#x6807;&#x51C6;&#x5316;&#x9A8C;&#x8BC1;&#x6570;&#x636E;&#x3002;</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li><strong>num_features&#xFF1A;</strong> &#x6765;&#x81EA;&#x671F;&#x671B;&#x8F93;&#x5165;&#x7684;&#x7279;&#x5F81;&#x6570;&#xFF0C;&#x8BE5;&#x671F;&#x671B;&#x8F93;&#x5165;&#x7684;&#x5927;&#x5C0F;&#x4E3A;&apos;batch_size x num_features x height x width&apos;</li>
+<li><strong>eps&#xFF1A;</strong> &#x4E3A;&#x4FDD;&#x8BC1;&#x6570;&#x503C;&#x7A33;&#x5B9A;&#x6027;&#xFF08;&#x5206;&#x6BCD;&#x4E0D;&#x80FD;&#x8D8B;&#x8FD1;&#x6216;&#x53D6;0&#xFF09;,&#x7ED9;&#x5206;&#x6BCD;&#x52A0;&#x4E0A;&#x7684;&#x503C;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;1e-5&#x3002;</li>
+<li><strong>momentum&#xFF1A;</strong> &#x52A8;&#x6001;&#x5747;&#x503C;&#x548C;&#x52A8;&#x6001;&#x65B9;&#x5DEE;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x52A8;&#x91CF;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;0.1&#x3002;</li>
+<li><strong>affine&#xFF1A;</strong> &#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x5F53;&#x8BBE;&#x4E3A;true&#xFF0C;&#x7ED9;&#x8BE5;&#x5C42;&#x6DFB;&#x52A0;&#x53EF;&#x5B66;&#x4E60;&#x7684;&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#x53C2;&#x6570;&#x3002;</li>
+</ul>
+<p><strong>Shape&#xFF1A;</strong></p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;&#xFF08;N, C&#xFF0C;H, W)</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;&#xFF08;N, C, H, W&#xFF09;&#xFF08;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x76F8;&#x540C;&#xFF09;</li>
+</ul>
+<p><strong>&#x4F8B;&#x5B50;</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># With Learnable Parameters</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.BatchNorm2d(<span class="hljs-number">100</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Without Learnable Parameters</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.BatchNorm2d(<span class="hljs-number">100</span>, affine=<span class="hljs-keyword">False</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">100</span>, <span class="hljs-number">35</span>, <span class="hljs-number">45</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<hr>
+<h3 id="class-torchnnbatchnorm3dnumfeatures-eps1e-05-momentum01-affinetrue">class torch.nn.BatchNorm3d(num_features, eps=1e-05, momentum=0.1, affine=True)<a href="https://pytorch.org/docs/nn.html#torch.nn.BatchNorm3d" target="_blank"></a></h3>
+<p>&#x5BF9;&#x5C0F;&#x6279;&#x91CF;(mini-batch)4d&#x6570;&#x636E;&#x7EC4;&#x6210;&#x7684;5d&#x8F93;&#x5165;&#x8FDB;&#x884C;&#x6279;&#x6807;&#x51C6;&#x5316;(Batch Normalization)&#x64CD;&#x4F5C;</p>
+<p><script type="math/tex; "> y = \frac{x - mean[x]}{ \sqrt{Var[x]} + \epsilon} * gamma + beta </script></p>
+<p>&#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x5C0F;&#x6279;&#x91CF;&#xFF08;mini-batch&#xFF09;&#x6570;&#x636E;&#x4E2D;&#xFF0C;&#x8BA1;&#x7B97;&#x8F93;&#x5165;&#x5404;&#x4E2A;&#x7EF4;&#x5EA6;&#x7684;&#x5747;&#x503C;&#x548C;&#x6807;&#x51C6;&#x5DEE;&#x3002;gamma&#x4E0E;beta&#x662F;&#x53EF;&#x5B66;&#x4E60;&#x7684;&#x5927;&#x5C0F;&#x4E3A;C&#x7684;&#x53C2;&#x6570;&#x5411;&#x91CF;&#xFF08;C&#x4E3A;&#x8F93;&#x5165;&#x5927;&#x5C0F;&#xFF09;</p>
+<p>&#x5728;&#x8BAD;&#x7EC3;&#x65F6;&#xFF0C;&#x8BE5;&#x5C42;&#x8BA1;&#x7B97;&#x6BCF;&#x6B21;&#x8F93;&#x5165;&#x7684;&#x5747;&#x503C;&#x4E0E;&#x65B9;&#x5DEE;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x3002;&#x79FB;&#x52A8;&#x5E73;&#x5747;&#x9ED8;&#x8BA4;&#x7684;&#x52A8;&#x91CF;&#x503C;&#x4E3A;0.1&#x3002;</p>
+<p>&#x5728;&#x9A8C;&#x8BC1;&#x65F6;&#xFF0C;&#x8BAD;&#x7EC3;&#x6C42;&#x5F97;&#x7684;&#x5747;&#x503C;/&#x65B9;&#x5DEE;&#x5C06;&#x7528;&#x4E8E;&#x6807;&#x51C6;&#x5316;&#x9A8C;&#x8BC1;&#x6570;&#x636E;&#x3002;</p>
+<p><strong>&#x53C2;&#x6570;&#xFF1A;</strong></p>
+<ul>
+<li><strong>num_features&#xFF1A;</strong> &#x6765;&#x81EA;&#x671F;&#x671B;&#x8F93;&#x5165;&#x7684;&#x7279;&#x5F81;&#x6570;&#xFF0C;&#x8BE5;&#x671F;&#x671B;&#x8F93;&#x5165;&#x7684;&#x5927;&#x5C0F;&#x4E3A;&apos;batch_size x num_features depth x height x width&apos;</li>
+<li><strong>eps&#xFF1A;</strong> &#x4E3A;&#x4FDD;&#x8BC1;&#x6570;&#x503C;&#x7A33;&#x5B9A;&#x6027;&#xFF08;&#x5206;&#x6BCD;&#x4E0D;&#x80FD;&#x8D8B;&#x8FD1;&#x6216;&#x53D6;0&#xFF09;,&#x7ED9;&#x5206;&#x6BCD;&#x52A0;&#x4E0A;&#x7684;&#x503C;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;1e-5&#x3002;</li>
+<li><strong>momentum&#xFF1A;</strong> &#x52A8;&#x6001;&#x5747;&#x503C;&#x548C;&#x52A8;&#x6001;&#x65B9;&#x5DEE;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x52A8;&#x91CF;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;0.1&#x3002;</li>
+<li><strong>affine&#xFF1A;</strong> &#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x5F53;&#x8BBE;&#x4E3A;true&#xFF0C;&#x7ED9;&#x8BE5;&#x5C42;&#x6DFB;&#x52A0;&#x53EF;&#x5B66;&#x4E60;&#x7684;&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#x53C2;&#x6570;&#x3002;</li>
+</ul>
+<p><strong>Shape&#xFF1A;</strong></p>
+<ul>
+<li>&#x8F93;&#x5165;&#xFF1A;&#xFF08;N, C&#xFF0C;D, H, W)</li>
+<li>&#x8F93;&#x51FA;&#xFF1A;&#xFF08;N, C, D, H, W&#xFF09;&#xFF08;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x76F8;&#x540C;&#xFF09;</li>
+</ul>
+<p><strong>&#x4F8B;&#x5B50;</strong></p>
+<pre><code class="lang-py"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># With Learnable Parameters</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.BatchNorm3d(<span class="hljs-number">100</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-comment"># Without Learnable Parameters</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>m = nn.BatchNorm3d(<span class="hljs-number">100</span>, affine=<span class="hljs-keyword">False</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>input = autograd.Variable(torch.randn(<span class="hljs-number">20</span>, <span class="hljs-number">100</span>, <span class="hljs-number">35</span>, <span class="hljs-number">45</span>, <span class="hljs-number">10</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>output = m(input)
+</code></pre>
+<hr>
+<h2 id="recurrent-layers">Recurrent layers</h2>
+<h3 id="class-torchnnrnn-args--kwargs">class torch.nn.RNN(<em> args, *</em> kwargs)</h3>
+<p>&#x5C06;&#x4E00;&#x4E2A;&#x591A;&#x5C42;&#x7684; <code>Elman RNN</code>&#xFF0C;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x4E3A;<code>tanh</code>&#x6216;&#x8005;<code>ReLU</code>&#xFF0C;&#x7528;&#x4E8E;&#x8F93;&#x5165;&#x5E8F;&#x5217;&#x3002;</p>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x5E8F;&#x5217;&#x4E2D;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;<code>RNN</code>&#x6BCF;&#x5C42;&#x7684;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#x4E3A; <script type="math/tex; "> h_t=tanh(w_{ih} _x_t+b_{ih}+w_{hh}_ h_{t-1}+b_{hh}) </script> $h_t$&#x662F;&#x65F6;&#x523B;$t$&#x7684;&#x9690;&#x72B6;&#x6001;&#x3002; $x_t$&#x662F;&#x4E0A;&#x4E00;&#x5C42;&#x65F6;&#x523B;$t$&#x7684;&#x9690;&#x72B6;&#x6001;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x7B2C;&#x4E00;&#x5C42;&#x5728;&#x65F6;&#x523B;$t$&#x7684;&#x8F93;&#x5165;&#x3002;&#x5982;&#x679C;<code>nonlinearity=&apos;relu&apos;</code>,&#x90A3;&#x4E48;&#x5C06;&#x4F7F;&#x7528;<code>relu</code>&#x4EE3;&#x66FF;<code>tanh</code>&#x4F5C;&#x4E3A;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x53C2;&#x6570;&#x8BF4;&#x660E;:</p>
+<ul>
+<li><p>input_size &#x2013; &#x8F93;&#x5165;<code>x</code>&#x7684;&#x7279;&#x5F81;&#x6570;&#x91CF;&#x3002;</p>
+</li>
+<li><p>hidden_size &#x2013; &#x9690;&#x5C42;&#x7684;&#x7279;&#x5F81;&#x6570;&#x91CF;&#x3002;</p>
+</li>
+<li><p>num_layers &#x2013; RNN&#x7684;&#x5C42;&#x6570;&#x3002;</p>
+</li>
+<li><p>nonlinearity &#x2013; &#x6307;&#x5B9A;&#x975E;&#x7EBF;&#x6027;&#x51FD;&#x6570;&#x4F7F;&#x7528;<code>tanh</code>&#x8FD8;&#x662F;<code>relu</code>&#x3002;&#x9ED8;&#x8BA4;&#x662F;<code>tanh</code>&#x3002;</p>
+</li>
+<li><p>bias &#x2013; &#x5982;&#x679C;&#x662F;<code>False</code>&#xFF0C;&#x90A3;&#x4E48;RNN&#x5C42;&#x5C31;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;&#x504F;&#x7F6E;&#x6743;&#x91CD; $b_ih$&#x548C;$b_hh$,&#x9ED8;&#x8BA4;&#x662F;<code>True</code></p>
+</li>
+<li><p>batch_first &#x2013; &#x5982;&#x679C;<code>True</code>&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x8F93;&#x5165;<code>Tensor</code>&#x7684;shape&#x5E94;&#x8BE5;&#x662F;[batch_size, time_step, feature],&#x8F93;&#x51FA;&#x4E5F;&#x662F;&#x8FD9;&#x6837;&#x3002;</p>
+</li>
+<li><p>dropout &#x2013; &#x5982;&#x679C;&#x503C;&#x975E;&#x96F6;&#xFF0C;&#x90A3;&#x4E48;&#x9664;&#x4E86;&#x6700;&#x540E;&#x4E00;&#x5C42;&#x5916;&#xFF0C;&#x5176;&#x5B83;&#x5C42;&#x7684;&#x8F93;&#x51FA;&#x90FD;&#x4F1A;&#x5957;&#x4E0A;&#x4E00;&#x4E2A;<code>dropout</code>&#x5C42;&#x3002;</p>
+</li>
+<li><p>bidirectional &#x2013; &#x5982;&#x679C;<code>True</code>&#xFF0C;&#x5C06;&#x4F1A;&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x53CC;&#x5411;<code>RNN</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;<code>False</code>&#x3002;</p>
+</li>
+</ul>
+<p><code>RNN</code>&#x7684;&#x8F93;&#x5165;&#xFF1A; <strong>(input, h_0)</strong></p>
+<ul>
+<li><p>input (seq_len, batch, input_size): &#x4FDD;&#x5B58;&#x8F93;&#x5165;&#x5E8F;&#x5217;&#x7279;&#x5F81;&#x7684;<code>tensor</code>&#x3002;<code>input</code>&#x53EF;&#x4EE5;&#x662F;&#x88AB;&#x586B;&#x5145;&#x7684;&#x53D8;&#x957F;&#x7684;&#x5E8F;&#x5217;&#x3002;&#x7EC6;&#x8282;&#x8BF7;&#x770B;<code>torch.nn.utils.rnn.pack_padded_sequence()</code></p>
+</li>
+<li><p>h_0 (num_layers * num_directions, batch, hidden_size): &#x4FDD;&#x5B58;&#x7740;&#x521D;&#x59CB;&#x9690;&#x72B6;&#x6001;&#x7684;<code>tensor</code></p>
+</li>
+</ul>
+<p><code>RNN</code>&#x7684;&#x8F93;&#x51FA;&#xFF1A; <strong>(output, h_n)</strong></p>
+<ul>
+<li>output (seq_len, batch, hidden_size * num_directions): &#x4FDD;&#x5B58;&#x7740;<code>RNN</code>&#x6700;&#x540E;&#x4E00;&#x5C42;&#x7684;&#x8F93;&#x51FA;&#x7279;&#x5F81;&#x3002;&#x5982;&#x679C;&#x8F93;&#x5165;&#x662F;&#x88AB;&#x586B;&#x5145;&#x8FC7;&#x7684;&#x5E8F;&#x5217;&#xFF0C;&#x90A3;&#x4E48;&#x8F93;&#x51FA;&#x4E5F;&#x662F;&#x88AB;&#x586B;&#x5145;&#x7684;&#x5E8F;&#x5217;&#x3002;</li>
+<li>h_n (num_layers * num_directions, batch, hidden_size): &#x4FDD;&#x5B58;&#x7740;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x65F6;&#x523B;&#x9690;&#x72B6;&#x6001;&#x3002;</li>
+</ul>
+<p><code>RNN</code>&#x6A21;&#x578B;&#x53C2;&#x6570;:</p>
+<ul>
+<li><p>weight_ih_l[k] &#x2013; &#x7B2C;<code>k</code>&#x5C42;&#x7684; <code>input-hidden</code> &#x6743;&#x91CD;&#xFF0C; &#x53EF;&#x5B66;&#x4E60;&#xFF0C;&#x5F62;&#x72B6;&#x662F;<code>(input_size x hidden_size)</code>&#x3002;</p>
+</li>
+<li><p>weight_hh_l[k] &#x2013; &#x7B2C;<code>k</code>&#x5C42;&#x7684; <code>hidden-hidden</code> &#x6743;&#x91CD;&#xFF0C; &#x53EF;&#x5B66;&#x4E60;&#xFF0C;&#x5F62;&#x72B6;&#x662F;<code>(hidden_size x hidden_size)</code></p>
+</li>
+<li><p>bias_ih_l[k] &#x2013; &#x7B2C;<code>k</code>&#x5C42;&#x7684; <code>input-hidden</code> &#x504F;&#x7F6E;&#xFF0C; &#x53EF;&#x5B66;&#x4E60;&#xFF0C;&#x5F62;&#x72B6;&#x662F;<code>(hidden_size)</code></p>
+</li>
+<li><p>bias_hh_l[k] &#x2013; &#x7B2C;<code>k</code>&#x5C42;&#x7684; <code>hidden-hidden</code> &#x504F;&#x7F6E;&#xFF0C; &#x53EF;&#x5B66;&#x4E60;&#xFF0C;&#x5F62;&#x72B6;&#x662F;<code>(hidden_size)</code></p>
+</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-py">rnn = nn.RNN(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">2</span>)
+input = Variable(torch.randn(<span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">10</span>))
+h0 = Variable(torch.randn(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">20</span>))
+output, hn = rnn(input, h0)
+</code></pre>
+<h3 id="class-torchnnlstm-args--kwargs">class torch.nn.LSTM(<em> args, *</em> kwargs)</h3>
+<p>&#x5C06;&#x4E00;&#x4E2A;&#x591A;&#x5C42;&#x7684; <code>(LSTM)</code> &#x5E94;&#x7528;&#x5230;&#x8F93;&#x5165;&#x5E8F;&#x5217;&#x3002;</p>
+<p>&#x5BF9;&#x8F93;&#x5165;&#x5E8F;&#x5217;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;<code>LSTM</code>&#x7684;&#x6BCF;&#x5C42;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x8BA1;&#x7B97;&#xFF1A; [\begin{split}\begin{array}{ll} i<em>t = \mathrm{sigmoid}(W</em>{ii} x<em>t + b</em>{ii} + W<em>{hi} h</em>{(t-1)} + b<em>{hi}) \ f_t = \mathrm{sigmoid}(W</em>{if} x<em>t + b</em>{if} + W<em>{hf} h</em>{(t-1)} + b<em>{hf}) \ g_t = \tanh(W</em>{ig} x<em>t + b</em>{ig} + W<em>{hc} h</em>{(t-1)} + b<em>{hg}) \ o_t = \mathrm{sigmoid}(W</em>{io} x<em>t + b</em>{io} + W<em>{ho} h</em>{(t-1)} + b<em>{ho}) \ c_t = f_t * c</em>{(t-1)} + i<em>t _g_t \ h_t = o_t</em> \tanh(c_t) \end{array}\end{split}]&#x662F;&#x65F6;&#x523B;$t$&#x7684;&#x9690;&#x72B6;&#x6001;,$c_t$&#x662F;&#x65F6;&#x523B;$t$&#x7684;&#x7EC6;&#x80DE;&#x72B6;&#x6001;&#xFF0C;$x_t$&#x662F;&#x4E0A;&#x4E00;&#x5C42;&#x7684;&#x5728;&#x65F6;&#x523B;$t$&#x7684;&#x9690;&#x72B6;&#x6001;&#x6216;&#x8005;&#x662F;&#x7B2C;&#x4E00;&#x5C42;&#x5728;&#x65F6;&#x523B;$t$&#x7684;&#x8F93;&#x5165;&#x3002;$i_t, f_t, g_t, o_t$ &#x5206;&#x522B;&#x4EE3;&#x8868; &#x8F93;&#x5165;&#x95E8;&#xFF0C;&#x9057;&#x5FD8;&#x95E8;&#xFF0C;&#x7EC6;&#x80DE;</p>
+<p><em>class</em><code>torch.nn.``GRU</code>(<em>*args</em>, <em>**kwargs</em>)<a href="https://pytorch.org/docs/master/_modules/torch/nn/modules/rnn.html#GRU" target="_blank">[source]</a></p>
+<p>Applies a multi-layer gated recurrent unit (GRU) RNN to an input sequence. For each element in the input sequence, each layer computes the following function:[\begin{split}\begin{array}{ll} r<em>t = \mathrm{sigmoid}(W</em>{ir} x<em>t + b</em>{ir} + W<em>{hr} h</em>{(t-1)} + b<em>{hr}) \ z_t = \mathrm{sigmoid}(W</em>{iz} x<em>t + b</em>{iz} + W<em>{hz} h</em>{(t-1)} + b<em>{hz}) \ n_t = \tanh(W</em>{in} x<em>t + b</em>{in} + r<em>t * (W</em>{hn} h<em>{(t-1)}+ b</em>{hn})) \ h<em>t = (1 - z_t) <em> n_t + z_t </em> h</em>{(t-1)} \ \end{array}\end{split}]where (h_t) is the hidden state at time &lt;cite&gt;t&lt;/cite&gt;, (x_t) is the hidden state of the previous layer at time &lt;cite&gt;t&lt;/cite&gt; or (input_t) for the first layer, and (r_t), (z_t), (n_t) are the reset, input, and new gates, respectively. | Parameters: | <em> <strong>input_size</strong> &#x2013; The number of expected features in the input x </em> <strong>hidden_size</strong> &#x2013; The number of features in the hidden state h <em> <strong>num_layers</strong> &#x2013; Number of recurrent layers. </em> <strong>bias</strong> &#x2013; If False, then the layer does not use bias weights b_ih and b_hh. Default: True <em> <strong>batch_first</strong> &#x2013; If True, then the input and output tensors are provided as (batch, seq, feature) </em> <strong>dropout</strong> &#x2013; If non-zero, introduc</p>
+<p><hr></p>
+<div align="center">
+    <p><a href="http://www.apachecn.org" target="_blank"><font face="KaiTi" size="6" color="red">&#x6211;&#x4EEC;&#x4E00;&#x76F4;&#x5728;&#x52AA;&#x529B;</font></a></p>
+    <p><a href="https://github.com/apachecn/pytorch-doc-zh/" target="_blank">apachecn/pytorch-doc-zh</a></p>
+    <p><iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=pytorch-doc-zh&amp;type=watch&amp;count=true&amp;v=2" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=pytorch-doc-zh&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <iframe align="middle" src="https://ghbtns.com/github-btn.html?user=apachecn&amp;repo=pytorch-doc-zh&amp;type=fork&amp;count=true" frameborder="0" scrolling="0" width="100px" height="25px"></iframe>
+    <a target="_blank" href="shang.qq.com/wpa/qunwpa"><img border="0" src="http://data.apachecn.org/img/logo/ApacheCN-group.png" alt="ML | ApacheCN" title="ML | ApacheCN"></a></p>
+</div>
+ <div style="text-align:center;margin:0 0 10.5px;">
+     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-3565452474788507" data-ad-slot="2543897000">
+     </ins>
+     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?38525fdac4b5d4403900b943d4e7dd91";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102475051-10"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-102475051-10');
+    </script>
+</div>
+
+<p><meta name="google-site-verification" content="pyo9N70ZWyh8JB43bIu633mhxesJ1IcwWCZlM3jUfFo"></p>
+<p><iframe src="https://www.bilibili.com/read/cv2710377" style="display:none"></iframe>
+<img src="http://t.cn/AiCoDHwb" hidden="hidden"></p>
+<div>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+    <div id="gitalk-container"></div>
+    <script type="text/javascript">
+        const gitalk = new Gitalk({
+        clientID: '2e62dee5b9896e2eede6',
+        clientSecret: 'ca6819a54656af0d87960af15315320f8a628a53',
+        repo: 'pytorch-doc-zh',
+        owner: 'apachecn',
+        admin: ['jiangzhonglian', 'wizardforcel'],
+        id: md5(location.pathname),
+        distractionFreeMode: false
+        })
+        gitalk.render('gitalk-container')
+    </script>
+</div>
+
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; ibooker.org.cn 2019 all right reserved&#xFF0C;&#x7531; ApacheCN &#x56E2;&#x961F;&#x63D0;&#x4F9B;&#x652F;&#x6301;</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A; 
+2019-07-11 14:14:05
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="15.html" class="navigation navigation-prev " aria-label="Previous page: torch.Storage">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="17.html" class="navigation navigation-next " aria-label="Next page: torch.nn.functional">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"torch.nn","level":"1.3.7","depth":2,"next":{"title":"torch.nn.functional","level":"1.3.8","depth":2,"path":"17.md","ref":"17.md","articles":[]},"previous":{"title":"torch.Storage","level":"1.3.6","depth":2,"path":"15.md","ref":"15.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","github-buttons","-sharing","insert-logo","sharing-plus","back-to-top-button","code","copy-code-button","mathjax","pageview-count","edit-link","emphasize","alerts","auto-scroll-table","popup","hide-element","page-toc-button","tbfed-pagefooter","sitemap","advanced-emoji","expandable-chapters","splitter","search-pro"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy ibooker.org.cn 2019","modify_label":"该文件修订时间： ","modify_format":"YYYY-MM-DD HH:mm:ss"},"emphasize":{},"github":{"url":"https://github.com/apachecn/pytorch-doc-zh"},"splitter":{},"search-pro":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"popup":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sitemap":{"hostname":"http://pytorch.apachecn.org"},"page-toc-button":{"maxTocDepth":4,"minTocSize":4},"back-to-top-button":{},"pageview-count":{},"alerts":{},"github-buttons":{"buttons":[{"user":"apachecn","repo":"pytorch-doc-zh","type":"star","count":true,"size":"small"}]},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["qq","douban","facebook","google","linkedin","twitter","weibo","whatsapp"],"douban":false,"facebook":false,"weibo":true,"whatsapp":false,"twitter":false,"line":false,"google":false,"qzone":true},"edit-link":{"label":"编辑本页","base":"https://github.com/apachecn/pytorch-doc-zh/blob/master/docs/0.4"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 150px; min-height: 150px","url":"http://data.apachecn.org/img/logo.jpg"},"expandable-chapters":{}},"my_links":{"sidebar":{"Home":"https://www.baidu.com"}},"theme":"default","author":"ApacheCN","my_plugins":["donate","todo","-lunr","-search","expandable-chapters-small","chapter-fold","expandable-chapters","expandable-chapters-small","back-to-top-button","ga","baidu","sitemap","tbfed-pagefooter","advanced-emoji","sectionx","page-treeview","simple-page-toc","ancre-navigation","theme-apachecn@git+https://github.com/apachecn/theme-apachecn#HEAD","pagefooter-apachecn@git+https://github.com/apachecn/gitbook-plugin-pagefooter-apachecn#HEAD"],"my_pluginsConfig":{"page-treeview":{"copyright":"Copyright &#169; aleen42","minHeaderCount":"2","minHeaderDeep":"2"},"ignores":["node_modules"],"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"page-copyright":{"wisdom":"Designer, Frontend Developer & overall web enthusiast","noPowered":false,"copyright":"Copyright &#169; 你的名字","style":"normal","timeColor":"#666","utcOffset":"8","format":"YYYY-MM-dd hh:mm:ss","signature":"你的签名","copyrightColor":"#666","description":"modified at"},"donate":{"wechat":"微信收款的二维码URL","alipay":"支付宝收款的二维码URL","title":"","button":"赏","alipayText":"支付宝打赏","wechatText":"微信打赏"},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"github-buttons":{"buttons":[{"user":"apachecn","repo":"pytorch-doc-zh","type":"star","count":true,"size":"small"},{"user":"apachecn","width":"160","type":"follow","count":true,"size":"small"}]},"ga":{"token":"UA-102475051-10"},"baidu":{"token":"75439e2cbd22bdd813226000e9dcc12f"},"pagefooter-apachecn":{"copyright":"Copyright &copy ibooker.org.cn 2019","modify_label":"该文件修订时间： ","modify_format":"YYYY-MM-DD HH:mm:ss"}},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Pytorch 中文文档","language":"zh-hans","gitbook":"*","description":"Pytorch 中文文档: 教程和文档"},"file":{"path":"16.md","mtime":"2019-07-11T06:14:05.732Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-05T02:47:56.738Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
